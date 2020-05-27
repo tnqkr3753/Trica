@@ -24,4 +24,10 @@ public class PageController {
 		mv.setViewName("order-list");
 		return mv;
 	}
+	@RequestMapping("boardList.trc")
+	public ModelAndView getBoardList() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("boardList");
+		return mv;
+	}
 }

@@ -10,18 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
 </head>
 <body>
     <!-- Page Preloder -->
@@ -74,7 +73,7 @@
     </header>
     <!-- Header Section End --> 
     <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-area set-bg" data-setbg="img/breadcrumb/breadcrumb-cart.jpg">
+    <div class="breadcrumb-area set-bg" data-setbg="./resources/img/breadcrumb/breadcrumb-cart.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">

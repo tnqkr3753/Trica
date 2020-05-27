@@ -17,18 +17,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
  
 </head> 
 
@@ -55,7 +54,7 @@
                                 <li><a href="#">Shop</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="./about.html">About</a></li>
+                                        <li><a href="boardList.trc">Board</a></li>
                                         <li><a href="./listing-details.html">Listing Details</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                         <li><a href="./contact.html">Contact</a></li>
@@ -84,7 +83,7 @@
     <!-- Header Section End --> 
 
     <!-- Hero Section Begin -->
-    <section class="hero set-bg" data-setbg="img/background_black.png">
+    <section class="hero set-bg" data-setbg="./resources/img/background_black.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -114,12 +113,12 @@
                             </form>
                         </div>
                         <ul class="hero__categories__tags">
-                            <li><a href="#"><img src="img/hero/cat-1.png" alt=""> TV</a></li>
-                            <li><a href="#"><img src="img/hero/cat-2.png" alt=""> 냉장고</a></li>
-                            <li><a href="#"><img src="img/hero/cat-3.png" alt=""> 카메라</a></li>
-                            <li><a href="#"><img src="img/hero/cat-4.png" alt=""> 전자레인지</a></li>
-                            <li><a href="#"><img src="img/hero/cat-5.png" alt=""> 노트북</a></li>
-                            <li><a href="#"><img src="img/hero/cat-6.png" alt=""> All Categories</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-1.png" alt=""> TV</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-2.png" alt=""> 냉장고</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-3.png" alt=""> 카메라</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-4.png" alt=""> 전자레인지</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-5.png" alt=""> 노트북</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-6.png" alt=""> All Categories</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1446,7 +1445,7 @@
     <!-- Feature Location Section End -->
 
     <!-- Testimonial Section Begin -->
-    <section class="testimonial spad set-bg" data-setbg="img/testimonial/testimonial-bg.jpg">
+    <section class="testimonial spad set-bg" data-setbg="./resources/img/testimonial/testimonial-bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -1460,9 +1459,9 @@
                                 Consultant made a number of suggestions to help improve our systems. Consultant
                                 explained how things work and why it would help."</p>
                             <div class="testimonial__item__author">
-                                <a href="#review-3"><img src="img/testimonial/author-3.png" alt=""></a>
-                                <a href="#review-1" class="active"><img src="img/testimonial/author-1.png" alt=""></a>
-                                <a href="#review-2"><img src="img/testimonial/author-2.png" alt=""></a>
+                                <a href="#review-3"><img src="./resources/img/testimonial/author-3.png" alt=""></a>
+                                <a href="#review-1" class="active"><img src="./resources/img/testimonial/author-1.png" alt=""></a>
+                                <a href="#review-2"><img src="./resources/img/testimonial/author-2.png" alt=""></a>
                             </div>
                             <div class="testimonial__item__author__text">
                                 <h5>John Smith -</h5>
@@ -1481,9 +1480,9 @@
                                 Consultant made a number of suggestions to help improve our systems. Consultant
                                 explained how things work and why it would help."</p>
                             <div class="testimonial__item__author">
-                                <a href="#review-1"><img src="img/testimonial/author-1.png" alt=""></a>
-                                <a href="#review-2" class="active"><img src="img/testimonial/author-2.png" alt=""></a>
-                                <a href="#review-3"><img src="img/testimonial/author-3.png" alt=""></a>
+                                <a href="#review-1"><img src="./resources/img/testimonial/author-1.png" alt=""></a>
+                                <a href="#review-2" class="active"><img src="./resources/img/testimonial/author-2.png" alt=""></a>
+                                <a href="#review-3"><img src="./resources/img/testimonial/author-3.png" alt=""></a>
                             </div>
                             <div class="testimonial__item__author__text">
                                 <h5>John Smith -</h5>
@@ -1502,9 +1501,9 @@
                                 Consultant made a number of suggestions to help improve our systems. Consultant
                                 explained how things work and why it would help."</p>
                             <div class="testimonial__item__author">
-                                <a href="#review-2"><img src="img/testimonial/author-2.png" alt=""></a>
+                                <a href="#review-2"><img src="./resources/img/testimonial/author-2.png" alt=""></a>
                                 <a href="#review-3" class="active"><img src="img/testimonial/author-3.png" alt=""></a>
-                                <a href="#review-1"><img src="img/testimonial/author-1.png" alt=""></a>
+                                <a href="#review-1"><img src="./resources/img/testimonial/author-1.png" alt=""></a>
                             </div>
                             <div class="testimonial__item__author__text">
                                 <h5>John Smith -</h5>
@@ -1539,7 +1538,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-1.jpg">
+                        <div class="blog__item__pic set-bg" data-setbg="./resources/img/blog/blog-1.jpg">
                             <a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="blog__item__text">
@@ -1557,7 +1556,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpg"></div>
+                        <div class="blog__item__pic set-bg" data-setbg="./resources/img/blog/blog-2.jpg"></div>
                         <div class="blog__item__text">
                             <ul class="blog__item__tags">
                                 <li><i class="fa fa-tags"></i> Travel</li>
@@ -1573,7 +1572,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg"></div>
+                        <div class="blog__item__pic set-bg" data-setbg="./resources/img/blog/blog-3.jpg"></div>
                         <div class="blog__item__text">
                             <ul class="blog__item__tags">
                                 <li><i class="fa fa-tags"></i> Travel</li>
@@ -1620,7 +1619,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.jsp"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="./index.jsp"><img src="./resources/img/footer-logo.png" alt=""></a>
                         </div>
                         <p>Challenging the way things have always been done can lead to creative new options that reward
                             you.</p>
@@ -1691,16 +1690,16 @@
     </footer>
     <!-- Footer Section End -->
         <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.barfiller.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./resources/js/jquery-3.3.1.min.js"></script>
+    <script src="./resources/js/bootstrap.min.js"></script>
+    <script src="./resources/js/jquery.nice-select.min.js"></script>
+    <script src="./resources/js/jquery-ui.min.js"></script>
+    <script src="./resources/js/jquery.nicescroll.min.js"></script>
+    <script src="./resources/js/jquery.barfiller.js"></script>
+    <script src="./resources/js/jquery.magnific-popup.min.js"></script>
+    <script src="./resources/js/jquery.slicknav.js"></script>
+    <script src="./resources/js/owl.carousel.min.js"></script>
+    <script src="./resources/js/main.js"></script>
 
 </body>
 
