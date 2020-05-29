@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
     <br/>
 <h3 class="text-center">
 				상품리뷰
@@ -96,7 +98,10 @@
 				</tbody>
 			</table>
 			<div>
-				<input class="btn btn-secondary pull-right" type="button" value="글쓰기"/> 
+				<form action="insertBoard.trc">
+				<input type="hidden" value="Review" name="boardType"/> 
+				<input class="btn btn-secondary pull-right" type="submit" value="글쓰기"/> 
+				</form> 
 				<nav>
 					<ul class="pagination">
 						<li class="page-item">

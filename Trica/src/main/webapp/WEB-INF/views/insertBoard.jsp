@@ -78,10 +78,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Board</h2>
+                        <h2>Board Insert</h2>
                         <div class="breadcrumb__option">
                             <a href="#"><i class="fa fa-home"></i> Home</a>
-                            <span>Board</span>
+                            <span>Board Insert</span>
                         </div>
                     </div>
                 </div>
@@ -96,145 +96,47 @@
 	<div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
 		<div class="col-md-12">
 			<div class="tabbable" id="tabs-367706">
-				<ul class="nav nav-tabs">
-					<li class="nav-item">
-						<a class="nav-link active" href="#" data-tab="boardFree">자유게시판</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-tab="boardInquiry">문의게시판</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-tab="boardReview">상품리뷰</a>
-					</li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane active" id="tabContent">
-					<br/>
-									<h3 class="text-center">
-				자유게시판
-			</h3>
-			<br/>
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>
-							#
-						</th>
-						<th>
-							Product
-						</th>
-						<th>
-							Payment Taken
-						</th>
-						<th>
-							Status
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							1
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							01/04/2012
-						</td>
-						<td>
-							Default
-						</td>
-					</tr>
-					<tr>
-						<td>
-							1
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							01/04/2012
-						</td>
-						<td>
-							Approved
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							02/04/2012
-						</td>
-						<td>
-							Declined
-						</td>
-					</tr>
-					<tr>
-						<td>
-							3
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							03/04/2012
-						</td>
-						<td>
-							Pending
-						</td>
-					</tr>
-					<tr>
-						<td>
-							4
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							04/04/2012
-						</td>
-						<td>
-							Call in to confirm
-						</td>
-					</tr>
-				</tbody>
-			</table>
-						<div>
-				<input class="btn btn-secondary pull-right" type="button" value="글쓰기"/> 
-				<nav>
-					<ul class="pagination">
-						<li class="page-item">
-							<a class="page-link" href="#">Previous</a>
-						</li>
-						<li class="page-item">
-							<a class="page-link" href="#">1</a>
-						</li>
-						<li class="page-item">
-							<a class="page-link" href="#">2</a>
-						</li>
-						<li class="page-item">
-							<a class="page-link" href="#">3</a>
-						</li>
-						<li class="page-item">
-							<a class="page-link" href="#">4</a>
-						</li>
-						<li class="page-item">
-							<a class="page-link" href="#">5</a>
-						</li>
-						<li class="page-item">
-							<a class="page-link" href="#">Next</a>
-						</li>
-					</ul>
-				</nav>
-				
-			</div>
-					</div>
-				</div>
+				<div class="pb-5"> 
+      <div class="container"> 
+         <div class="row ">
+            <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+               <div class="page-header">
+                   <div class="col-md-12 col-md-offset-3 text-center">
+                     <h3>글 등록</h3>
+                  </div>
+               </div>
+               <div class="col-sm-12 col-md-offset-3">
+                  <form method="post" action="board/registBoard.trc" enctype="multipart/form-data">
+                  	 <div class="row form-group">
+                        <select id="inputType" name="boardType" class="selectpicker">
+                        	<option value="Free">자유게시판</option>
+                        	<option value="Inquiry">문의게시판</option>
+                        	<option value="Review">상품리뷰</option>
+                        </select>
+                     </div>
+                     <div class="form-group">
+                        <label for="inputTitle" >제목</label> 
+                        <input id="inputTitle" type="text" class="form-control" name="boardTitle" placeholder="제목을 입력해주세요">
+                     </div>
+                     <input type="hidden" name="memberId" value=""/>
+                     <div class="form-group">
+                        <label for="inputContent">글 내용</label> 
+                        <textarea class="form-control" id="inputContent" name="boardContent" placeholder="내용을 입력해주세요">
+                        </textarea>
+                     </div> 
+                     <div class="form-group">
+                        <label for="inputContent">첨부파일</label> 
+                        <input type="file" class="form-control" maxlength="60" size="40" name='file'>
+                     </div> 
+                     
+                     <input class="btn btn-primary " type="submit"	value=" 새글 등록 " />
+                     
+                  </form>
+               </div> 
+            </div>
+         </div>
+      </div>
+   </div>
 			</div>
 			
 		</div>
@@ -332,6 +234,6 @@
     <script src="./resources/js/jquery.slicknav.js"></script>
     <script src="./resources/js/owl.carousel.min.js"></script>
     <script src="./resources/js/main.js"></script>
-    <script src="./resources/js/board.js"></script>
+    <script src="./resources/js/boardInsert.js"></script>
 </body>
 </html>

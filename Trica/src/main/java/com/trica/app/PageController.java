@@ -30,4 +30,11 @@ public class PageController {
 		mv.setViewName("boardList");
 		return mv;
 	}
+	@RequestMapping("insertBoard.trc")
+	public ModelAndView insertBoard(String boardType) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("insertBoard");
+		mv.addObject("boardType", boardType);
+		return mv;
+	}
 }

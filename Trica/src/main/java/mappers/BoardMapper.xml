@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+<insert id="insertBoard" parameterType="board">
+	INSERT INTO board
+	(board_no,member_id,board_type,board_title,board_content,board_date,view_cnt
+	<if test="boardFsize!=null">
+	 ,board_fname,board_fsize
+	 </if>
+	 )
+	VALUES
+	(seq_board_no.nextval,#{memberId},#{boardType},#{boardTitle},#{boardContent},sysdate,0
+	<if test="boardFsize!=null">
+	,#{boardFname},#{boardFsize}
+	</if>
+	)
+</insert>
+</mapper>

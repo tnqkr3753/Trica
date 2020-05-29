@@ -205,7 +205,10 @@
 				</tbody>
 			</table>
 						<div>
-				<input class="btn btn-secondary pull-right" type="button" value="글쓰기"/> 
+							<form action="insertBoard.trc">
+							<input type="hidden" value="Free" name="boardType"/> 
+							<input class="btn btn-secondary pull-right" type="submit" value="글쓰기"/> 
+							</form>
 				<nav>
 					<ul class="pagination">
 						<li class="page-item">
