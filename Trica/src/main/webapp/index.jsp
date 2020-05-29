@@ -60,7 +60,7 @@
                                         <li><a href="./contact.html">Contact</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="./blog.html">Blog</a></li>
+                                <li><a href="boardList.trc">Board</a></li>
                                 <li><a href="#">Cart</a>
                                 	 <ul class="dropdown">
                                         <li><a href="cart.trc">Shopping Cart</a></li>

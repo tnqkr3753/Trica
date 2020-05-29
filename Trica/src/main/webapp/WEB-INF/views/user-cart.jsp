@@ -226,7 +226,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.jsp"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="./index.jsp"><img src="./resources/img/footer-logo.png" alt=""></a>
                         </div>
                         <p>Challenging the way things have always been done can lead to creative new options that reward
                             you.</p>
@@ -297,15 +297,15 @@
     </footer>
     <!-- Footer Section End -->
         <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.barfiller.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./resources/js/jquery-3.3.1.min.js"></script>
+    <script src="./resources/js/bootstrap.min.js"></script>
+    <script src="./resources/js/jquery.nice-select.min.js"></script>
+    <script src="./resources/js/jquery-ui.min.js"></script>
+    <script src="./resources/js/jquery.nicescroll.min.js"></script>
+    <script src="./resources/js/jquery.barfiller.js"></script>
+    <script src="./resources/js/jquery.magnific-popup.min.js"></script>
+    <script src="./resources/js/jquery.slicknav.js"></script>
+    <script src="./resources/js/owl.carousel.min.js"></script>
+    <script src="./resources/js/main.js"></script>
 </body>
 </html>
