@@ -93,10 +93,10 @@
                             <p>전자제품의 모든것 !</p>
                         </div>
                         <div class="hero__search__form">
-                            <form action="#">
-                                <input type="text" placeholder="검색어를 입력해주세요">
+                            <form action="search.trc">
+                                <input type="text" name="title" placeholder="검색어를 입력해주세요">
                                 <div class="select__option fir">
-                                    <select>
+                                    <select name="bc_no">
                                         <option value="1">TV/냉장고/세탁기/건조기</option>
                                         <option value="2">카메라/게임/음향</option>
                                         <option value="3">주방가전</option>
@@ -105,11 +105,11 @@
                                     </select>
                                 </div>
                                 <div class="select__option sec">
-                                    <select>
+                                    <select name="sc_no">
                                         <option value="">세부 카테고리</option>
                                     </select>
                                 </div>
-                                <button type="submit">Explore Now</button>
+                                <button type="submit">찾기</button>
                             </form>
                         </div>
                         <ul class="hero__categories__tags">

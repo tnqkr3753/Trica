@@ -1,0 +1,312 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Directing Template">
+<meta name="keywords" content="Directing, unica, creative, html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Product Details</title>
+
+<!-- Google Font -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+	rel="stylesheet">
+
+<!-- Css Styles -->
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/productDetails.css" type="text/css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="./resources/productDetails.js"></script>
+
+
+
+
+</head>
+
+<body>
+	<!-- Header 시작 -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="header__logo">
+					<a href="./index.html"><img src="" alt=""></a>
+				</div>
+				<div class="col-lg-9 col-md-9">
+					<div class="header__nav">
+						<nav class="header__menu mobile-menu">
+							<ul>
+								<li><a href="./index.html">Home</a></li>
+								<li><a href="./listing.html">Listing</a></li>
+								<li><a href="#">Categories</a></li>
+								<li><a href="#">Pages</a>
+									<ul class="dropdown">
+										<li><a href="./about.html">About</a></li>
+										<li><a href="./listing-details.html">Listing Details</a></li>
+										<li><a href="./blog-details.html">Blog Details</a></li>
+										<li><a href="./contact.html">Contact</a></li>
+									</ul></li>
+								<li class="active"><a href="./blog.html">Blog</a></li>
+								<li><a href="#">Shop</a></li>
+							</ul>
+						</nav>
+						<div class="header__menu__right">
+							<a href="#" class="primary-btn"><i class="fa fa-plus"></i>Add
+								Listing</a> <a href="#" class="login-btn"><i class="fa fa-user"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="mobile-menu-wrap"></div>
+		</div>
+	</header>
+	<!-- Header 끝 -->
+
+	<!-- 상단 이미지 -->
+	<section class="hero set-bg" data-setbg="./resources/img/background_black.png">
+	</section>
+
+	<!-- 상세페이지 시작 -->
+	<div class="content">
+		<section class="product_details">
+			<br/>
+
+			<!-- 상품 큰 제목 -->
+			<div class="detailHeader">
+				<h2>드럼세탁기 F21VDT [21KG／5방향터보샷／6모션손빨래]</h2>
+			</div>
+
+			<div class="container">
+				<br />
+				<!-- 상품 이미지 및 정보 출력 -->
+				<div class="img" style="float: left;">
+					<img src="img/details/drum1.jpg" width="500" height="500">
+				</div>
+				
+				<!-- 오른쪽 상품상세정보 rightSec 출력 -->
+				<div class="rightSec" style="float: left;">
+					<dl>
+						<dt>소개</dt>
+						<dd>옷감 손상을 줄여주는 맞춤 드럼세탁기</dd>
+					</dl>
+					<dl>
+						<dt>정가</dt>
+						<dd>
+							<del>
+								<span>712,000</span>원
+							</del>
+						</dd>
+					</dl>
+					<dl class="item_price">
+						<dt>판매가</dt>
+						<dd>
+							<strong>640,000</strong>원
+						</dd>
+					</dl>
+					<dl class="item_delivery">
+						<dt>배송비</dt>
+						<dd>
+							3,000원 / 주문시결제(선결제) <a href="http://www.naver.com"><img
+								src="img/details/btnTip.gif" /></a>
+						</dd>
+					</dl>
+					<dl class="pct_code">
+						<dt>상품코드</dt>
+						<dd>00000001</dd>
+					</dl>
+					<dt>브랜드</dt>
+					<dd>LG</dd>
+					<td class="cart_prdt_name">
+						<div class="item_choice_list">
+							<table class="option_display_area" border="0" cellpadding="0"
+								cellspacing="0">
+								<colgroup>
+									<col width="330px">
+									<col>
+									<col width="80px">
+									<col width="40px">
+								</colgroup>
+								<tbody id="option_display_item_0">
+									<tr class="check optionKey_0">
+									<tr>
+										<span class="count"> <span class="goods_qty">
+												<td><strong><span>수량</span></strong></td>
+												<td><input type="text" name="goodsCnt[]"
+													class="goodsCnt_0" title="수량" value="1"></td>
+												<td><input type="button" class="up_goods_cnt"
+													title="증가" value="▲"></td>
+												<td><input type="button" class="down_goods_cnt"
+													title="감소" value="▼"></td>
+									</tr>
+								</tbody>
+							</table>
+							<br />
+							<div class="total">
+								<dt>총 금액</dt>
+								<dd>
+									<strong class="total_price">640,000원</strong>
+								</dd>
+							</div>
+							<br />
+							<div class="btn_choice_box">
+								<input type="button" class="btn_add_cart" value="장바구니">
+								</button>
+								<input type="button" class="btn_add_wish" value="찜하기">
+								</button>
+								<input type="button" class="btn_add_order" value="구매하기">
+								</button>
+
+							</div>
+							<br /> <br /> <br /> <br /> <br /> <br /> <br />
+					</td>
+				</div>
+				<!-- rightSec 끝 -->
+			</div>
+
+			<!-- 상세정보 시작 -->
+			<!-- *********** detailTab : 스크롤 내려도 고정되게 수정해야함 *********** -->
+			<div class="detailTab"
+				style="position: absolute; top: 630px; left: 0px; width: 1008px; margin-left: 0px; z-index: 1;">
+				<a href="#detail_cont" class="active"
+					style="margin-left: 33px; margin-right: 33px;">상품상세설명</a> <a
+					href="#nece_cont" style="margin-left: 33px; margin-right: 33px;">필수정보</a>
+				<a href="#refund_cont"
+					style="margin-left: 33px; margin-right: 33px;">교환/환불정보</a>
+			</div>
+			<div class="detail_cont" id="detail_cont">
+				<h2>상품상세정보</h2>
+				<div class="detail_explain_box">
+
+					<p style="text-align: center;" align="center">
+						<img src="img/details/detail1.jpg">
+					</p>
+				</div>
+			</div>
+			<div class="nece_cont" id="nece_cont">
+				<h2>필수정보</h2>
+				<div class="nece_explain_box">
+
+					<p style="text-align: center;" align="center">
+						<img src="img/details/nece1.PNG">
+					</p>
+				</div>
+			</div>
+			<div class="refund_cont" id="refund_cont">
+				<h2>교환 및 반품 안내</h2>
+				<div class="refund_explain_box">
+					<p style="text-align: center;" align="center">
+						<img src="img/details/refund.PNG">
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- 상세정보 끝 -->
+	</div>
+		<!-- Footer 시작 -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="footer__about">
+							<div class="footer__about__logo">
+								<a href="./index.html"><img src="./resources/img/footer-logo.png" alt=""></a>
+							</div>
+							<p>Challenging the way things have always been done can lead
+								to creative new options that reward you.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 offset-lg-1 col-md-6">
+						<div class="footer__address">
+							<ul>
+								<li><span>Call Us:</span>
+									<p>(+12) 345-678-910</p></li>
+								<li><span>Email:</span>
+									<p>info.colorlib@gmail .com</p></li>
+								<li><span>Fax:</span>
+									<p>(+12) 345-678-910</p></li>
+								<li><span>Connect Us:</span>
+									<div class="footer__social">
+										<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
+											class="fa fa-instagram"></i></a> <a href="#"><i
+											class="fa fa-twitter"></i></a> <a href="#"><i
+											class="fa fa-skype"></i></a>
+									</div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-md-6">
+						<div class="footer__widget">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">How it work</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Blog</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Sign In</a></li>
+								<li><a href="#">How it Work</a></li>
+								<li><a href="#">Advantages</a></li>
+								<li><a href="#">Direo App</a></li>
+								<li><a href="#">Packages</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="footer__copyright">
+							<div class="footer__copyright__text">
+								<p>
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+									Copyright &copy;
+									<script>
+										document
+												.write(new Date().getFullYear());
+									</script>
+									All rights reserved | This template is made with <i
+										class="fa fa-heart" aria-hidden="true"></i> by <a
+										href="https://colorlib.com" target="_blank">Colorlib</a>
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								</p>
+							</div>
+							<div class="footer__copyright__links">
+								<a href="#">Terms</a> <a href="#">Privacy Policy</a> <a href="#">Cookie
+									Policy</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+		<!-- Footer 끝 -->
+
+		<!-- Js Plugins -->
+		<script src="./resources/js/jquery-3.3.1.min.js"></script>
+		<script src="./resources/js/bootstrap.min.js"></script>
+		<script src="./resources/js/jquery.nice-select.min.js"></script>
+		<script src="./resources/js/jquery-ui.min.js"></script>
+		<script src="./resources/js/jquery.nicescroll.min.js"></script>
+		<script src="./resources/js/jquery.barfiller.js"></script>
+		<script src="./resources/js/jquery.magnific-popup.min.js"></script>
+		<script src="./resources/js/jquery.slicknav.js"></script>
+		<script src="./resources/js/owl.carousel.min.js"></script>
+		<script src="./resources/js/main.js"></script>
+</body>
+</html>

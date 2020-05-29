@@ -11,8 +11,8 @@
 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
 	<property name="url" value="jdbc:oracle:thin:@192.168.0.8:1521:orcl"></property>
-	<property name="username" value="tricamanage"></property>
-	<property name="password" value="112233"></property>
+	<property name="username" value="trica"></property>
+	<property name="password" value="456456"></property>
 </bean>	
 	
 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

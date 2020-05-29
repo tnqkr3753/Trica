@@ -77,7 +77,7 @@ public class BoardVO {
 			this.boardFname = file.getOriginalFilename(); //원래 파일 경로
 			this.boardFsize  = file.getSize();
 			//실제 파일로 저장
-			File f = new File("C:\\Users\\KOSMO_25\\git\\Trica\\Trica\\src\\main\\webapp\\resources\\upload\\"+boardFname);
+			File f = new File("C:\\Users\\KOSMO_25\\git\\Trica\\Trica\\src\\main\\webapp\\resources\\upload\\board\\img\\"+boardFname);
 			try {
 				file.transferTo(f);
 			} catch (IllegalStateException | IOException e) {

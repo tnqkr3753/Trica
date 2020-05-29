@@ -41,7 +41,7 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li ><a href="./index.jsp">Home</a></li>
+                                <li ><a href="../index.jsp">Home</a></li>
                                 <li><a href="#">Shop</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
@@ -54,15 +54,14 @@
                                 <li><a href="./blog.html">Blog</a></li>
                                 <li class="active"><a href="#">Cart</a>
                                 	 <ul class="dropdown">
-                                        <li><a href="cart.trc">Shopping Cart</a></li>
-                                        <li><a href="favorite.trc">Favorite</a></li>
-                                        <li><a href="orderList.trc">OrderList</a></li>
+                                        <li><a href="./cart.trc">Shopping Cart</a></li>
+                                        <li><a href="./favorite.trc">Favorite</a></li>
+                                        <li><a href="./orderList.trc">OrderList</a></li>
                                     </ul>
                                 </li>
                              </ul> 
                         </nav>
                         <div class="header__menu__right">
-                            <a href="#" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
                             <a href="#" class="login-btn"><i class="fa fa-user"></i></a>
                         </div> 
                     </div>   
@@ -106,7 +105,7 @@
                   </div>
                </div>
                <div class="col-sm-12 col-md-offset-3">
-                  <form method="post" action="board/registBoard.trc" enctype="multipart/form-data">
+                  <form method="post" action="registBoard.trc" enctype="multipart/form-data">
                   	 <div class="row form-group">
                         <select id="inputType" name="boardType" class="selectpicker">
                         	<option value="Free">자유게시판</option>
@@ -152,7 +151,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.jsp"><img src="./resources/img/footer-logo.png" alt=""></a>
+                            <a href="../index.jsp"><img src="./resources/img/footer-logo.png" alt=""></a>
                         </div>
                         <p>Challenging the way things have always been done can lead to creative new options that reward
                             you.</p>

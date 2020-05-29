@@ -10,14 +10,13 @@ import com.trica.service.BoardService;
 import com.trica.vo.BoardVO;
 
 @Controller
-@RequestMapping("/board")
 public class BoardController {
 	@Autowired
 	BoardService boardService ;
-	@RequestMapping("/{step}.trc")
+	@RequestMapping("/board/{step}.trc")
 	public ModelAndView getBoardList(@PathVariable String step) {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("boardTable/"+step);
+		mv.setViewName("board/"+step);
 		return mv;
 	}
 	@RequestMapping("/registBoard.trc")
@@ -25,9 +24,22 @@ public class BoardController {
 		ModelAndView mv = new ModelAndView();
 		System.out.println(vo.getBoardContent());
 		System.out.println(vo.getBoardTitle());
-		mv.setViewName("boardList");
+		mv.setViewName("board/boardList");
 		int result = boardService.boardInsert(vo);
 		mv.addObject("result",result);
+		return mv;
+	}
+	@RequestMapping("/boardList.trc")
+	public ModelAndView getBoardList() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("board/boardList");
+		return mv;
+	}
+	@RequestMapping("/insertBoard.trc")
+	public ModelAndView insertBoard(String boardType) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("board/insertBoard");
+		mv.addObject("boardType", boardType);
 		return mv;
 	}
 }

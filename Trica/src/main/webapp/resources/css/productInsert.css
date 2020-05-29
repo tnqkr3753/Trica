@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.btn_pct_reset, .btn_pct_insert{
+    border-radius: 30px;
+    display: inline-block;
+    width: 150px;
+    height: 52px;
+    margin: 0 0 0 6px;
+    padding: 0 10px 0 10px;
+    color: #3e3d3c;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container {
+	width : 80%;
+}

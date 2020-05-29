@@ -9,32 +9,21 @@ public class PageController {
 	@RequestMapping("cart.trc")
 	public ModelAndView getCart() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("user-cart");
+		mv.setViewName("cart/user-cart");
 		return mv;
 	}
 	@RequestMapping("favorite.trc")
 	public ModelAndView getFavorite() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("user-favorite");
+		mv.setViewName("cart/user-favorite");
 		return mv;
 	}
 	@RequestMapping("orderList.trc")
 	public ModelAndView getOrderList() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("order-list");
+		mv.setViewName("cart/order-list");
 		return mv;
 	}
-	@RequestMapping("boardList.trc")
-	public ModelAndView getBoardList() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("boardList");
-		return mv;
-	}
-	@RequestMapping("insertBoard.trc")
-	public ModelAndView insertBoard(String boardType) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("insertBoard");
-		mv.addObject("boardType", boardType);
-		return mv;
-	}
+
+
 }
