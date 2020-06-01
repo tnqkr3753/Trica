@@ -11,7 +11,7 @@ import com.trica.vo.BoardVO;
 
 @Controller
 public class BoardController {
-	int boardNoFormat = 6;
+	int boardPerPage = 10;
 	@Autowired
 	BoardService boardService ;
 	@RequestMapping("/board/{step}.trc")
@@ -34,15 +34,24 @@ public class BoardController {
 	public ModelAndView getBoardList(String pageNum,String bType) {
 		int pNum=1;
 		String boardType = "Free";
+		//파라미터에 타입이 없다면
 		if(bType!=null) {
 			boardType=bType;
 		}
+		//파라미터에 페이지넘버가 없다면
 		if(pageNum != null) {
 			pNum=Integer.parseInt(pageNum);
+		}
+		int totalBoardNum = boardService.countBoard(); //게시글의 총 개수
+		int totalPageNum =totalBoardNum/boardPerPage;
+		if(totalPageNum%boardPerPage!=0)  {
+			totalPageNum+=1; 
 		}
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("bList", boardService.getBoardList(pNum,boardType));
 		mv.setViewName("board/boardFree");
+		mv.addObject("totalPage", totalPageNum);
+		mv.addObject("pageNum", pNum);
 		return mv;
 	}
 	@RequestMapping("/boardList.trc")

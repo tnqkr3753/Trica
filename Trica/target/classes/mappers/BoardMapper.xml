@@ -39,4 +39,8 @@
 		FROM board
 		WHERE trim(BOARD_NO)=#{boardNo}
 	</select>
+	<select id="countBoard" resultType="hashmap">
+		SELECT count(board_no) 
+		FROM board;
+	</select>
 </mapper>

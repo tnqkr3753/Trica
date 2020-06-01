@@ -8,4 +8,5 @@ public interface BoardService {
 	public int boardInsert(BoardVO vo) ;
 	public BoardVO getBoardOne(BoardVO vo);
 	public List<BoardVO> getBoardList(int pNum,String boardType);
+	public int countBoard();
 }

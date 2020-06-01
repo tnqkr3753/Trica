@@ -33,5 +33,9 @@ public class BoardServiceImpl implements BoardService {
 		hash.put("boardType",boardType);
 		return boardDAO.getBoardList(hash);
 	}
+	@Override
+	public int countBoard() {
+		return boardDAO.countBoard();
+	}
 
 }

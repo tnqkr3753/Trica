@@ -26,5 +26,9 @@ public class BoardDAOImpl implements BoardDAO {
 		System.out.println("------dao getBoardOne 호출------ : " + vo.getBoardNo());
 		return sqlSession.selectOne("BoardDAO.selectBoard", vo);
 	}
+	@Override
+	public int countBoard() {
+		return sqlSession.selectOne("BoardDAO.countBoard");
+	}
 
 }

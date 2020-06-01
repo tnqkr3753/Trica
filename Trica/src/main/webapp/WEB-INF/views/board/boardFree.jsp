@@ -76,8 +76,8 @@
 				<nav>
 					<ul class="pagination">
 						<li class="page-item">
-							<input type="hidden" value="Free" name="boardType"/> 
-							<a class="page-link" href="#">Previous</a>
+							<input type="hidden" value="${board[0].boardType }" name="bType"/> 
+							<a class="page-link" href="getBoardList.trc?pageNum=${pageNum-1}&bType=${board[0].boardType}">Previous</a>
 						</li>
 						<li class="page-item">
 							<a class="page-link" href="#">1</a>
