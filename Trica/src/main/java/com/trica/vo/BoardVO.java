@@ -17,9 +17,23 @@ public class BoardVO {
 	private int viewCnt;
 	private String boardFname;
 	private Long boardFsize;
+	private String parentBoardNo;
+	private int lvl;
+
 	//파일
 	MultipartFile file;
-	
+	public String getParentBoardNo() {
+		return parentBoardNo;
+	}
+	public void setParentBoardNo(String parentBoardNo) {
+		this.parentBoardNo = parentBoardNo;
+	}
+	public int getLevel() {
+		return lvl;
+	}
+	public void setLevel(int lvl) {
+		this.lvl = lvl;
+	}
 	public String getBoardFname() {
 		return boardFname;
 	}

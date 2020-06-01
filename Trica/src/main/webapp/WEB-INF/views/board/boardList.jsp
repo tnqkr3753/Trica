@@ -94,8 +94,9 @@
 	<div class="row">
 	<div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
 		<div class="col-md-12">
+		
 			<div class="tabbable" id="tabs-367706">
-				<ul class="nav nav-tabs">
+				<ul id="navtab" class="nav nav-tabs">
 					<li class="nav-item">
 						<a class="nav-link active" href="#" data-tab="boardFree">자유게시판</a>
 					</li>

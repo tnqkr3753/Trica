@@ -30,8 +30,17 @@ public class BoardController {
 		return mv;
 	}
 	@RequestMapping("/boardList.trc")
-	public ModelAndView getBoardList() {
+	public ModelAndView getBoardList(String pageNum,String bType) {
+		int pNum=1;
+		String boardType = "Free";
+		if(bType!=null) {
+			boardType=bType;
+		}
+		if(pageNum != null) {
+			pNum=Integer.parseInt(pageNum);
+		}
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("bList", boardService.getBoardList(pNum,boardType));
 		mv.setViewName("board/boardList");
 		return mv;
 	}

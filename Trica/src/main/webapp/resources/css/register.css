@@ -1,0 +1,27 @@
+@charset "UTF-8";
+ 
+#formtab {
+    background: #f5f6f7;
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+	 
+}
+ 
+h3{ 
+	margin : 0;  
+	text-align : center;  
+} 
+
+label {   
+    width: 240px;
+    cursor: pointer;
+}  
+  
+#sample6_address{ 
+	width : 80.5%;  
+}    
+#sample6_detailAddress, #sample6_extraAddress, #sample6_postcode,#addbtn{
+	 width : 40%; 
+	 display:inline-block;
+}          
+    
+        
