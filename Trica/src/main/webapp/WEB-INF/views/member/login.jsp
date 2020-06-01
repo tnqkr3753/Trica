@@ -14,18 +14,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <!-- Css Styles -->
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-<link rel="stylesheet" href="css/flaticon.css" type="text/css">
-<link rel="stylesheet" href="css/nice-select.css" type="text/css"> 
-<link rel="stylesheet" href="css/barfiller.css" type="text/css">
-<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"> 
-<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-<link rel="stylesheet" href="css/slicknav.min.css" type="text/css"> 
-<link rel="stylesheet" href="css/style.css" type="text/css">
-<link rel="stylesheet" href="css/common.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css"> 
+<link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css"> 
+<link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css"> 
+<link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/common.css" type="text/css">
  
 <!-- Bootstrap CSS -->  
 <link rel="stylesheet" 
@@ -67,7 +67,7 @@
 									</ul></li>
 								<li><a href="./blog.html">Blog</a></li>
 								<li><a href="#">Shop</a></li>
-								<li><a href="./Register.jsp">Register</a></li>
+								<li><a href="Register.trc">Register</a></li>
 							</ul>
 						</nav>
 						<div class="header__menu__right">
@@ -81,7 +81,7 @@
 	<!-- Header Section End -->
 	<!-- Breadcrumb Begin -->
 	<div class="breadcrumb-area set-bg"
-		data-setbg="img/breadcrumb/breadcrumb-blog.jpg">
+		data-setbg="./resources/img/breadcrumb/breadcrumb-blog.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
@@ -125,19 +125,6 @@
 	</div>
 
 	<div class="modal"></div>
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
 
 	<!-- Footer Section Begin -->
 	<footer class="footer">
@@ -146,7 +133,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer__about">
 						<div class="footer__about__logo">
-							<a href="./index.jsp"><img src="img/footer-logo.png" alt=""></a>
+							<a href="./index.jsp"><img src="./resources/img/footer-logo.png" alt=""></a>
 						</div>
 						<p>Challenging the way things have always been done can lead
 							to creative new options that reward you.</p>
@@ -215,16 +202,23 @@
 	</footer>
 	<!-- Footer Section End -->
 	<!-- Js Plugins -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/jquery.barfiller.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/jquery.slicknav.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="./resources/js/jquery-3.3.1.min.js"></script>
+	<script src="./resources/js/bootstrap.min.js"></script>
+	<script src="./resources/js/jquery.nice-select.min.js"></script>
+	<script src="./resources/js/jquery-ui.min.js"></script>
+	<script src="./resources/js/jquery.nicescroll.min.js"></script>
+	<script src="./resources/js/jquery.barfiller.js"></script>
+	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
+	<script src="./resources/js/jquery.slicknav.js"></script>
+	<script src="./resources/js/owl.carousel.min.js"></script>
+	<script src="./resources/js/main.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
 </body>
 </html>
 </html>

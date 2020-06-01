@@ -72,7 +72,7 @@
                         </nav>
                         <div class="header__menu__right">
                             <a href="#" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
-                            <a href="loginPage.trc" class="login-btn"><i class="fa fa-user"></i></a>
+                            <a href="LoginPage.trc" class="login-btn"><i class="fa fa-user"></i></a>
                         </div> 
                     </div>   
                 </div> 

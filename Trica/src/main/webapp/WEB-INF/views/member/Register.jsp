@@ -16,18 +16,18 @@
 	rel="stylesheet">
 
 <!-- Css Styles -->
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-<link rel="stylesheet" href="css/flaticon.css" type="text/css">
-<link rel="stylesheet" href="css/nice-select.css" type="text/css">
-<link rel="stylesheet" href="css/barfiller.css" type="text/css">
-<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-<link rel="stylesheet" href="css/style.css" type="text/css">
-<link rel="stylesheet" href="css/register.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/register.css" type="text/css">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -134,7 +134,7 @@ function sample6_execDaumPostcode() {
   
 	<!-- Breadcrumb Begin -->
 	<div class="breadcrumb-area set-bg" 
-		data-setbg="img/breadcrumb/breadcrumb-blog.jpg">
+		data-setbg="./resources/img/breadcrumb/breadcrumb-blog.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
@@ -243,7 +243,7 @@ function sample6_execDaumPostcode() {
 				<div class="col-lg-3 col-md-6">
 					<div class="footer__about">
 						<div class="footer__about__logo">
-							<a href="./index.jsp"><img src="img/footer-logo.png" alt=""></a>
+							<a href="./index.jsp"><img src="./resources/img/footer-logo.png" alt=""></a>
 						</div>
 						<p>Challenging the way things have always been done can lead
 							to creative new options that reward you.</p>
@@ -314,17 +314,17 @@ function sample6_execDaumPostcode() {
 	</footer>
 	<!-- Footer Section End -->
 	<!-- Js Plugins -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/jquery.barfiller.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/jquery.slicknav.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/register.js"></script>
+	<script src="./resources/js/jquery-3.3.1.min.js"></script>
+	<script src="./resources/js/bootstrap.min.js"></script>
+	<script src="./resources/js/jquery.nice-select.min.js"></script>
+	<script src="./resources/js/jquery-ui.min.js"></script>
+	<script src="./resources/js/jquery.nicescroll.min.js"></script>
+	<script src="./resources/js/jquery.barfiller.js"></script>
+	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
+	<script src="./resources/js/jquery.slicknav.js"></script>
+	<script src="./resources/js/owl.carousel.min.js"></script>
+	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/register.js"></script>
 	
 </body>
 </html>
