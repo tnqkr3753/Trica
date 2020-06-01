@@ -117,11 +117,11 @@
                         <label for="inputTitle" >제목</label> 
                         <input id="inputTitle" type="text" class="form-control" name="boardTitle" placeholder="제목을 입력해주세요">
                      </div>
-                     <input type="hidden" name="memberId" value=""/>
+                     <input type="hidden" name="memberId" value="aaarirang"/>
+                     <!-- 벨류 빼기 -->
                      <div class="form-group">
                         <label for="inputContent">글 내용</label> 
-                        <textarea class="form-control" id="inputContent" name="boardContent" placeholder="내용을 입력해주세요">
-                        </textarea>
+                        <textarea class="form-control" id="inputContent" name="boardContent" placeholder="내용을 입력해주세요"></textarea>
                      </div> 
                      <div class="form-group">
                         <label for="inputContent">첨부파일</label> 

@@ -11,6 +11,7 @@ import com.trica.vo.BoardVO;
 
 @Controller
 public class BoardController {
+	int boardNoFormat = 6;
 	@Autowired
 	BoardService boardService ;
 	@RequestMapping("/board/{step}.trc")
@@ -29,7 +30,7 @@ public class BoardController {
 		mv.addObject("result",result);
 		return mv;
 	}
-	@RequestMapping("/boardList.trc")
+	@RequestMapping("/getBoardList.trc")
 	public ModelAndView getBoardList(String pageNum,String bType) {
 		int pNum=1;
 		String boardType = "Free";
@@ -41,6 +42,13 @@ public class BoardController {
 		}
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("bList", boardService.getBoardList(pNum,boardType));
+		mv.setViewName("board/boardFree");
+		return mv;
+	}
+	@RequestMapping("/boardList.trc")
+	public ModelAndView getBoardPage() {
+
+		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/boardList");
 		return mv;
 	}
@@ -49,6 +57,14 @@ public class BoardController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/insertBoard");
 		mv.addObject("boardType", boardType);
+		return mv;
+	}
+	@RequestMapping("/boardView.trc")
+	public ModelAndView boardView(BoardVO vo) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("board/boardView");
+		BoardVO rvo = boardService.getBoardOne(vo);
+		mv.addObject("board", rvo);
 		return mv;
 	}
 }

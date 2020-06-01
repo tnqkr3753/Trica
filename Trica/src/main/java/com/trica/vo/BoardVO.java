@@ -2,9 +2,10 @@ package com.trica.vo;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.annotation.Generated;
-import org.springframework.format.annotation.DateTimeFormat;
+import java.util.Locale;
+
 import org.springframework.web.multipart.MultipartFile;
 public class BoardVO {
 	private String boardNo;
@@ -12,13 +13,13 @@ public class BoardVO {
 	private String boardType;
 	private String boardTitle;
 	private String boardContent;
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date boardDate;
 	private int viewCnt;
 	private String boardFname;
 	private Long boardFsize;
 	private String parentBoardNo;
 	private int lvl;
+	private String dateKor;
 
 	//파일
 	MultipartFile file;
@@ -75,6 +76,14 @@ public class BoardVO {
 	}
 	public void setBoardDate(Date boardDate) {
 		this.boardDate = boardDate;
+		SimpleDateFormat formatter = new SimpleDateFormat ( "yyyy.MM.dd HH:mm:ss", Locale.KOREA );
+		this.dateKor = formatter.format(boardDate);
+	}
+	public int getLvl() {
+		return lvl;
+	}
+	public String getDateKor() {
+		return dateKor;
 	}
 	public int getViewCnt() {
 		return viewCnt;
