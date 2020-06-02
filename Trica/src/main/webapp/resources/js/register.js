@@ -14,14 +14,14 @@ $('input[type="checkbox"][name="gender"]').click(function(){
 	    $(this).prop('checked', true);
 	    alert($(this).val());
 	} 
-});       
+});         
  
 //이용약관 동의  
 $('#agree').click(function(){ 
 	if(agree.checked == true) { alert("이용약관에 동의하였습니다."); }
 }) 
    
-//유형 체크
+//유형 체크 
 $('input[type="checkbox"][name="memberType"]').click(function(){
 	//클릭 이벤트 발생한 요소가 체크 상태인 경우 
 	if ($(this).prop('checked')){ 
@@ -30,5 +30,15 @@ $('input[type="checkbox"][name="memberType"]').click(function(){
 		$(this).prop('checked', true);  
 		alert($(this).attr('v')); 
 	}
-	
+//서브밋 이벤트 막기  
+//$('#join-submit').attr('disabled', true);	 
+//$('#join-submit').attr('disabled', false);	
+ 
+//서브밋 버튼 눌렸을 때  
+$('#join-submit').click(function(){
+	var addr = $('#sample6_postcode').val()+$('#sample6_address').val()+$('#sample6_detailAddress').val()+$('#sample6_extraAddress').val()
+	$('#address').val(addr);
+});	 
+ 
+ 	
 });   

@@ -6,9 +6,12 @@
 <settings>
 	<setting name="mapUnderscoreToCamelCase" value="true"/>
 </settings>
+
 <typeAliases>
 	<typeAlias alias="board" type="com.trica.vo.BoardVO"/>
+	<typeAlias alias="member" type="com.trica.vo.MemberVO"/>
 </typeAliases>
 
-</configuration>
-
+</configuration>   
+ 
+    

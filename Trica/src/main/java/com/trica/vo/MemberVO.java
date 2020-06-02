@@ -6,10 +6,11 @@ public class MemberVO {
 	private String password;
 	private String memberName;
 	private String regNum;
-	private String address;
+	private String address; 
 	private String gender;
-	private String tel;
-	public String getMemberId() {
+	private String tel; 
+	
+	public String getMemberId() { 
 		return memberId;
 	}
 	public void setMemberId(String memberId) {

@@ -10,8 +10,8 @@
 	 </if>
 	 <if test="parentBoardNo!=null">
 	 ,parent_board_no
-	 </if>
-	 )
+	 </if> 
+	 ) 
 	VALUES
 	(seq_board_no.nextval,#{memberId},#{boardType},#{boardTitle},#{boardContent},sysdate,0
 	<if test="boardFsize!=null">
