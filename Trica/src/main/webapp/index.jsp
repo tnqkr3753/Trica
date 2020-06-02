@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>전자제품의 모든것 ! TRICA</title> 
-.
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -71,8 +70,6 @@
                         </nav>
                         <div class="header__menu__right">
                             <a href="productInsert.trc" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
-                            <a href="#" class="login-btn"><i class="fa fa-user"></i></a>
-                            <a href="#" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
                             <a href="LoginPage.trc" class="login-btn"><i class="fa fa-user"></i></a>
                         </div> 
                     </div>   

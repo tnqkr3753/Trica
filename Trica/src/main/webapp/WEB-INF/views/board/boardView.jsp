@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+   <script src="./resources/js/boardView.js"></script>
     <br/>
 			<div class="container-fluid">
 	<div class="row">
@@ -32,12 +33,13 @@
 					</table>
 				</div>
 				<div class="card-footer">
-					<form>
+					
 					<input id="btn-list" type="button" class="btn btn-secondary" value="목록가기"/>
+					<input id="btn-reply" type="button" class="btn btn-secondary" value="답글달기"/>
 					<input type="hidden" value="${board.boardNo }" name="boardNo"/>
-					<input id="btn-delete" type="button" class="btn btn-secondary" value="수정하기"/>
-					<input id="btn-list" type="button" class="btn btn-secondary float-right" value="삭제하기"/>
-					</form>
+					<input type="hidden" value="${board.boardType }" name="boardType"/>
+					<input id="btn-modify" type="button" class="btn btn-secondary" value="수정하기"/>
+					<input id="btn-delete" type="button" class="btn btn-secondary float-right" value="삭제하기"/>
 				</div>
 			</div>
 		</div>

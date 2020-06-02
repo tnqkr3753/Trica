@@ -34,8 +34,8 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.getBoardList(hash);
 	}
 	@Override
-	public int countBoard() {
-		return boardDAO.countBoard();
+	public HashMap countBoard(String bType) {
+		return boardDAO.countBoard(bType);
 	}
 
 }
