@@ -1,23 +1,36 @@
-/*로그인 영역*/
-.login_wrap{position:relative;}
-#login_f{
-  width:305px;height:161px;background:url("../images/login_bg.png");
-  position:absolute;left:-110px;
-  top:-500px;z-index:15;padding:40px 0 0 30px;
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+html {
+	height: 100%;
 }
-.user_id, .user_pw{position:relative;}
-.user_id label, .user_pw label{position:absolute;top:3px;left:1px;}
-.user_pw{margin-bottom:8px;}
-#user_id, #user_pw{
-  width:170px;height:33px;line-height:33px;
-  padding-left:3px;border:1px solid #aaa;margin:2px 0;
+ 
+#login-form { 
+	width: 100%;
+	height: 100%; 
+	margin: 0;
+	padding-top: 80px;  
+	padding-bottom: 40px;
+	font-family: "Nanum Gothic", arial, helvetica, sans-serif;
+	background-repeat: no-repeat;
+	background: linear-gradient(to bottom right, #0098FF, #6BA8D1);
+	text-align: center; 
 }
-#login_f img{vertical-align:middle;}
-.log_btn{position:absolute;top:39px;right:40px;}
-.login_close_btn{position:absolute;bottom:20px;right:22px;}
-.join_btn_wrap{margin:10px 0;}
-.join_btn_wrap a{
-  padding-left:10px;
-  background:url("../images/login_bullet.gif") no-repeat;
+
+.card {
+	margin: 0 auto; /* Added */
+	float: none; /* Added */
+	margin-bottom: 10px; /* Added */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
-.sch_id_btn{margin-left:20px;} 
+
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+} 
+

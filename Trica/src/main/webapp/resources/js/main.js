@@ -216,5 +216,6 @@
 	$('#favorite-btn').css({
 		'float':'right'
 	})
+	
 	 
 })(jQuery);
