@@ -10,4 +10,7 @@ public interface BoardDAO {
 	public List<BoardVO> getBoardList(HashMap hash);
 	public BoardVO getBoardOne(BoardVO vo);
 	public HashMap countBoard(String bType);
+	public int deleteBoard(BoardVO vo);
+	public int modifyBoard(BoardVO vo);
+	public void increateCount(BoardVO vo);
 }

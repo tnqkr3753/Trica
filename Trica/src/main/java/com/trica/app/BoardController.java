@@ -1,9 +1,13 @@
 package com.trica.app;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -104,12 +108,43 @@ public class BoardController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/boardView");
 		BoardVO rvo = boardService.getBoardOne(vo);
+		boardService.increaseCount(rvo);
 		mv.addObject("board", rvo);
 		return mv;
 	}
 	@RequestMapping("/deleteBoard.trc")
-	public ModelAndView deleteBoard(BoardVO vo) {
+	public ModelAndView deleteBoard(BoardVO vo,HttpServletResponse response) throws IOException {
 		ModelAndView mv = new ModelAndView();
+		int result = boardService.deleteBoard(vo);
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter pw = response.getWriter();
+		pw.println("<script type='text/javascript'>");
+		if(result==1) {
+			pw.println("alert('파일이 삭제되었습니다.');");
+		}else {
+			pw.println("alert('파일 삭제에 실패하였습니다.');");
+		}
+		pw.println("history.back();");
+		pw.println("</script>");
+		pw.flush();
+		mv.setViewName("board/boardList");
+		return mv;
+	}
+	@RequestMapping("modifierBoard.trc")
+	public ModelAndView modifierBoard(BoardVO vo) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("board/boardModify");
+		mv.addObject("board", boardService.getBoardOne(vo));
+		return mv;
+	}
+	@RequestMapping("modifyBoard.trc")
+	public ModelAndView modifyBoard(BoardVO vo) {
+		ModelAndView mv = new ModelAndView();
+		int result = boardService.modifyBoard(vo);
+		if(result==1) {
+			mv.addObject("board", boardService.getBoardOne(vo));
+			mv.setViewName("board/boardView");
+		}
 		mv.setViewName("board/boardList");
 		return mv;
 	}

@@ -30,7 +30,7 @@
 																					WHERE board_type=#{boardType}
 																					start with parent_board_no is null
 																					connect by prior board_no = parent_board_no
-																					order SIBLINGS by board_no desc)) b
+																					order SIBLINGS by board_date desc)) b
 		WHERE a.board_no=b.board_no and b.rm<![CDATA[>=]]>#{startRow} and b.rm<![CDATA[<=]]>#{endRow}
 	</select>
 	
@@ -44,4 +44,20 @@
 		FROM board
 		WHERE board_Type = #{bType}
 	</select>
+	<delete id="deleteBoard" parameterType="board">
+		DELETE FROM board 
+		WHERE trim(board_no)=trim(#{boardNo})
+	</delete>
+	<update id="modifyBoard" parameterType="board">
+		UPDATE board SET board_title=#{boardTitle},board_type=#{boardType},board_content=#{boardContent}
+		<if test="boardFsize!=null">
+		,board_fname=#{boardFname},
+		board_fsize=#{boardFsize}
+		</if>
+		WHERE trim(board_no)=trim(#{boardNo})
+	</update>
+	<update id="increaseCount" parameterType="board">
+		UPDATE board SET view_cnt=view_cnt+1 
+		WHERE trim(board_no)=trim(#{boardNo})
+	</update>
 </mapper>
