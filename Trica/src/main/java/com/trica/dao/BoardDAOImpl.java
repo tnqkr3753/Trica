@@ -27,8 +27,8 @@ public class BoardDAOImpl implements BoardDAO {
 		return sqlSession.selectOne("BoardDAO.selectBoard", vo);
 	}
 	@Override
-	public int countBoard() {
-		return sqlSession.selectOne("BoardDAO.countBoard");
+	public HashMap countBoard(String bType) {
+		return sqlSession.selectOne("BoardDAO.countBoard",bType);
 	}
 
 }
