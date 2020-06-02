@@ -61,4 +61,19 @@ public class ProductController {
 		mv.setViewName("goToIndex");	// 인덱스 창으로
 		return mv;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	@RequestMapping("getNewList.trc")
+	public ModelAndView getNewList(ModelAndView mv) {
+		mv.setViewName("");	// ???????????????????
+		mv.addObject("list", productService.getNewList());	// 데이터 저장
+		
+		return mv;
+	}
 }

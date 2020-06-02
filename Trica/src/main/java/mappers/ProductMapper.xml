@@ -21,4 +21,19 @@ VALUES
  
 </insert>
 
+
+
+
+
+
+<select id="getNewList" resultType="product">
+
+	SELECT * FROM product ORDER BY pct_reg_date
+	
+</select>
+
+
+
+
+
 </mapper>
