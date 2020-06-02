@@ -1,8 +1,7 @@
 package com.trica.service;
 
-import org.springframework.stereotype.Service;
+import com.trica.vo.ProductVO;
 
-@Service
 public interface ProductService {
-
+	public int insertProduct(ProductVO vo);
 }

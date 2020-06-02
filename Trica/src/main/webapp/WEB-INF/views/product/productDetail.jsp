@@ -9,7 +9,7 @@
 <meta name="keywords" content="Directing, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Product Details</title>
+<title>productDetails.jsp</title>
 
 <!-- Google Font -->
 <link
@@ -32,10 +32,7 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="./resources/productDetails.js"></script>
-
-
-
+<script type="text/javascript" src="./resources/js/productDetails.js"></script>
 
 </head>
 
@@ -84,7 +81,7 @@
 	<!-- 상세페이지 시작 -->
 	<div class="content">
 		<section class="product_details">
-			<br/>
+			<br />
 
 			<!-- 상품 큰 제목 -->
 			<div class="detailHeader">
@@ -93,16 +90,17 @@
 
 			<div class="container">
 				<br />
-				<!-- 상품 이미지 및 정보 출력 -->
+				<!-- 상품 이미지 출력 -->
 				<div class="img" style="float: left;">
 					<img src="img/details/drum1.jpg" width="500" height="500">
 				</div>
-				
+
 				<!-- 오른쪽 상품상세정보 rightSec 출력 -->
 				<div class="rightSec" style="float: left;">
+
 					<dl>
 						<dt>소개</dt>
-						<dd>옷감 손상을 줄여주는 맞춤 드럼세탁기</dd>
+						<dd>옷감 손상을 줄여주는 맞춤형 드럼세탁기</dd>
 					</dl>
 					<dl>
 						<dt>정가</dt>
@@ -121,23 +119,37 @@
 					<dl class="item_delivery">
 						<dt>배송비</dt>
 						<dd>
-							3,000원 / 주문시결제(선결제) <a href="http://www.naver.com"><img
-								src="img/details/btnTip.gif" /></a>
+							업체배송 <img src="./resources/img/detail/btnTip.gif" id="aaa" /></a>
+							<div id="hoverpopup" class="hoverpopup" runat="server"
+								style="border: solid 2px black; border-radius: 10px; visibility: hidden; position: absolute; background: #F5F5F5; width: 550px;">
+								<h3>업체배송 상세정보</h3>
+								<p class="txt">
+									본 상품은 업체에서 배송/발송하는 상품입니다.<br> 대형상품은 업체에서 직접 배송/설치하나, 소형상품은
+									업체에서 택배로 발송합니다.
+								</p>
+								<p class="tit">직접 배송 상품</p>
+								<p class="df">- TV/냉장고/세탁기/김치냉장고/에어컨 등 대형상품 대상</p>
+								<p class="df">- 업체 보유 물량 부족이나 도서산간지역의 경우 배송이 지연될 수 있습니다.</p>
+								<p class="tit">택배배송 상품</p>
+								<p class="df">- 택배배송 상품은 결제 후 영업일 기준 2~3일의 배송기간이 소요됩니다.</p>
+								<p class="df">- 도서산간지역의 경우 배송기간이 지연될 수 있습니다.</p>
+							</div>
 						</dd>
 					</dl>
+
 					<dl class="pct_code">
 						<dt>상품코드</dt>
 						<dd>00000001</dd>
 					</dl>
+
 					<dt>브랜드</dt>
 					<dd>LG</dd>
+					
 					<td class="cart_prdt_name">
 						<div class="item_choice_list">
-							<table class="option_display_area" border="0" cellpadding="0"
-								cellspacing="0">
+							<table class="option_display_area" border="0" cellpadding="0" cellspacing="0">
 								<colgroup>
 									<col width="330px">
-									<col>
 									<col width="80px">
 									<col width="40px">
 								</colgroup>
@@ -156,6 +168,7 @@
 								</tbody>
 							</table>
 							<br />
+							
 							<div class="total">
 								<dt>총 금액</dt>
 								<dd>
@@ -163,6 +176,7 @@
 								</dd>
 							</div>
 							<br />
+							
 							<div class="btn_choice_box">
 								<input type="button" class="btn_add_cart" value="장바구니">
 								</button>
@@ -181,13 +195,14 @@
 			<!-- 상세정보 시작 -->
 			<!-- *********** detailTab : 스크롤 내려도 고정되게 수정해야함 *********** -->
 			<div class="detailTab"
-				style="position: absolute; top: 630px; left: 0px; width: 1008px; margin-left: 0px; z-index: 1;">
+				style="position: absolute; top: 630px; left: 0px; width: 1090px; margin-left: 0px; z-index: 1;">
 				<a href="#detail_cont" class="active"
 					style="margin-left: 33px; margin-right: 33px;">상품상세설명</a> <a
 					href="#nece_cont" style="margin-left: 33px; margin-right: 33px;">필수정보</a>
 				<a href="#refund_cont"
 					style="margin-left: 33px; margin-right: 33px;">교환/환불정보</a>
 			</div>
+			
 			<div class="detail_cont" id="detail_cont">
 				<h2>상품상세정보</h2>
 				<div class="detail_explain_box">
@@ -197,6 +212,7 @@
 					</p>
 				</div>
 			</div>
+			
 			<div class="nece_cont" id="nece_cont">
 				<h2>필수정보</h2>
 				<div class="nece_explain_box">
@@ -206,6 +222,7 @@
 					</p>
 				</div>
 			</div>
+			
 			<div class="refund_cont" id="refund_cont">
 				<h2>교환 및 반품 안내</h2>
 				<div class="refund_explain_box">
@@ -214,11 +231,12 @@
 					</p>
 				</div>
 			</div>
+			
 		</section>
 		<!-- 상세정보 끝 -->
 	</div>
-		<!-- Footer 시작 -->
-		<footer class="footer">
+	<!-- Footer 시작 -->
+	<footer class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 col-md-6">

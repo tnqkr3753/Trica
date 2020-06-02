@@ -174,8 +174,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>The Most Searched Services</h2>
-                        <p>Travelocity empowers travelers who are giving back on their trips in ways big and small</p>
+                        <h2>최근 업데이트 상품</h2>
+                        <p>가장 최근에 업데이트 된 상품 리스트입니다.</p>
                     </div>
                 </div>
             </div>

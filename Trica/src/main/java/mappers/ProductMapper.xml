@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ProductDAO">
+
+<insert id="insertProduct" parameterType="product">
+
+INSERT INTO product(pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
+pct_intro, pct_detail, sc_no 
+<if test='pctImgName != null'> 
+, pct_img_name, pct_img_size 
+</if> 
+) 
+VALUES 
+(sysdate, seq_pct_no.nextval, #{pctStock}, #{pctName}, #{pctPrice}, 
+#{pctIntro}, #{pctDetail}, #{scNo} 
+<if test="pctImgName != null"> 
+, #{pctImgName}, #{pctImgSize} 
+</if> 
+) 
+ 
+</insert>
+
+</mapper>

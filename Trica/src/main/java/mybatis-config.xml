@@ -3,11 +3,14 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
 <settings>
 	<setting name="mapUnderscoreToCamelCase" value="true"/>
 </settings>
+
 <typeAliases>
 	<typeAlias alias="board" type="com.trica.vo.BoardVO"/>
+	<typeAlias alias="product" type="com.trica.vo.ProductVO"/>
 </typeAliases>
 
 </configuration>

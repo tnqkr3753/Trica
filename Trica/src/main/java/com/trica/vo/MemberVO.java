@@ -9,6 +9,7 @@ public class MemberVO {
 	private String address;
 	private String gender;
 	private String tel;
+	
 	public String getMemberId() {
 		return memberId;
 	}

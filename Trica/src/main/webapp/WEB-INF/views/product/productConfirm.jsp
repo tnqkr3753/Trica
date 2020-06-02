@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +10,7 @@
 <meta name="keywords" content="Directing, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>productInsert.jsp</title>
+<title>productConfirm.jsp</title>
 
 <!-- Google Font -->
 <link
@@ -76,87 +77,67 @@
 	</header>
 	<!-- Header 끝 -->
 
-	<section class="hero set-bg" data-setbg="./resources/img/background_black.png">
-	</section>
+	<section class="hero set-bg"
+		data-setbg="./resources/img/background_black.png"></section>
 
 	<div class="container" width="80%">
 		<div class="row-fluid">
-			<!--span-->
 			<div class="span9" id="content">
 				<div class="row-fluid">
 					<br />
 					<div class="alert alert-warning">
-						<h4>상품 등록</h4>
+						<h4>상품 등록이 완료되었습니다!</h4>
 					</div>
-				</div>
-				<div>
-					<form action="saveProduct.trc" method="post" name="form1"
-						enctype='multipart/form-data'>
-						<div class="table-responsive">
-							<table class="table">
-								<tr>
-									<th class="success">1차 분류 선택</th>
-									<td colspan="5"><select id="category1" name="bigC">
-											<option value="0">1차 분류 선택</option>
-											<option value="1">TV/냉장고/세탁기/건조기</option>
-											<option value="2">카메라/게임/음향</option>
-											<option value="3">주방가전</option>
-											<option value="4">컴퓨터/휴대폰</option>
-											<option value="5">계절가전</option>
-									</select></td>
-								</tr>
-								<tr>
-									<th class="success">2차 분류 선택</th>
-									<td colspan="5"><select id="category2" name="smallC">
-											<option value="">2차 분류 선택</option>
-									</select></td>
-								</tr>
-								<tr>
-									<th class="success">상품재고</th>
-									<td colspan="5"><input type="text" name="pctStock"
-										id="pct_cnt" style="width: 26%"></td>
-								</tr>
-								<tr>
-									<th class="success">상품명</th>
-									<td colspan="5"><input type="text" name="pctName"
-										id="pct_name" style="width: 26%"></td>
-								</tr>
-								<tr>
-									<th class="success">상품가격</th>
-									<td colspan="5"><input type="text" name="pctPrice"
-										id="pct_price" style="width: 26%"></td>
-								</tr>
-								<tr>
-									<th class="success">상품소개</th>
-									<td colspan="5"><input type="text" name="pctIntro"
-										id="pct_intro" style="width: 98%"></td>
-								</tr>
-								<tr>
-									<th>상세설명</th>
-									<td colspan="5"><textarea id="pct_cont"
-											style="width: 98%; height: 200px;" name="pctDetail"></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th>상품 이미지</th>
-									<td colspan="5"><input type="file" name="file"
-										id="pct_img"></td>
-								</tr>
-							</table>
-						</div>
-						
-						<div class="text-center">
-							<input type="submit" value="상품등록" class="btn_pct_insert">
 
-							<input type="reset" value="초기화" class="btn_pct_reset">
-						</div>
-						
+					<table class="table">
+						<tr>
+							<th>상품 등록일</th>
+							<td>${vo.pctRegDate}</td>
+						</tr>
+						<tr>
+							<th>1차 카테고리 분류</th>
+							<td>${vo.bigC}</td>
+						</tr>
+						<tr>
+							<th>2차 카테고리 분류</th>
+							<td>${vo.smallC}</td>
+						</tr>
+						<tr>
+							<th>상품명</th>
+							<td>${vo.pctName}</td>
+						</tr>
+						<tr>
+							<th>상품재고</th>
+							<td>${vo.pctStock}개</td>
+						</tr>
+						<tr>
+							<th>상품가격</th>
+							<td>${vo.pctPrice}원</td>
+						</tr>
+						<tr>
+							<th>상품소개</th>
+							<td>${vo.pctIntro}</td>
+						</tr>
+						<tr>
+							<th>상품설명</th>
+							<td>${vo.pctDetail}</td>
+						</tr>
+						<tr>
+							<th>상품이미지</th>
+							<td><img
+								src="./resources/upload/product/img/${vo.pctImgName }"/></td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="text-center">
+					<form action="goIndex.trc" method="post">
+						<input type="submit" value="홈으로" class="btn_pct_insert">
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Footer 시작 -->
 	<footer class="footer">
@@ -165,7 +146,8 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer__about">
 						<div class="footer__about__logo">
-							<a href="./index.html"><img src="./resources/img/footer-logo.png" alt=""></a>
+							<a href="./index.html"><img
+								src="./resources/img/footer-logo.png" alt=""></a>
 						</div>
 						<p>Challenging the way things have always been done can lead
 							to creative new options that reward you.</p>

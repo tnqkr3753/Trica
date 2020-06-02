@@ -1,8 +1,7 @@
 package com.trica.dao;
 
-import org.springframework.stereotype.Repository;
+import com.trica.vo.ProductVO;
 
-@Repository
 public interface ProductDAO {
-	
+	public int insertProduct(ProductVO vo);
 }
