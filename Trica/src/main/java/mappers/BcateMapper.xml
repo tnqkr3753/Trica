@@ -3,11 +3,11 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="BcateDAO">
  	<select id="bcateCount" resultType="hashmap">
-		SELECT count(p.pct_no) as cnt, s.bc_no bc_no,b.bc_name bc_name
+		SELECT count(p.pct_no) cnt, s.bc_no bc_no, b.bc_name bc_name
 		FROM s_cate s LEFT OUTER JOIN product p
 		ON s.sc_no = p.sc_no INNER JOIN b_cate b
         ON b.bc_no = s.bc_no
 		GROUP BY s.bc_no,b.bc_name
-        ORDER BY s.bc_no
+        ORDER BY s.bc_no 
  	</select>  
-</mapper> 
+</mapper>  

@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.trica.service.BcateService;
@@ -15,15 +16,16 @@ public class BcateController {
 	
 	@Autowired
 	BcateService bcateService;
+	
 	@RequestMapping("/countCate.trc")
 	public ModelAndView counter() {
 		//string
 		ModelAndView mv = new ModelAndView();  
-		mv.setViewName("index/categories");
-		List<HashMap> list = bcateService.countBcate();
-		System.out.println(list);
+		List<HashMap> list = bcateService.bcateCount();
+		mv.setViewName("index/categories"); 
 		mv.addObject("list", list); 
-		return mv;     
+		return mv;      
 	}  
-	  
+ 	    
 } 
+   
