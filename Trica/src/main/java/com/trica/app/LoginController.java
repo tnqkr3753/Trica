@@ -64,13 +64,14 @@ public class LoginController {
 //		System.out.println(vo.getMemberType());
 		  
 		int result = memberService.insertMember(vo);
-		if(result==0) {
+		if(result==0) { 
 			mv.setViewName("member/Register");
 		}else { 
 			mv.setViewName("member/login"); 
-		}
+		} 
 		return mv; 
-	}
+	}  
+	 
 	//로그아웃
 	@RequestMapping("/logout.trc")
 	public ModelAndView logOut(HttpSession session) {
@@ -92,25 +93,23 @@ public class LoginController {
 			hash.put("addr"+i, str.nextToken()); 
 		} 
 		//string
-		ModelAndView mv = new ModelAndView(); 
+		ModelAndView mv = new ModelAndView();  
 		mv.setViewName("member/Register"); 
 		mv.addObject("vo", vo); 
 		mv.addObject("addr", hash); 
 		return mv;     
-	}  
-	  
+	}   
+	   
 	//회원정보 수정  
 	@RequestMapping("/Updater.trc") 
 	public ModelAndView updater(HttpSession session) {
 		MemberVO rvo = new MemberVO();
 		rvo.setMemberId((String)session.getAttribute("memberId"));
 		MemberVO vo = memberService.login(rvo);  
-		System.out.println(vo.getPassword());
-		System.out.println(vo.getTel());     
 		ModelAndView mv = new ModelAndView(); 
 		mv.setViewName("member/Register");  
-		mv.addObject("vo", vo); 
-		return mv;  
+		mv.addObject("vo", vo);  
+		return mv;   
 	}  
-	
+ 	
 }             

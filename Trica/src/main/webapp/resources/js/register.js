@@ -32,11 +32,11 @@ $('input[type="checkbox"][name="memberType"]').click(function(){
 	}
 //서브밋 이벤트 막기  
 //$('#join-submit').attr('disabled', true);	  
-//$('#join-submit').attr('disabled', false);	 
- 
+//$('#join-submit').attr('disabled', false);	  
+   
 //서브밋 버튼 눌렸을 때  
 $('#join-submit').click(function(){
-	var addr = $('#sample6_postcode').val()+"_"+$('#sample6_address').val()+"_"+$('#sample6_detailAddress').val()+"_"+$('#sample6_extraAddress').val()
+	var addr = $('#sample6_postcode').val()+"_"+$('#sample6_address').val()+$('#sample6_extraAddress').val()
 	$('#address').val(addr);
 });	  
  

@@ -25,14 +25,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  		 FROM member WHERE trim(MEMBER_ID)=trim(#{memberId}) 
     	<if test='password != null'>
     	AND PASSWORD=#{password} 
- 		</if>    
- 	</select>      
- 	    
+ 		</if>     
+ 	</select>       
+ 	         
  	<!-- 회원정보 수정 -->  
  	<update id="memberUpdate" parameterType='member'>  
- 		UPDATE member SET	
- 		PASSWORD=#{password},    
- 		TEL=#{tel}    
- 		WHERE MEMBER_ID=#{memberId} 
- 	</update>           
-</mapper>                                                        
+ 		UPDATE member 
+ 		SET PASSWORD=#{password}, TEL=#{tel}, ADDRESS=#{address}    
+ 		WHERE MEMBER_ID=#{memberId}   
+ 	</update>            
+</mapper>                                                         

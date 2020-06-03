@@ -15,9 +15,9 @@ public class BcateDAOImpl implements BcateDAO {
 	private SqlSessionTemplate mybatis;
 
 	@Override
-	public List<HashMap> countBcate() {
+	public List<HashMap> bcateCount() {
 		return mybatis.selectList("BcateDAO.bcateCount");
-	} 
+	}
  
 }  
-   
+     

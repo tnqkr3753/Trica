@@ -20,7 +20,7 @@ public class MemberServiceImpl implements MemberService {
 	}      
 	   
 	//로그인 
-	@Override
+	@Override 
 	public MemberVO login(MemberVO vo)  
 	{ 
 		return memberDAO.login(vo);  
@@ -30,7 +30,7 @@ public class MemberServiceImpl implements MemberService {
 	public int memberUpdate(MemberVO vo)
 	{  
 		return memberDAO.memberUpdate(vo); 
-	}
+	} 
 	 
-}          
-         
+}           
+          

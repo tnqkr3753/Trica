@@ -251,22 +251,21 @@ function sample6_execDaumPostcode() {
 											<input type="text" class="form-control" id="sample6_extraAddress" placeholder="참고항목">
 											<input type="hidden" name="address" id="address" value=""/>
 										</c:when>
-										<c:otherwise>  
+										<c:otherwise>   
 											<input value="${addr.addr0}" type="text" class="form-control" id="sample6_postcode" readonly>
 											<input type="button" id="addbtn" class="form-control btn btn-secondary" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
 											<input value="${addr.addr1}"type="text" class="form-control" id="sample6_address" readonly> 
-											<input value="${addr.addr2}" type="text" class="form-control" id="sample6_detailAddress"> 
-											<c:choose> 
-											<c:when test="${empty addr.addr3 }"> 
-											<input type="text" class="form-control" id="sample6_extraAddress" readonly>  
-											</c:when>  
-											<c:otherwise> 
-												<input value="${addr.addr3}" type="text" class="form-control" id="sample6_extraAddress" readonly>
-											</c:otherwise>
-										 	</c:choose> 
-											 
+											<input value="${addr.addr2}" type="text" class="form-control" id="sample6_detailAddress" readonly> 
+											<c:choose>  
+												<c:when test="${empty addr.addr3 }"> 
+													<input type="text" class="form-control" id="sample6_extraAddress" readonly>  
+												</c:when>  
+												<c:otherwise> 
+													<input value="${addr.addr3}" type="text" class="form-control" id="sample6_extraAddress" readonly>
+												</c:otherwise>
+										 	</c:choose>   
 										</c:otherwise>
-									</c:choose>		  
+									</c:choose>		   
 								</div>     
 							</div>     
 							<c:choose>       
@@ -296,22 +295,22 @@ function sample6_execDaumPostcode() {
 								<button type="button" class="btn btn-warning" onclick="location.href='LoginPage.trc'">
 									가입취소<i class="fa fa-times spaceLeft"></i>
 								</button> 
-							</div>     
-							</c:when>   
+							</div>      
+							</c:when>    
 							<c:otherwise>
-								<button type="submit" id="modify" class="btn btn-primary" onclick="location.href='Updater.trc'"> 
+								<button type="submit" id="btnUpedate" class="btn btn-primary" onclick="location.href='Updater.trc'"> 
 									회원정보수정<i class="fa fa-check spaceLeft"></i>  
-								</button>  
+								</button>    
 								<button type="button" class="btn btn-warning" onclick="location.href='Modifier.trc'">>  
 									수정취소<i class="fa fa-times spaceLeft"></i> 
 								</button>
 							</c:otherwise>   
-							</c:choose>   
+							</c:choose>      
 						</form>  
-					</div>      
-				</div> 
+					</div>       
+				</div>  
 			</div> 
-		</div>
+		</div> 
 	</div>
    
 	<!-- Footer Section Begin -->
@@ -400,7 +399,7 @@ function sample6_execDaumPostcode() {
 	<script src="./resources/js/jquery.barfiller.js"></script>
 	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
 	<script src="./resources/js/jquery.slicknav.js"></script>
-	<script src="./resources/js/owl.carousel.min.js"></script>
+	<script src="./resources/js/owl.carousel.min.js"></script> 
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/register.js"></script>
 </body> 
