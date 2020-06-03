@@ -20,6 +20,11 @@ VALUES
 ) 
  
 </insert>
+<select id="selectProduct" parameterType="product" resultType="product">
+	SELECT * 
+	FROM product
+	WHERE trim(pct_no)=${pctNo}
+</select>
 
 
 <select id="getNewList" resultType="product">
