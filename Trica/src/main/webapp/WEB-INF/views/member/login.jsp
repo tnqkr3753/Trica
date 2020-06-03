@@ -9,31 +9,43 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
- 
+
 <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+	rel="stylesheet">
 
 <!-- Css Styles -->
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css"> 
-<link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css"> 
-<link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css"> 
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/font-awesome.min.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/elegant-icons.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/flaticon.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/nice-select.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/barfiller.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/magnific-popup.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/jquery-ui.min.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/owl.carousel.min.css"
+	type="text/css">
+<link rel="stylesheet" href="./resources/css/slicknav.min.css"
+	type="text/css">
 <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/common.css" type="text/css">
  
-<!-- Bootstrap CSS -->  
-<link rel="stylesheet" 
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 <title>Login</title>
- 
+
 </head>
 
 <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0"
@@ -63,20 +75,20 @@
 										<li><a href="./about.html">About</a></li>
 										<li><a href="./listing-details.html">Listing Details</a></li>
 										<li><a href="./blog-details.html">Blog Details</a></li>
-				 						<li><a href="./contact.html">Contact</a></li>
+										<li><a href="./contact.html">Contact</a></li>
 									</ul></li>
 								<li><a href="./blog.html">Blog</a></li>
-								<li><a href="#">Shop</a></li>
-								<li><a href="Register.trc">Register</a></li>
-							</ul>
+								<li><a href="#">Shop</a></li> 
+							</ul>  
 						</nav>
 						<div class="header__menu__right">
 							<a href="#" class="login-btn"><i class="fa fa-user"></i></a>
 						</div>
 					</div>
-				</div> 
+				</div>
 				<div id="mobile-menu-wrap"></div>
 			</div>
+		</div>
 	</header>
 	<!-- Header Section End -->
 	<!-- Breadcrumb Begin -->
@@ -88,42 +100,46 @@
 					<div class="breadcrumb__text">
 						<h2>Login</h2>
 						<div class="breadcrumb__option">
-							<a href="#"><i class="fa fa-home"></i> Home</a> 
-							<span>Our login</span>
-						</div> 
+							<a href="#"><i class="fa fa-home"></i> Home</a> <span>Our
+								login</span>
+						</div>
 					</div>
 				</div>
-			</div> 
+			</div>
 		</div>
 	</div>
-	<!-- Breadcrumb End -->
+	<!-- Breadcrumb End --> 
 
 	<div class="card align-middle"
 		style="width: 20rem; border-radius: 20px;">
 		<div class="card-title" style="margin-top: 30px;">
 			<h2 class="card-title text-center" style="color: #113366;">Login</h2>
 		</div>
-		<div class="card-body">  
+		<div class="card-body">
 			<form class="form-signin" method="POST"
-				onSubmit="logincall();return false">
+				onSubmit="logincall();return false" action="Login.trc">
 				<h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>
-				<label for="inputEmail" class="sr-only">Your ID</label> <input
-					type="text" id="uid" class="form-control" placeholder="Your ID"
-					required autofocus><BR> <label for="inputPassword" 
-					class="sr-only">Password</label> <input type="password" id="upw"
-					class="form-control" placeholder="Password" required><br>
+				<label for="inputEmail" class="sr-only">Your ID</label> 
+				<input   
+					name="memberId" type="text" id="uid" class="form-control"
+					placeholder="Your ID" required autofocus><BR> 
+				<label for="inputPassword" class="sr-only">Password</label>  
+				<input
+					name="password" type="password" id="upw" class="form-control"
+					placeholder="Password" required><br> 
 				<div class="checkbox">
 					<label> <input type="checkbox" value="remember-me">
 						기억하기
-					</label> 
+					</label>  
 				</div>
 				<button id="btn-Yes" class="btn btn-lg btn-primary btn-block"
 					type="submit">로 그 인</button>
-			</form> 
-
-		</div>
-	</div>
-
+				<button id="btn-Rg" class="btn btn-lg btn-primary btn-block"
+					onclick="location.href='Register.trc'">회원가입</button>
+			</form>            
+		</div>            
+	</div>         
+ 
 	<div class="modal"></div>
 
 	<!-- Footer Section Begin -->
@@ -133,7 +149,8 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer__about">
 						<div class="footer__about__logo">
-							<a href="./index.jsp"><img src="./resources/img/footer-logo.png" alt=""></a>
+							<a href="./index.jsp"><img
+								src="./resources/img/footer-logo.png" alt=""></a>
 						</div>
 						<p>Challenging the way things have always been done can lead
 							to creative new options that reward you.</p>
@@ -196,7 +213,7 @@
 								Policy</a>
 						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -210,15 +227,16 @@
 	<script src="./resources/js/jquery.barfiller.js"></script>
 	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
 	<script src="./resources/js/jquery.slicknav.js"></script>
-	<script src="./resources/js/owl.carousel.min.js"></script>
+	<script src="./resources/js/owl.carousel.min.js"></script> 
 	<script src="./resources/js/main.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script> 
+ 
 </body>
 </html>
 </html>
