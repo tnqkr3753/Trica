@@ -1458,6 +1458,15 @@ ol {
 	background: #0033FF;
 }
 
+/* -----------------------------------수정------------------------------- */
+.listing__item__pic__tag.recommend {
+	background: #00CC00;
+}
+
+.listing__item__pic__tag.popular {
+	background: #DD0000;
+}
+
 .listing__item__pic__btns {
 	position: absolute;
 	right: 20px;

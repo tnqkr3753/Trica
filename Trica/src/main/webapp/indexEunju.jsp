@@ -213,22 +213,22 @@
 							<li class="nav-item">
 							<a class="nav-link active"
 								data-toggle="tab" href="#" role="tab" data-tab="all">
-								<span class="flaticon-039-fork" ></span> 전체상품
+								<span class="icon_grid-3x3" ></span> 전체상품
 							</a></li>
 							<li class="nav-item">
 							<a class="nav-link" data-toggle="tab"
 								href="#" role="tab" data-tab="popular">
-								<span class="flaticon-030-kebab" ></span> 인기상품
+								<span class="icon_like_alt" ></span> 인기상품
 							</a></li>
 							<li class="nav-item">
 							<a class="nav-link" data-toggle="tab"
 								href="#" role="tab" data-tab="recommend">
-								<span class="flaticon-032-food-truck"></span> 추천상품
+								<span class="icon_star"></span> 추천상품
 							</a></li>
 							<li class="nav-item">
 							<a class="nav-link" data-toggle="tab"
 								href="#" role="tab" data-tab="new">
-								<span class="flaticon-038-take-away"></span> 새로 만나는 신상품
+								<span class="social_delicious"></span> 새로 만나는 신상품
 							</a></li>
 						</ul>
 					</div>

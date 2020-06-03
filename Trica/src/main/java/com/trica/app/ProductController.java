@@ -92,7 +92,7 @@ public class ProductController {
 			System.out.println("----recommend-----");
 			mv.addObject("list", productService.getRecommendList());
 		}
-		
+		mv.addObject("tabName", tabName);
 		return mv;
 	}
 }
