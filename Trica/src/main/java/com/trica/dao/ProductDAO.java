@@ -10,5 +10,8 @@ public interface ProductDAO {
 	
 	public List<ProductVO> getNewList();
 	public List<ProductVO> getAllList();
+	public List<ProductVO> getPopularList();
+	public List<ProductVO> getRecommendList();
+
 
 }

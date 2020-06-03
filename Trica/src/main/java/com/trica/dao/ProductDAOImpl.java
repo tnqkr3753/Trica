@@ -30,4 +30,14 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<ProductVO> getAllList() {
 		return sqlSession.selectList("ProductDAO.getAllList");
 	}
+	
+	@Override
+	public List<ProductVO> getPopularList() {
+		return sqlSession.selectList("ProductDAO.getPopularList");
+	}
+	
+	@Override
+	public List<ProductVO> getRecommendList() {
+		return sqlSession.selectList("ProductDAO.getRecommendList");
+	}
 }

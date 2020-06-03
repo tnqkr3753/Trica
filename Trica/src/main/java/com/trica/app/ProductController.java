@@ -80,12 +80,17 @@ public class ProductController {
 		} */
 		
 		if(tabName.contains("new")) {
-			// System.out.println("----new-----");
+			System.out.println("----new-----");
 			mv.addObject("list", productService.getNewList());	// 최근 입력된 상품 불러옴
-			
 		} else if (tabName.contains("all")) {
-			// System.out.println("----all-----");
+			System.out.println("----all-----");
 			mv.addObject("list", productService.getAllList());	// 전체 상품목록 중 랜덤으로 불러옴
+		} else if (tabName.contains("popular")) {
+			System.out.println("----popular-----");
+			mv.addObject("list", productService.getPopularList());	// 조회수 순으로 인기상품 불러옴
+		} else if (tabName.contains("recommend")) {
+			System.out.println("----recommend-----");
+			mv.addObject("list", productService.getRecommendList());
 		}
 		
 		return mv;
