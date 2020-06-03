@@ -38,4 +38,14 @@ public class ProductServiceImpl implements ProductService {
 		return productDAO.selectProduct(vo);
 	}
 	
+	
+	@Override
+	public List<ProductVO> getPopularList() {
+		return productDAO.getPopularList();	// 상품 리스트 리턴
+	}
+	
+	@Override
+	public List<ProductVO> getRecommendList() {
+		return productDAO.getRecommendList();	// 상품 리스트 리턴
+	}
 }

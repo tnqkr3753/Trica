@@ -4,7 +4,7 @@
 
 <c:choose>
 	<c:when test="${empty list }">
-		최근 추가 상품이 없습니다.
+		상품이 존재하지 않습니다.
 	</c:when>
 	<c:otherwise>
 		<c:set var="count" value="1"></c:set>

@@ -31,29 +31,31 @@ VALUES
 <select id="getNewList" resultType="product">
 	<![CDATA[
 	SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
-	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt
-    FROM product
-    WHERE pct_no in (SELECT pct_no
-                    FROM (SELECT pct_no,rownum as rnum 
-                            FROM (SELECT pct_no 
-                                    FROM product 
-                                    ORDER BY pct_reg_date))
-                    WHERE rnum>=1 AND rnum<=6)]]>
+	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM 
+	 (SELECT * FROM product ORDER BY pct_reg_date desc) WHERE rownum>=1 AND rownum<=6]]>
 </select>
 
 <select id="getAllList" resultType="product">
 	<![CDATA[
 	SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
-	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt
-    FROM product
-    WHERE pct_no in (SELECT pct_no
-                    FROM (SELECT pct_no,rownum as rnum 
-                            FROM (SELECT pct_no 
-                                    FROM product 
-                                    ORDER BY DBMS_RANDOM.VALUE))
-                    WHERE rnum>=1 AND rnum<=6)]]>
+	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM 
+	 (SELECT * FROM product ORDER BY DBMS_RANDOM.VALUE) WHERE rownum>=1 AND rownum<=6]]>
 </select>
 
+<select id="getPopularList" resultType="product">
+<![CDATA[
+SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
+	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM 
+	 (SELECT * FROM product ORDER BY pct_cnt desc) WHERE rownum>=1 AND rownum<=6]]>
+</select>
+
+<select id="getRecommendList" resultType="product">
+
+	 <![CDATA[
+	 SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
+	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM 
+	 (SELECT * FROM product ORDER BY pct_cnt ASC) WHERE rownum>=1 AND rownum<=6]]>
+</select>
 
 
 
