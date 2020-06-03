@@ -12,18 +12,18 @@ public class PageController {
 		mv.setViewName("cart/user-cart");
 		return mv;
 	}
+	
 	@RequestMapping("favorite.trc")
 	public ModelAndView getFavorite() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("cart/user-favorite");
 		return mv;
 	}
+	
 	@RequestMapping("orderList.trc")
 	public ModelAndView getOrderList() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("cart/order-list");
 		return mv;
 	}
-
-
 }

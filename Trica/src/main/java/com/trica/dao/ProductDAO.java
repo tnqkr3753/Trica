@@ -8,5 +8,7 @@ public interface ProductDAO {
 	public int insertProduct(ProductVO vo);
 	
 	
-	List<ProductVO> getNewList();
+	public List<ProductVO> getNewList();
+	public List<ProductVO> getAllList();
+
 }

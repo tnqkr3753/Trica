@@ -22,14 +22,30 @@ VALUES
 </insert>
 
 
-
-
-
-
 <select id="getNewList" resultType="product">
+	<![CDATA[
+	SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
+	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt
+    FROM product
+    WHERE pct_no in (SELECT pct_no
+                    FROM (SELECT pct_no,rownum as rnum 
+                            FROM (SELECT pct_no 
+                                    FROM product 
+                                    ORDER BY pct_reg_date))
+                    WHERE rnum>=1 AND rnum<=6)]]>
+</select>
 
-	SELECT * FROM product ORDER BY pct_reg_date
-	
+<select id="getAllList" resultType="product">
+	<![CDATA[
+	SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
+	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt
+    FROM product
+    WHERE pct_no in (SELECT pct_no
+                    FROM (SELECT pct_no,rownum as rnum 
+                            FROM (SELECT pct_no 
+                                    FROM product 
+                                    ORDER BY DBMS_RANDOM.VALUE))
+                    WHERE rnum>=1 AND rnum<=6)]]>
 </select>
 
 

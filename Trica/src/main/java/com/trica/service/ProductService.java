@@ -9,4 +9,5 @@ public interface ProductService {
 	
 	
 	public List<ProductVO> getNewList();
+	public List<ProductVO> getAllList();
 }

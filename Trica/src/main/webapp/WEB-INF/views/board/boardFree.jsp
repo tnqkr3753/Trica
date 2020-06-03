@@ -47,7 +47,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				<c:forEach items="${bList }" var="board">
+				<c:forEach items="${bList}" var="board">
 					<tr style="cursor:pointer" no="${board.boardNo }">
 						<td>
 							${board.boardNo }
