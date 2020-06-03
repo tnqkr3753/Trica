@@ -3,16 +3,16 @@ package com.trica.vo;
 public class MemberVO {
 	private String memberId;
 	private String memberType;
-	private String password;
+	private String password; 
 	private String memberName;
 	private String regNum;
-	private String address;
+	private String address; 
 	private String gender;
-	private String tel;
+	private String tel;   
 	
-	public String getMemberId() {
-		return memberId;
-	}
+	public String getMemberId() { 
+		return memberId;  
+	} 
 	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}

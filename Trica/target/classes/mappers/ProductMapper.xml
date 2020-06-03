@@ -6,7 +6,7 @@
 <insert id="insertProduct" parameterType="product">
 
 INSERT INTO product(pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
-pct_intro, pct_detail, sc_no 
+pct_intro, pct_detail, sc_no  
 <if test='pctImgName != null'> 
 , pct_img_name, pct_img_size 
 </if> 
@@ -20,6 +20,11 @@ VALUES
 ) 
  
 </insert>
+<select id="selectProduct" parameterType="product" resultType="product">
+	SELECT * 
+	FROM product
+	WHERE trim(pct_no)=${pctNo}
+</select>
 
 
 <select id="getNewList" resultType="product">

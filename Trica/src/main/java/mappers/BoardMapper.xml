@@ -28,7 +28,7 @@
 		FROM board a,(select board_no,ROWNUM rm,lvl FROM(SELECT board_no,Level lvl
 																					FROM board 
 																					WHERE board_type=#{boardType}
-																					start with parent_board_no is null
+										 											start with parent_board_no is null
 																					connect by prior board_no = parent_board_no
 																					order SIBLINGS by board_date desc)) b
 		WHERE a.board_no=b.board_no and b.rm<![CDATA[>=]]>#{startRow} and b.rm<![CDATA[<=]]>#{endRow}

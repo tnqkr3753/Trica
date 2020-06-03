@@ -17,7 +17,7 @@ public class BoardServiceImpl implements BoardService {
 	public int boardInsert(BoardVO vo) {
 		return boardDAO.insertBoard(vo);
 	}
-	@Override
+	@Override 
 	public BoardVO getBoardOne(BoardVO vo) {
 		System.out.println("------------service.getBoardOne호출-----------");
 		return boardDAO.getBoardOne(vo);
@@ -33,7 +33,7 @@ public class BoardServiceImpl implements BoardService {
 		hash.put("boardType",boardType);
 		return boardDAO.getBoardList(hash);
 	}
-	@Override
+	@Override  
 	public HashMap countBoard(String bType) {
 		return boardDAO.countBoard(bType);
 	}
