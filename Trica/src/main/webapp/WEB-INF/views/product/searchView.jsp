@@ -124,24 +124,25 @@
                                 </div>
                                 <button type="submit">찾기</button>
                             </form>
-                        </div>                  
+                        </div>         
+                        
+                                 
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="row">
                             <!-- for문 시작 -->
-                                <form action="productDetail.trc">
-                                <input type="submit" value="상세보기"/>
-                                </form>
-                                <div class="col-lg-4 col-md-6">
+								<c:forEach var='list' items="${sList }" begin='1' end='6'> 
+                                <div class="col-lg-4 col-md-6 product-item">
+                                 	<form name='next_go'  id='next_go'  action="productDetail.trc" method="get">                           		 	
                                     <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="img/컴퓨터_휴대폰/노트북/노트북1.jpg"><!-- 이미지  -->
-                                            <img src="img/BSTE_상품.png" alt=""> <!-- 이미지 -->
-                                            <div class="listing__item__pic__tag top_rate"> 노트북 </div> <!--단어  -->
-                                            <div class="listing__item__pic__btns">                              
+                                        	<div class="listing__item__pic set-bg" data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}" ><!-- 이미지  -->
+                                            <img src="./resources/img/추천상품/BSTE_상품.png" alt=""> <!-- 이미지 -->
+                                            <div class="listing__item__pic__tag top_rate"> ${list.SC_NAME } </div> <!--단어  -->
+                                            <div class="listing__item__pic__btns">                          
                                             </div>
                                         </div>
                                         <div class="listing__item__text">
                                             <div class="listing__item__text__inside">
-                                                <h5>삼성 최신 노트북</h5> <!-- 헤더 -->
+                                                <h5>${list.PCT_NAME }</h5> <!-- 헤더 -->
                                                 <div class="listing__item__text__rating">
                                                     <div class="listing__item__rating__star"> <!-- 평점에 따라 별 숫자 다르게 -->
                                                         <span class="icon_star"></span>
@@ -150,29 +151,25 @@
                                                         <span class="icon_star"></span>
                                                         <span class="icon_star"></span>
                                                     </div>
-                                                    <h6>\1,000,000</h6> <!-- 가격 -->
+                                                    <h6>${list.PCT_PRICE }</h6> <!-- 가격 -->
                                                 </div>
                                                 <ul>
                                                     <li><span class="icon_id"></span> 삼성디지털프라자</li> <!-- 업체 -->
-                                                    <li><span class="icon_pencil"></span>1.81kg 가벼운 무게!!</li> <!-- 짧은 설명 -->
+                                                    <li><span class="icon_pencil"></span>${list.PCT_INTRO }</li> <!-- 짧은 설명 -->
                                                 </ul>
                                             </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="img/listing/list_small_icon-4.png" alt="">
-                                                    <span>찜하기</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed" >
-                                                	
-                                                <i class='icon_check'> 구매하기 </i></div>                                                                       
-                                            </div>
-                                            <div></div>
                                         </div>
                                     </div>
+                                    </form>
                                 </div>
+                                </c:forEach>
+                                
+                                
+                                
                                 <!-- for문 끝 -->
                             </div>
-                        </div>                       
+                        </div>
+                        </div>                  
     		</section>
     <!-- Most Search Section End -->
   
@@ -265,6 +262,7 @@
     <script src="./resources/js/jquery.slicknav.js"></script>
     <script src="./resources/js/owl.carousel.min.js"></script>
     <script src="./resources/js/main.js"></script>
+    <script src="./resources/js/searchView.js"></script>
 
 </body>
 

@@ -10,4 +10,7 @@ public interface BoardService {
 	public BoardVO getBoardOne(BoardVO vo);
 	public List<BoardVO> getBoardList(int pNum,String boardType);
 	public HashMap countBoard(String bType);
+	public int deleteBoard(BoardVO vo);
+	public int modifyBoard(BoardVO vo);
+	public void increaseCount(BoardVO vo);
 }

@@ -36,8 +36,8 @@
 					
 					<input id="btn-list" type="button" class="btn btn-secondary" value="목록가기"/>
 					<input id="btn-reply" type="button" class="btn btn-secondary" value="답글달기"/>
-					<input type="hidden" value="${board.boardNo }" name="boardNo"/>
-					<input type="hidden" value="${board.boardType }" name="boardType"/>
+					<input type="hidden" value="${board.boardNo}" name="boardNo"/>
+					<input type="hidden" value="${board.boardType}" name="boardType"/>
 					<input id="btn-modify" type="button" class="btn btn-secondary" value="수정하기"/>
 					<input id="btn-delete" type="button" class="btn btn-secondary float-right" value="삭제하기"/>
 				</div>

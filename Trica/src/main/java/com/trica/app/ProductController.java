@@ -15,13 +15,6 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping("search.trc")
-	public ModelAndView searchProduct() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("product/searchView");
-		return mv;
-	}
-
 	@RequestMapping("productDetail.trc")
 	public ModelAndView detailProduct() {
 		ModelAndView mv = new ModelAndView();
