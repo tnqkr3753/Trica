@@ -185,9 +185,9 @@
 							<form name="addForm" action="addCart.trc" method="POST">
 							<div class="btn_choice_box">
 								<input type="button" class="btn_add_cart" value="장바구니">
-								<input type="button" class="btn_add_wish" value="찜하기">
+								<input type="submit" class="btn_add_wish" value="찜하기">
 								<input type="button" class="btn_add_order" value="구매하기">
-								<input type="hidden" >
+								<input type="hidden" name="pctStock">
 								<input type="hidden" value="${vo.pctNo }" name="pctNo">
 							</div>
 							</form>	
