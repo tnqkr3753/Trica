@@ -16,8 +16,9 @@ public class ProductController {
 	ProductService productService;
 
 	@RequestMapping("productDetail.trc")
-	public ModelAndView detailProduct() {
+	public ModelAndView detailProduct(ProductVO vo) {
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("vo", productService.selectProduct(vo));
 		mv.setViewName("product/productDetail");	// 상품 상세 정보 페이지 창으로
 		return mv;
 	}

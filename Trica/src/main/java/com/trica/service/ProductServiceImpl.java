@@ -30,4 +30,12 @@ public class ProductServiceImpl implements ProductService {
 	public List<ProductVO> getAllList() {
 		return productDAO.getAllList();	// 상품 리스트 리턴
 	}
+
+
+
+	@Override
+	public ProductVO selectProduct(ProductVO vo) {
+		return productDAO.selectProduct(vo);
+	}
+	
 }
