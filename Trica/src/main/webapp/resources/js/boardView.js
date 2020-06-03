@@ -19,6 +19,6 @@ $(function(){
 		}
 	});
 	$('#btn-modify').click(function(){
-		location.href="insertBoard.trc?boardNo="+boardNo;
+		location.href="modifierBoard.trc?boardNo="+boardNo;
 	});
 })

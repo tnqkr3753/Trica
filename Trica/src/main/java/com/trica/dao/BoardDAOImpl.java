@@ -30,5 +30,17 @@ public class BoardDAOImpl implements BoardDAO {
 	public HashMap countBoard(String bType) {
 		return sqlSession.selectOne("BoardDAO.countBoard",bType);
 	}
+	@Override
+	public int deleteBoard(BoardVO vo) {
+		return sqlSession.delete("BoardDAO.deleteBoard", vo);
+	}
+	@Override
+	public int modifyBoard(BoardVO vo) {
+		return sqlSession.update("BoardDAO.modifyBoard",vo);
+	}
+	@Override
+	public void increateCount(BoardVO vo) {
+		sqlSession.update("BoardDAO.increaseCount", vo);
+	}
 
 }

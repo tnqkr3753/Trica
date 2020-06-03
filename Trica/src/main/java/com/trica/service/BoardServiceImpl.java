@@ -37,5 +37,18 @@ public class BoardServiceImpl implements BoardService {
 	public HashMap countBoard(String bType) {
 		return boardDAO.countBoard(bType);
 	}
+	@Override
+	public int deleteBoard(BoardVO vo) {
+		return boardDAO.deleteBoard(vo);
+	}
+	@Override
+	public int modifyBoard(BoardVO vo) {
+		return boardDAO.modifyBoard(vo);
+	}
+	@Override
+	public void increaseCount(BoardVO vo) {
+		boardDAO.increateCount(vo);
+	}
+	
 
 }

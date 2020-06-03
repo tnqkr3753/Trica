@@ -3,6 +3,7 @@ package com.trica.app;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.trica.service.ProductService;
@@ -13,13 +14,6 @@ public class ProductController {
 	
 	@Autowired
 	ProductService productService;
-
-	@RequestMapping("search.trc")
-	public ModelAndView searchProduct() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("product/searchView");
-		return mv;
-	}
 
 	@RequestMapping("productDetail.trc")
 	public ModelAndView detailProduct() {
@@ -59,6 +53,41 @@ public class ProductController {
 	public ModelAndView goIndex() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("goToIndex");	// 인덱스 창으로
+		return mv;
+	}
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	@RequestMapping("getNewList.trc")
+	public ModelAndView getNewList(@RequestParam String tabName) {
+		System.out.println("확인 출력");
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("product/getList");
+		System.out.println(productService.getNewList().get(0).getPctName());
+		
+		/* if(tabName.contains("all")) {
+			mv.addObject("list", productService.getNewList());	// 데이터 저장
+			
+		} else if (tabName.contains("popular")) {
+			mv.addObject("list", productService.getAllList());
+		} */
+		
+		if(tabName.contains("new")) {
+			// System.out.println("----new-----");
+			mv.addObject("list", productService.getNewList());	// 최근 입력된 상품 불러옴
+			
+		} else if (tabName.contains("all")) {
+			// System.out.println("----all-----");
+			mv.addObject("list", productService.getAllList());	// 전체 상품목록 중 랜덤으로 불러옴
+		}
+		
 		return mv;
 	}
 }
