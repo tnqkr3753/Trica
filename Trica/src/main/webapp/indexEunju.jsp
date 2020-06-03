@@ -190,6 +190,8 @@
 		</div>
 	</section>
 	<!-- Categories Section End -->
+	
+<!-- ********************************* 수정 ********************************* -->
 
 	<!-- Most Search Section Begin -->
 	<section class="most-search spad">
@@ -197,15 +199,13 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="section-title">
-						<h2>The Most Searched Services</h2>
-						<p>Travelocity empowers travelers who are giving back on their
-							trips in ways big and small</p>
+						<h2>오늘의 상품</h2>
+						<p>현재 판매중인 상품입니다.</p>
 					</div>
 				</div>
 			</div>
 
 
-<!-- ********************************* 수정 ********************************* -->
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="most__search__tab">
@@ -213,22 +213,22 @@
 							<li class="nav-item">
 							<a class="nav-link active"
 								data-toggle="tab" href="#" role="tab" data-tab="all">
-								<span class="flaticon-039-fork" ></span> 전체상품
+								<span class="icon_grid-3x3" ></span> 전체상품
 							</a></li>
 							<li class="nav-item">
 							<a class="nav-link" data-toggle="tab"
 								href="#" role="tab" data-tab="popular">
-								<span class="flaticon-030-kebab" ></span> 인기상품
+								<span class="icon_like_alt" ></span> 인기상품
 							</a></li>
 							<li class="nav-item">
 							<a class="nav-link" data-toggle="tab"
 								href="#" role="tab" data-tab="recommend">
-								<span class="flaticon-032-food-truck"></span> 추천상품
+								<span class="icon_star"></span> 추천상품
 							</a></li>
 							<li class="nav-item">
 							<a class="nav-link" data-toggle="tab"
 								href="#" role="tab" data-tab="new">
-								<span class="flaticon-038-take-away"></span> 새로 만나는 신상품
+								<span class="social_delicious"></span> 새로 만나는 신상품
 							</a></li>
 						</ul>
 					</div>
@@ -559,7 +559,6 @@
 	<script src="./resources/js/owl.carousel.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/getList.js"></script>
-
 
 </body>
 </html>
