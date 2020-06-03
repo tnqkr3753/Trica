@@ -198,7 +198,7 @@
 	    secondSelect.find('option').remove();
 	    for(var i = 0 ; i < options[num].length; i++){
 	    	
-	    	secondSelect.append("<option value='"+i+"'>"+options[num][i]+"</option>");
+	    	secondSelect.append("<option value='"+(i+1)+"'>"+options[num][i]+"</option>");
     	}
 	    secondSelect.niceSelect('update');
 	} 
