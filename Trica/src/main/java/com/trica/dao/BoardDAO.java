@@ -9,4 +9,5 @@ public interface BoardDAO {
 	public int insertBoard(BoardVO vo);
 	public List<BoardVO> getBoardList(HashMap hash);
 	public BoardVO getBoardOne(BoardVO vo);
+	public HashMap countBoard(String bType);
 }

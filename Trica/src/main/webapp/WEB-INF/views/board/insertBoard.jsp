@@ -107,21 +107,40 @@
                <div class="col-sm-12 col-md-offset-3">
                   <form method="post" action="registBoard.trc" enctype="multipart/form-data">
                   	 <div class="row form-group">
-                        <select id="inputType" name="boardType" class="selectpicker">
-                        	<option value="Free">자유게시판</option>
-                        	<option value="Inquiry">문의게시판</option>
-                        	<option value="Review">상품리뷰</option>
-                        </select>
+                  	 <select id="inputType" name="boardType" class="selectpicker">
+                  	 	<c:choose>
+		                  	 <c:when test='${boardNo eq ""}' >
+		                        	<option value="Free">자유게시판</option>
+		                        	<option value="Inquiry">문의게시판</option>
+		                        	<option value="Review">상품리뷰</option>
+		                     </c:when>
+		                     <c:otherwise>
+		                     		<option value="${boardType}">
+		                     			<c:choose>
+		                     				<c:when test='${boardType eq "Free" }'>자유게시판</c:when>
+		                     				<c:when test='${boardType eq "Inquiry" }'>문의게시판</c:when>
+		                     				<c:when test='${boardType eq "Review" }'>상품리뷰</c:when>
+		                     			</c:choose>
+		                     		</option>
+		                     </c:otherwise>
+	                     </c:choose>
+                     </select>
                      </div>
+                     <c:if test='${boardNo ne "" }'>
+	                     <div class="form-group">
+	                        <label for="inputTitle" >${boardNo}번글의 답글</label>
+	                        <input id="inputTitle" type="hidden" name="parentBoardNo" value="${boardNo }">
+	                     </div>
+                     </c:if>
                      <div class="form-group">
-                        <label for="inputTitle" >제목</label> 
+                        <label for="inputTitle" >제목</label>
                         <input id="inputTitle" type="text" class="form-control" name="boardTitle" placeholder="제목을 입력해주세요">
                      </div>
-                     <input type="hidden" name="memberId" value=""/>
+                     <input type="hidden" name="memberId" value="aaarirang"/>
+                     <!-- 벨류 빼기 -->
                      <div class="form-group">
                         <label for="inputContent">글 내용</label> 
-                        <textarea class="form-control" id="inputContent" name="boardContent" placeholder="내용을 입력해주세요">
-                        </textarea>
+                        <textarea class="form-control" id="inputContent" name="boardContent" placeholder="내용을 입력해주세요"></textarea>
                      </div> 
                      <div class="form-group">
                         <label for="inputContent">첨부파일</label> 

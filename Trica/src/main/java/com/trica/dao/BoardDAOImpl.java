@@ -18,12 +18,17 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 	@Override
 	public List<BoardVO> getBoardList(HashMap hash) {
-
+		System.out.println("------dao.getBoardList호출---------");
 		return sqlSession.selectList("BoardDAO.selectBoardList", hash);
 	}
 	@Override
 	public BoardVO getBoardOne(BoardVO vo) {
+		System.out.println("------dao getBoardOne 호출------ : " + vo.getBoardNo());
 		return sqlSession.selectOne("BoardDAO.selectBoard", vo);
+	}
+	@Override
+	public HashMap countBoard(String bType) {
+		return sqlSession.selectOne("BoardDAO.countBoard",bType);
 	}
 
 }

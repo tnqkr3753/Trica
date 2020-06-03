@@ -19,10 +19,12 @@ public class BoardServiceImpl implements BoardService {
 	}
 	@Override 
 	public BoardVO getBoardOne(BoardVO vo) {
+		System.out.println("------------service.getBoardOne호출-----------");
 		return boardDAO.getBoardOne(vo);
 	}
 	@Override
 	public List<BoardVO> getBoardList(int pNum,String boardType) {
+		System.out.println("------service.getBoardList호출---------");
 		int startRow = (pNum-1)*pagePerBoard+1;
 		int endRow = (pNum)*pagePerBoard;
 		HashMap hash = new HashMap();
@@ -30,6 +32,10 @@ public class BoardServiceImpl implements BoardService {
 		hash.put("endRow", endRow);
 		hash.put("boardType",boardType);
 		return boardDAO.getBoardList(hash);
+	}
+	@Override  
+	public HashMap countBoard(String bType) {
+		return boardDAO.countBoard(bType);
 	}
 
 }

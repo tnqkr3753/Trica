@@ -1,5 +1,10 @@
 package com.trica.app;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +16,7 @@ import com.trica.vo.BoardVO;
 
 @Controller
 public class BoardController {
+	int boardPerPage = 10;
 	@Autowired
 	BoardService boardService ;
 	@RequestMapping("/board/{step}.trc")
@@ -29,26 +35,82 @@ public class BoardController {
 		mv.addObject("result",result);
 		return mv;
 	}
-	@RequestMapping("/boardList.trc")
+	@RequestMapping("/getBoardList.trc")
 	public ModelAndView getBoardList(String pageNum,String bType) {
 		int pNum=1;
-		String boardType = "Free";
-		if(bType!=null) {
+		String boardType = "";
+		//파라미터에 타입이 없다면
+		if(bType==null||bType.equals("")) {
+			boardType="Free";
+		}
+		else {
 			boardType=bType;
 		}
+		//파라미터에 페이지넘버가 없다면
+		System.out.println(pageNum);
 		if(pageNum != null) {
-			pNum=Integer.parseInt(pageNum);
+			if(pageNum.contains("plus")) { // + 가 있을 때 (Next를 눌렀을 때)
+				pageNum=pageNum.replace("plus", "");
+				pNum = Integer.parseInt(pageNum.substring(0, 1)) + Integer.parseInt(pageNum.substring(1, 2));
+			}else if(pageNum.contains("minus")){ // - 가 있을 때 (Previous를 눌렀을 때)
+				pageNum=pageNum.replace("minus", "");
+				pNum = Integer.parseInt(pageNum.substring(0, 1)) - Integer.parseInt(pageNum.substring(1, 2));
+			}else {
+				pNum=Integer.parseInt(pageNum);
+			}
+		}
+		HashMap hash = boardService.countBoard(boardType);
+		int totalBoardNum = ((BigDecimal) hash.get("COUNTBOARD")).intValue(); //게시글의 총 개수
+		System.out.println(hash);
+		int totalPageNum =totalBoardNum/boardPerPage;
+		if(totalBoardNum%boardPerPage!=0)  { //총 페이지 수 구하기
+			totalPageNum+=1; 
+		}
+		List<Integer> pageList = new ArrayList<Integer>(); //있어야하는 페이지들 리스트
+		for (int i = ((pNum/5)*5)+1 ; i <= ((pNum/5)*5)+5 && i<=totalPageNum ; i++) {
+			pageList.add(i);
+		}
+		if(pNum<=0||pNum>totalPageNum) {
+			pNum=1;
 		}
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("bList", boardService.getBoardList(pNum,boardType));
+		mv.setViewName("board/boardFree");
+		mv.addObject("pageList", pageList);
+		mv.addObject("pageNum", pNum);
+		return mv;
+	}
+	@RequestMapping("/boardList.trc")
+	public ModelAndView getBoardPage() {
+
+		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/boardList");
 		return mv;
 	}
 	@RequestMapping("/insertBoard.trc")
-	public ModelAndView insertBoard(String boardType) {
+	public ModelAndView insertBoard(BoardVO vo) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/insertBoard");
-		mv.addObject("boardType", boardType);
+		if(vo.getBoardNo()==null) {
+			vo.setBoardNo("");
+		}
+		mv.addObject("boardNo", vo.getBoardNo());
+		mv.addObject("boardType", vo.getBoardType());
+		return mv;
+	}
+	@RequestMapping("/boardView.trc")
+	public ModelAndView boardView(BoardVO vo) {
+		System.out.println(vo.getBoardNo());
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("board/boardView");
+		BoardVO rvo = boardService.getBoardOne(vo);
+		mv.addObject("board", rvo);
+		return mv;
+	}
+	@RequestMapping("/deleteBoard.trc")
+	public ModelAndView deleteBoard(BoardVO vo) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("board/boardList");
 		return mv;
 	}
 }

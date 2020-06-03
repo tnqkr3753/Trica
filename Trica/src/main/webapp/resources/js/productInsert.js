@@ -1,8 +1,3 @@
-/**
- * 
- */
-
-
 $(function(){
 	
 	// 1차 카테고리 변경하면 2차 카테고리 변경되게
@@ -29,11 +24,10 @@ $(function(){
 			changeItem = season;
 		}
 		
-		
 		$('#category2').empty();
 		
 		for(var i=0; i<changeItem.length; i++) {
-			var option = $("<option>" + changeItem[i] + "</option>");
+			var option = $("<option value='"+(i+1)+"'>" + changeItem[i] + "</option>");
 			$('#category2').append(option);
 			$('#category2').niceSelect('update');
 		}

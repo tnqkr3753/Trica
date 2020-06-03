@@ -18,11 +18,19 @@ public class MemberDAOImpl implements MemberDAO{
 		return mybatis.insert("MemberDAO.insertMember", vo);
 	}
 
-	@Override 
+	@Override  
 	public MemberVO login(MemberVO vo) {
-		System.out.println("===>  MemberMapper login() 호출");
+		System.out.println("===>  MemberMapper login() 호출"); 
 		return mybatis.selectOne("MemberDAO.login", vo);
 	}
-	      
+
+	@Override
+	public int memberUpdate(MemberVO vo) {
+		System.out.println("===> MemberMapper memberUpdate() 호출");
+		return mybatis.selectOne("MemberDAO.memberUpdate", vo);
+	}
+	    
+	
+	            
 }     
-                
+                 

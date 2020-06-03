@@ -9,6 +9,8 @@ public interface MemberDAO {
 	
 	//로그인
 	MemberVO login(MemberVO vo); 
-	 
-}    
-             
+	
+	//회원정보 수정
+	public int memberUpdate(MemberVO vo);
+}        
+                 

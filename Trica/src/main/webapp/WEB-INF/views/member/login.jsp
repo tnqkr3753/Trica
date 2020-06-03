@@ -79,7 +79,7 @@
 									</ul></li>
 								<li><a href="./blog.html">Blog</a></li>
 								<li><a href="#">Shop</a></li> 
-							</ul> 
+							</ul>  
 						</nav>
 						<div class="header__menu__right">
 							<a href="#" class="login-btn"><i class="fa fa-user"></i></a>
@@ -120,7 +120,7 @@
 				onSubmit="logincall();return false" action="Login.trc">
 				<h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>
 				<label for="inputEmail" class="sr-only">Your ID</label> 
-				<input 
+				<input   
 					name="memberId" type="text" id="uid" class="form-control"
 					placeholder="Your ID" required autofocus><BR> 
 				<label for="inputPassword" class="sr-only">Password</label>  
@@ -227,9 +227,8 @@
 	<script src="./resources/js/jquery.barfiller.js"></script>
 	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
 	<script src="./resources/js/jquery.slicknav.js"></script>
-	<script src="./resources/js/owl.carousel.min.js"></script>
+	<script src="./resources/js/owl.carousel.min.js"></script> 
 	<script src="./resources/js/main.js"></script>
-	<script src="./resources/js/login.js"></script>	
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>

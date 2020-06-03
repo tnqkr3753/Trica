@@ -9,7 +9,7 @@
 <meta name="keywords" content="Directing, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>pct_insert</title>
+<title>productInsert.jsp</title>
 
 <!-- Google Font -->
 <link
@@ -29,10 +29,6 @@
 <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/productInsert.css" type="text/css">
-
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="./resources/productInsert.js"></script>
 
 </head>
 
@@ -94,12 +90,13 @@
 					</div>
 				</div>
 				<div>
-					<form action="" method="post" name="form1">
+					<form action="saveProduct.trc" method="post" name="form1"
+						enctype='multipart/form-data'>
 						<div class="table-responsive">
 							<table class="table">
 								<tr>
 									<th class="success">1차 분류 선택</th>
-									<td colspan="5"><select id="category1" name="kind">
+									<td colspan="5"><select id="category1" name="bigC">
 											<option value="0">1차 분류 선택</option>
 											<option value="1">TV/냉장고/세탁기/건조기</option>
 											<option value="2">카메라/게임/음향</option>
@@ -110,55 +107,50 @@
 								</tr>
 								<tr>
 									<th class="success">2차 분류 선택</th>
-									<td colspan="5"><select id="category2" name="kind">
+									<td colspan="5"><select id="category2" name="smallC">
 											<option value="">2차 분류 선택</option>
 									</select></td>
 								</tr>
-
-								<tr>
-									<th class="success">상품코드</th>
-									<td colspan="5"><input type="text" name="pct_no"
-										id="pct_no" style="width: 26%"></td>
-								</tr>
 								<tr>
 									<th class="success">상품재고</th>
-									<td colspan="5"><input type="text" name="pct_cnt"
+									<td colspan="5"><input type="text" name="pctStock"
 										id="pct_cnt" style="width: 26%"></td>
 								</tr>
-
 								<tr>
 									<th class="success">상품명</th>
-									<td colspan="5"><input type="text" name="pct_name"
+									<td colspan="5"><input type="text" name="pctName"
 										id="pct_name" style="width: 26%"></td>
 								</tr>
 								<tr>
 									<th class="success">상품가격</th>
-									<td colspan="5"><input type="text" name="pct_price"
+									<td colspan="5"><input type="text" name="pctPrice"
 										id="pct_price" style="width: 26%"></td>
 								</tr>
 								<tr>
 									<th class="success">상품소개</th>
-									<td colspan="5"><input type="text" name="pct_intro"
+									<td colspan="5"><input type="text" name="pctIntro"
 										id="pct_intro" style="width: 98%"></td>
 								</tr>
 								<tr>
 									<th>상세설명</th>
 									<td colspan="5"><textarea id="pct_cont"
-											style="width: 98%; height: 200px;" name="pct_cont"></textarea>
+											style="width: 98%; height: 200px;" name="pctDetail"></textarea>
 									</td>
 								</tr>
 								<tr>
 									<th>상품 이미지</th>
-									<td colspan="5"><input type="file" name="pct_img"
+									<td colspan="5"><input type="file" name="file"
 										id="pct_img"></td>
 								</tr>
 							</table>
 						</div>
+						
 						<div class="text-center">
-							<input type="button" value="상품등록" class="btn_pct_insert">
+							<input type="submit" value="상품등록" class="btn_pct_insert">
 
 							<input type="reset" value="초기화" class="btn_pct_reset">
 						</div>
+						
 					</form>
 				</div>
 			</div>
@@ -255,6 +247,7 @@
 	<script src="./resources/js/jquery.slicknav.js"></script>
 	<script src="./resources/js/owl.carousel.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/productInsert.js"></script>
 
 </body>
 </html>

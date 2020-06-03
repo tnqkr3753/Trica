@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
-<meta name="author" content="">
+<meta name="author" content=""> 
 
 <!-- Google Font -->
 <link 
@@ -17,7 +17,7 @@
 	rel="stylesheet">  
  
 <!-- Css Styles -->  
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css"> 
 <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
@@ -155,20 +155,29 @@ function sample6_execDaumPostcode() {
 			<div class="row"> 
 				<div  class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
 					<div id="formhead" class="page-header">
-			 			<div class="col-md-12 col-md-offset-3">
-							<h3>회원가입</h3>   
-						</div>  
+			 			<c:choose>
+							<c:when test="${empty vo.memberId }">
+			 					<div class="col-md-12 col-md-offset-3">
+									<h3>회원가입</h3>
+								</div>
+							</c:when>
+							<c:otherwise>
+								<div class="col-md-12 col-md-offset-3">
+									<h3>회원정보</h3>
+								</div>
+							</c:otherwise>	
+						</c:choose>    
 					</div>        
 					<div id="formtab" class="col-sm-12 col-md-offset-3"> 
 						<c:choose>
 						<c:when test="${empty sessionScope.memberId }">
-							<form action="Regist.trc">
-						</c:when>
+							<form action="Regist.trc"></form>
+						</c:when> 
 						<c:otherwise>
-							<form action="Modify.trc">
+							<form action="Modifier.trc"></form>
 						</c:otherwise>
-						</c:choose>
-						      
+						</c:choose>  
+						       
 							<div class="form-group"> 
 								<label for="memberName" >성명</label> 
 								<c:choose>
@@ -179,14 +188,14 @@ function sample6_execDaumPostcode() {
 										<input type="text" value="${vo.memberId }" name="memberName" class="form-control" id="memberName" readonly />
 									</c:otherwise>
 								</c:choose>
-								 
+								  
 							</div>   
 							<div class="form-group"> 
 								<label for="gender">성별</label><br/> 
 								<c:choose>
 									<c:when test="${empty vo.memberId }">
 										<input type="checkbox" name="gender" id="gender" value="남"/>남자 &nbsp;&nbsp;
-										<input type="checkbox" name="gender" id="gender" value="여"/>여자 
+										<input type="checkbox" name="gender" id="gender" value="여"/>여자  
 									</c:when>
 									<c:otherwise>
 										<input type="text" value="${vo.gender }" name="gender" class="form-control" id="gender" readonly />
@@ -204,35 +213,61 @@ function sample6_execDaumPostcode() {
 									<c:otherwise>
 										<input type="text" value="${vo.regNum }" name="regNum" class="form-control" id="regNum" readonly>
 									</c:otherwise>
-								</c:choose> 
+								</c:choose>   
 								
 							</div> 
 							 
 							<div class="form-group">  
 								<label for="memberId">아이디</label> 
-								<input type="text" name="memberId" class="form-control" id="memberId" placeholder="아이디를 입력해 주세요">
-							</div>   
+									<c:choose>
+									<c:when test="${empty vo.memberId }">
+									<input type="text" name="memberId" class="form-control" id="memberId" placeholder="아이디를 입력해 주세요">
+									</c:when>
+									<c:otherwise>
+										<input type="text" value="${vo.memberId }" name="memberId" class="form-control" id="memberId" readonly>
+									</c:otherwise> 
+								</c:choose> 
+							</div>     
       
 			 				<div class="form-group">
 								<label for="password">비밀번호</label> 
 								<input type="password" name="password" class="form-control" id="password" placeholder="비밀번호를 입력해주세요">
 							</div>  
-    
+     
 							<div class="form-group"> 
 								<label for="tel">휴대폰 번호</label> 
 								<input type="tel" name="tel" class="form-control" id="tel"	placeholder="휴대폰번호를 입력해 주세요">
 							</div>  
            
-							<div>   
+							<div>      
 								<div class="form-group addr">
 									<label for="address">주소</label><br/>
-									<input type="text" class="form-control" id="sample6_postcode" placeholder="우편번호">
-									<input type="button" id="addbtn" class="form-control btn btn-secondary" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
-									<input type="text" class="form-control" id="sample6_address" placeholder="주소">
-									<input type="text" class="form-control" id="sample6_detailAddress" placeholder="상세주소">
-									<input type="text" class="form-control" id="sample6_extraAddress" placeholder="참고항목">
-									<input type="hidden" name="address" id="address" value=""/>
-								</div>  
+									<c:choose>
+										<c:when test="${empty vo.memberId }">
+											<input type="text" class="form-control" id="sample6_postcode" placeholder="우편번호">
+											<input type="button" id="addbtn" class="form-control btn btn-secondary" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+											<input type="text" class="form-control" id="sample6_address" placeholder="주소">
+											<input type="text" class="form-control" id="sample6_detailAddress" placeholder="상세주소">
+											<input type="text" class="form-control" id="sample6_extraAddress" placeholder="참고항목">
+											<input type="hidden" name="address" id="address" value=""/>
+										</c:when>
+										<c:otherwise>  
+											<input value="${addr.addr0}" type="text" class="form-control" id="sample6_postcode" readonly>
+											<input type="button" id="addbtn" class="form-control btn btn-secondary" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+											<input value="${addr.addr1}"type="text" class="form-control" id="sample6_address" readonly> 
+											<input value="${addr.addr2}" type="text" class="form-control" id="sample6_detailAddress"> 
+											<c:choose> 
+											<c:when test="${empty addr.addr3 }"> 
+											<input type="text" class="form-control" id="sample6_extraAddress" readonly>  
+											</c:when>  
+											<c:otherwise> 
+												<input value="${addr.addr3}" type="text" class="form-control" id="sample6_extraAddress" readonly>
+											</c:otherwise>
+										 	</c:choose> 
+											 
+										</c:otherwise>
+									</c:choose>		  
+								</div>     
 							</div>     
 							<c:choose>       
                    			<c:when test="${empty sessionScope.memberId}">  
@@ -253,29 +288,28 @@ function sample6_execDaumPostcode() {
 								<input type="checkbox" class="form-check-input" name="memberType" id="memberType" v="판매회원" value="1">판매회원
 								</div>   
 							</div>        
-     						
+     						  
 							<div class="form-group text-center">      
 								<button type="submit" id="join-submit" class="btn btn-primary"> 
 									회원가입<i class="fa fa-check spaceLeft"></i> 
-								</button>
-								<button type="submit" class="btn btn-warning">
+								</button> 
+								<button type="button" class="btn btn-warning" onclick="location.href='LoginPage.trc'">
 									가입취소<i class="fa fa-times spaceLeft"></i>
-								</button>
-							</div>    
-							</c:when>
+								</button> 
+							</div>     
+							</c:when>   
 							<c:otherwise>
-								<button type="submit" id="join-submit" class="btn btn-primary"> 
-									회원정보수정<i class="fa fa-check spaceLeft"></i> 
+								<button type="submit" id="modify" class="btn btn-primary" onclick="location.href='Updater.trc'"> 
+									회원정보수정<i class="fa fa-check spaceLeft"></i>  
+								</button>  
+								<button type="button" class="btn btn-warning" onclick="location.href='Modifier.trc'">>  
+									수정취소<i class="fa fa-times spaceLeft"></i> 
 								</button>
-								<button type="submit" class="btn btn-warning">
-									수정취소<i class="fa fa-times spaceLeft"></i>
-								</button>
-							</c:otherwise>
-							</c:choose>
-							
-						</form> 
-					</div>     
-				</div>
+							</c:otherwise>   
+							</c:choose>   
+						</form>  
+					</div>      
+				</div> 
 			</div> 
 		</div>
 	</div>
