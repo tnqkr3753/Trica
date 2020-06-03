@@ -76,8 +76,21 @@
 	</header>
 	<!-- Header 끝 -->
 
-	<section class="hero set-bg" data-setbg="./resources/img/background_black.png">
-	</section>
+       <div class="breadcrumb-area set-bg" data-setbg="./resources/img/background_black.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>□ TRICA</h2>
+                        <div class="breadcrumb__option">
+                            <a href="#"><i class="fa fa-home"></i> 전자제품</a>
+                            <span> 상품 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<div class="container" width="80%">
 		<div class="row-fluid">

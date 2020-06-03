@@ -132,7 +132,8 @@
                             <!-- for문 시작 -->
 								<c:forEach var='list' items="${sList }" begin='1' end='6'> 
                                 <div class="col-lg-4 col-md-6 product-item">
-                                 	<form name='next_go'  id='next_go'  action="productDetail.trc" method="get">                           		 	
+                                 	<form name='next_go'  id='next_go'  action="productDetail.trc" method="get">    
+                                 	<input type="hidden" name="pctNo" value="${list.PCT_NO }">                       		 	
                                     <div class="listing__item">
                                         	<div class="listing__item__pic set-bg" data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}" ><!-- 이미지  -->
                                             <img src="./resources/img/추천상품/BSTE_상품.png" alt=""> <!-- 이미지 -->
