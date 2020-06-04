@@ -9,5 +9,6 @@ import com.trica.vo.ProductVO;
 public interface SearchDAO {
 	
 	public List<HashMap> getSearchList(ProductVO vo);
+	public List<HashMap> getBigSearch(String bcNo);
 	
 }
