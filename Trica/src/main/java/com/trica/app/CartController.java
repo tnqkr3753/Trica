@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,7 +25,9 @@ import com.trica.vo.ProductVO;
 public class CartController {
 	@ResponseBody
 	@RequestMapping(value="/addCart.trc",produces = "application/text; charset=utf8")
-	public String addCart(@RequestBody HashMap<String, Object> hash,HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException {
+	public String addCart(@RequestBody HashMap<String, Object> hash,
+								HttpServletRequest request,HttpServletResponse response
+								) throws UnsupportedEncodingException {
 		System.out.println("-----addCart------");
 		Cookie[] cookies = request.getCookies();
 		Cookie kie = null;
@@ -38,7 +41,7 @@ public class CartController {
 			}
 		}
 		kie = new Cookie("cartPctNo", URLEncoder.encode(newValue.toString(), "UTF-8"));
-		kie.setMaxAge(60*60*24); //하루로 기간설정
+		kie.setMaxAge(-1); //브라우저끄면 삭제
 		response.addCookie(kie);
 		return "장바구니에 추가되었습니다.";
 	}
@@ -61,31 +64,22 @@ public class CartController {
 		return mv;
 	}
 	@RequestMapping("cart.trc")
-	public ModelAndView getCart(HttpServletRequest request) {
+	public ModelAndView getCart(@CookieValue(value="cartPctNo",required = true,defaultValue = "") String ckValue) throws UnsupportedEncodingException {
 		//쿠기 값 받아서 list로 만들기
-		Cookie[] ck = request.getCookies();
-		StringBuffer sb = new StringBuffer();
-		String ckValue = "";
-		if(ck!=null) {
-			for (Cookie cookie : ck) {
-				if(cookie.getName().equals("cartPctNo")) {
-					ckValue = cookie.getValue();
-					break;
-				}
-			}
-		}
-		StringTokenizer st = new StringTokenizer(ckValue,"#");
-		ArrayList<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
-		for(int i=1; st.hasMoreTokens();i++) {
-			ArrayList<String> arr = new ArrayList<String>();
-			arr.add(String.valueOf(i));
-			StringTokenizer st2 = new StringTokenizer(st.nextToken(), "&");
-			while(st2.hasMoreTokens()) {
-				arr.add(st2.nextToken());
-			}
-			list.add(arr);
-		}
 		ModelAndView mv = new ModelAndView();
+		ArrayList<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
+		if(!ckValue.equals("")){
+			StringTokenizer st = new StringTokenizer(ckValue,"#");
+			for(int i=1; st.hasMoreTokens();i++) {
+				ArrayList<String> arr = new ArrayList<String>();
+				arr.add(String.valueOf(i));
+				StringTokenizer st2 = new StringTokenizer(st.nextToken(), "&");
+				while(st2.hasMoreTokens()) {
+					arr.add(st2.nextToken());
+				}
+				list.add(arr);
+			}
+		}
 		mv.addObject("cList", list);
 		mv.setViewName("cart/user-cart");
 		return mv;
@@ -96,5 +90,37 @@ public class CartController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("cart/user-favorite");
 		return mv;
+	}
+	@ResponseBody
+	@RequestMapping(value="deleteCookie.trc",produces = "application/text; charset=utf8")
+	public String deleteCookie(@RequestBody HashMap hash,@CookieValue(value="cartPctNo",required = true) String ckValue,
+			HttpServletResponse response) {
+		System.out.println("-----delcookie----");
+		System.out.println("hash값:"+hash.get("delPctIndex"));
+		StringBuffer sb = new StringBuffer();
+		//ckValue가 default값이 아닐 때
+		if(!ckValue.equals("")){
+			//쿠키를 #으로 자른다
+			System.out.println("-----if문진입----");
+			StringTokenizer st = new StringTokenizer(ckValue,"#");
+			for(int i=1; st.hasMoreTokens();i++) {
+				//자른 값마다 다시 &로 잘라 각자의 값을 받아온다.
+				String tok = st.nextToken();
+				if(String.valueOf(i).equals(hash.get("delPctIndex"))) {
+					continue;
+				}
+				StringTokenizer st2 = new StringTokenizer(tok, "&");
+				while(st2.hasMoreTokens()) {
+					//첫번째값=no
+					sb.append(st2.nextToken()); //1번이 아닐경우 sb에 저장
+					sb.append("&");
+				}
+				sb.append("#");
+			}
+		}
+		Cookie ck = new Cookie("cartPctNo", sb.toString());
+		ck.setMaxAge(-1);
+		response.addCookie(ck);
+		return "장바구니에서 삭제되었습니다.";
 	}
 }

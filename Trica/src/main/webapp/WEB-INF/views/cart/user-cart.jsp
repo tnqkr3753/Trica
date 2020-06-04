@@ -80,23 +80,23 @@
                 <c:forEach var="list" items="${cList }">
                 <tr>
                     <td class="border-0 align-middle">
-                    	<input type="hidden" value="${list.0 }">
+                    	<input id="list-pct-index" type="hidden" value="${list[0] }">
                     	<div class="custom-control custom-checkbox">
-							<input type="checkbox" id="jb-checkbox-1" class="custom-control-input">
-							<label class="custom-control-label" for="jb-checkbox-1"></label>
+							<input type="checkbox" id="jb-checkbox-${list[0] }" class="custom-control-input">
+							<label class="custom-control-label" for="jb-checkbox-${list[0] }"></label>
 						</div>
 					</td>
                   <th scope="row" class="border-0">
                     <div class="p-2">
-                      <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+                      <img src="./resources/upload/product/img/${list[4] }" alt="" width="70" class="img-fluid rounded shadow-sm">
                       <div class="ml-3 d-inline-block align-middle">
-                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Timex Unisex Originals</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">${list[1] }</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
                       </div>
                     </div>
                   </th>
-                  <td class="border-0 align-middle"><strong>$79.00</strong></td>
-                  <td class="border-0 align-middle"><strong>3</strong></td>
-                  <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                  <td class="border-0 align-middle"><strong class="each-price">${list[3] }</strong><strong>원</strong></td>
+                  <td class="border-0 align-middle"><strong>${list[2] }</strong></td>
+                  <td class="border-0 align-middle"><a href="cart.trc" class="text-dark delete-order"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 </c:forEach>
                 <!-- for문 끝 -->
@@ -109,34 +109,34 @@
 
       <div class="row py-5 p-4 bg-white rounded shadow-sm">
         <div class="col-lg-6">
-          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
+          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">쿠폰 번호</div>
           <div class="p-4">
-            <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
+            <p class="font-italic mb-4">만약 쿠폰이 있다면, 이 칸에 쿠폰 번호를 입력해주세요.</p>
             <div class="input-group mb-4 border rounded-pill p-2">
-              <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
+              <input type="text" placeholder="쿠폰 적용" aria-describedby="button-addon3" class="form-control border-0">
               <div class="input-group-append border-0">
-                <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
+                <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>적용 쿠폰</button>
               </div>
             </div>
           </div>
-          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for seller</div>
+          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">판매자에게 하고싶은 말</div>
           <div class="p-4">
-            <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
+            <p class="font-italic mb-4">만약 판매자에게 하고 싶은 말이나 필요한 옵션이 있다면 여기에 적어주세요.</p>
             <textarea name="" cols="30" rows="2" class="form-control"></textarea>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">주문 </div>
           <div class="p-4">
-            <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
+            <p class="font-italic mb-4">체크 표시한 상품들이 주문 목록에 들어갑니다.</p>
             <ul class="list-unstyled mb-4">
-              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
-              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
-              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
-              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                <h5 class="font-weight-bold">$400.00</h5>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">주문 합계 </strong><strong id="totalOrderPrice">0</strong><strong>원</strong></li>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">배송비</strong><strong id="deliveryPrice">2500</strong><strong>원</strong></li>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">부가세</strong><strong id="texPrice">0</strong><strong>원</strong></li>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">합계</strong>
+                <h5 class="font-weight-bold" id="total-condition-price">0</h5><h5>원</h5>
               </li>
-            </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+            </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">결제</a>
           </div>
         </div>
       </div>
@@ -158,5 +158,6 @@
     <script src="./resources/js/jquery.slicknav.js"></script>
     <script src="./resources/js/owl.carousel.min.js"></script>
     <script src="./resources/js/main.js"></script>
+    <script src="./resources/js/cart.js"></script>
 </body>
 </html>
