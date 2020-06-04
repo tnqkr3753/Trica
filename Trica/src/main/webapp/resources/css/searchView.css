@@ -1,0 +1,7 @@
+.listing__item .listing__item__pic > span > img{
+	position:relative;
+	margin-right:90%;
+	margin-left:68%;
+	z-index: 9999;
+	border-radius: 0%;
+} 

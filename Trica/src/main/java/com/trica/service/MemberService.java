@@ -9,9 +9,10 @@ public interface MemberService {
 	
 	//로그인 service  
 	public MemberVO login(MemberVO vo);
-	
-	//회원정보 수정 service
-	public int memberUpdate(MemberVO vo);  
 	 
-} 
-                         
+	//회원정보 수정 service  
+	public int memberUpdate(MemberVO vo);
+
+   
+}   
+                                    

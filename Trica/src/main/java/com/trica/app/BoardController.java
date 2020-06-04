@@ -109,7 +109,7 @@ public class BoardController {
 		BoardVO rvo = boardService.getBoardOne(vo);
 		boardService.increaseCount(rvo);
 		mv.addObject("board", rvo);
-		return mv;
+		return mv; 
 	}
 	@RequestMapping("/deleteBoard.trc")
 	public ModelAndView deleteBoard(BoardVO vo,HttpServletResponse response) throws IOException {
@@ -127,7 +127,7 @@ public class BoardController {
 		pw.println("history.back();");
 		pw.println("</script>");
 		pw.flush();
-		mv.setViewName("board/boardList");
+		mv.setViewName("board/boardList"); 
 		return mv;
 	}
 	@RequestMapping("modifierBoard.trc") //수정창

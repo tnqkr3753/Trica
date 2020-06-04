@@ -17,7 +17,7 @@ public class BcateController {
 	@Autowired
 	BcateService bcateService;
 	
-	@RequestMapping("/countCate.trc")
+	@RequestMapping("/countCate.trc") 
 	public ModelAndView counter() {
 		//string
 		ModelAndView mv = new ModelAndView();  

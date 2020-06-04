@@ -117,32 +117,21 @@
 		</div>
 		<div class="card-body"> 
 			<form class="form-signin" method="POST" 
-				onSubmit="logincall();return false" action="Login.trc">
-				<h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>  
-				<label for="inputEmail" class="sr-only">Your ID</label> 
-				<input   
-					name="memberId" type="text" id="uid" class="form-control"
-					placeholder="Your ID" required autofocus><BR> 
+				onSubmit="logincall();return false" action="passChk.trc">
+				<h5 class="form-signin-heading">비밀번호를 입력하세요</h5>  
 				<label for="inputPassword" class="sr-only">Password</label>  
-				<input
+				<input 
 					name="password" type="password" id="upw" class="form-control"
 					placeholder="Password" required><br> 
-				<div class="checkbox"> 
-					<label> <input type="checkbox" value="remember-me">
-						기억하기
-					</label>    
-				</div>
-				<button id="btn-Yes" class="btn btn-lg btn-primary btn-block"
-					type="submit">로 그 인</button>
-				<button id="btn-Rg" class="btn btn-lg btn-primary btn-block"
-					onclick="location.href='Register.trc'">회원가입</button>
-			</form>             
-		</div>             
-	</div>         
- 
+ 				<button id="btn-Chk" class="btn btn-lg btn-primary btn-block"
+					onclick="location.href='Register.trc'">확 인</button>
+			</form>              
+		</div>            
+	</div>             
+  
 	<div class="modal"></div>
  
-	<!-- Footer Section Begin -->
+	<!-- Footer Section Begin --> 
 	<footer class="footer">
 		<div class="container">
 			<div class="row">

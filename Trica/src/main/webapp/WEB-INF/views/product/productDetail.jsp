@@ -101,6 +101,7 @@
 				<!-- 상품 이미지 출력 -->
 				<div class="img" style="float: left;">
 					<img src="./resources/upload/product/img/${vo.pctImgName }" width="500" height="500">
+					<input type="hidden" value="${vo.pctImgName }" id="pctImgName">
 				</div>
 
 				<!-- 오른쪽 상품상세정보 rightSec 출력 -->

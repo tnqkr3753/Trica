@@ -12,7 +12,7 @@ import com.trica.vo.BoardVO;
 public class BoardDAOImpl implements BoardDAO {
 	@Autowired
 	private SqlSessionTemplate sqlSession;
-	@Override
+	@Override 
 	public int insertBoard(BoardVO vo) {
 		return sqlSession.insert("BoardDAO.insertBoard", vo);
 	}
@@ -36,7 +36,7 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 	@Override
 	public int modifyBoard(BoardVO vo) {
-		return sqlSession.update("BoardDAO.modifyBoard",vo);
+		return sqlSession.update("BoardDAO.modifyBoard",vo); 
 	}
 	@Override
 	public void increateCount(BoardVO vo) {

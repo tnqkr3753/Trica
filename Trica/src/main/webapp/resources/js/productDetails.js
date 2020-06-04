@@ -31,7 +31,8 @@ $(function(){
 		var type=$(this).attr('act');
 		var obj = {"pctNo" : $.trim($('#pctNo').val()),
 					"pctStock":$('#cnt').val(),
-					"totalPrice":$('#totalPrice').text()
+					"totalPrice":$('#totalPrice').text(),
+					"pctImgName":$('pctImgName').val()
 						}
 		$.ajax({
 			type : 'POST',                 //get방식으로 통신
