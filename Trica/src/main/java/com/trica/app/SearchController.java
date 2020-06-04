@@ -32,4 +32,19 @@ public class SearchController {
 		mv.setViewName("product/searchView");
 		return mv;
 	}
+	
+	@RequestMapping("bigSearch.trc")
+	public ModelAndView bigSearch(@RequestParam String bcNo) {
+		System.out.println("===============큰 카테고리 출력=================");
+		
+		// --------------------------------------------------------------------------------
+		System.out.println(bcNo);
+		ModelAndView mv = new ModelAndView();
+		System.out.println(searchService.getBigSearch(bcNo));
+		mv.addObject("sList", searchService.getBigSearch(bcNo));
+		mv.setViewName("product/searchView");
+		// --------------------------------------------------------------------------------
+		
+		return mv;
+	}
 }

@@ -48,4 +48,13 @@ public class ProductServiceImpl implements ProductService {
 	public List<ProductVO> getRecommendList() {
 		return productDAO.getRecommendList();	// 상품 리스트 리턴
 	}
+
+
+
+	@Override
+	public void increaseCount(ProductVO vo) {
+		System.out.println("-------product cnt increase------");
+		productDAO.increaseCount(vo);
+	}
+	
 }

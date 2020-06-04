@@ -25,32 +25,21 @@
 						</c:choose>
 						${tabName }</div>
 
-						<div class="listing__item__pic__btns">
-							<a href="#"><span class="icon_zoom-in_alt"></span></a> <a
-								href="#"><span class="icon_heart_alt"></span></a>
-						</div>
+						
 					</div>
 					<div class="listing__item__text">
 						<div class="listing__item__text__inside">
 							<h5>${pct.pctName}</h5>
 							<div class="listing__item__text__rating">
-								<div class="listing__item__rating__star">
-									<span class="icon_star"></span> <span class="icon_star"></span>
-									<span class="icon_star"></span> <span class="icon_star"></span>
-									<span class="icon_star-half_alt"></span>
-								</div>
-								<h6>${pct.pctPrice }</h6>
+								<h6>${pct.pctPrice }원</h6>
 							</div>
-							<ul>
-								<li><span class="icon_pin_alt"></span> ${pct.pctIntro }</li>
-								<li><span class="icon_phone"></span> (+12) 345-678-910</li>
-							</ul>
+								<span class="arrow_carrot-right"></span> ${pct.pctIntro}
+							
 						</div>
 						<div class="listing__item__text__info">
 							<div class="listing__item__text__info__left">
-								<img src="img/listing/list_small_icon-1.png" alt=""> <span>${pct.pctStock }</span>
+							<span>현재 재고 : ${pct.pctStock }개</span>
 							</div>
-							<div class="listing__item__text__info__right">Open Now</div>
 						</div>
 					</div>
 				</div>

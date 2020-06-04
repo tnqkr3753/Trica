@@ -57,6 +57,11 @@ SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price,
 	 (SELECT * FROM product ORDER BY pct_cnt ASC) WHERE rownum>=1 AND rownum<=6]]>
 </select>
  
+<update id="increaseCount" parameterType="product">
+	UPDATE product 
+	SET pct_cnt=pct_cnt+1
+	WHERE trim(pct_no) = trim(#{pctNo}) 
+</update>
 
 
 

@@ -7,4 +7,5 @@ import com.trica.vo.ProductVO;
 
 public interface SearchService {
 	public List<HashMap> getSearchList(ProductVO vo);
+	public List<HashMap> getBigSearch(String bcNo);
 }
