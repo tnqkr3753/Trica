@@ -32,15 +32,15 @@ $(function(){
 		var obj = {"pctNo" : $.trim($('#pctNo').val()),
 					"pctStock":$('#cnt').val(),
 					"totalPrice":$('#totalPrice').text(),
-					"pctImgName":$('pctImgName').val()
-						}
+					"pctImgName":$('#pctImgName').val()
+						};
 		$.ajax({
-			type : 'POST',                 //get방식으로 통신
+			type : 'POST',                 //post방식으로 통신
 			async : true,
 			contentType : 'application/json',
 			url : type,    //탭의 data-tab속성의 값으로 된 html파일로 통신
 			data : JSON.stringify(obj),
-			dataType : "text",            //html형식으로 값 읽기
+			dataType : "text",            //text형식으로 값 읽기
 			error : function(e) {          //통신 실패시
 				alert("오류입니다.");
 			},
