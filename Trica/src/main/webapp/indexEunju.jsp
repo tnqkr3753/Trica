@@ -151,13 +151,20 @@
 						<h2>진행중인 이벤트</h2>
 					</div>
 					<div class="testimonial__slider owl-carousel">
-						<div class="testimonial__item" data-hash="review-1">
-														<p><img src="./resources/img/event/event1.png" width="500" height="400"></p>
-							
-						</div>
-						<div class="testimonial__item" data-hash="review-2">
+						<div class="testimonial__item">
 							<p><img src="./resources/img/event/event1.png" width="500" height="400"></p>
-							
+						</div>
+						<div class="testimonial__item">
+							<p><img src="./resources/img/event/event2.jpg" width="500" height="400"></p>
+						</div>
+						<div class="testimonial__item">
+							<p><img src="./resources/img/event/event3.jpg" width="500" height="400"></p>
+						</div>
+						<div class="testimonial__item">
+							<p><img src="./resources/img/event/event4.jpg" width="500" height="400"></p>
+						</div>
+						<div class="testimonial__item">
+							<p><img src="./resources/img/event/event5.jpg" width="500" height="400"></p>
 						</div>
 					</div>
 				</div>
@@ -370,6 +377,6 @@
 	<script src="./resources/js/owl.carousel.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/getList.js"></script>
-	<script src="./resources/js/cateee.js"></script>
+	<script src="./resources/js/bigCate.js"></script>
 </body>
 </html>
