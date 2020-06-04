@@ -29,47 +29,7 @@
     </div> 
 
     <!-- Header Section Begin --> 
-    <header class="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <!-- <div class="header__logo">
-                        <a href="./index.jsp"><img src="img/Logo.png" alt=""></a>
-                    </div> -->
-                </div>
-                <div class="col-lg-9 col-md-9">
-                    <div class="header__nav">
-                        <nav class="header__menu mobile-menu">
-                            <ul>
-                                <li ><a href="./index.jsp">Home</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./about.html">About</a></li>
-                                        <li><a href="./listing-details.html">Listing Details</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
-                                        <li><a href="./contact.html">Contact</a></li>
-                                    </ul>
-                                </li> 
-                                <li><a href="./blog.html">Blog</a></li>
-                                <li class="active"><a href="#">Cart</a>
-                                	 <ul class="dropdown">
-                                        <li><a href="cart.trc">Shopping Cart</a></li>
-                                        <li><a href="favorite.trc">Favorite</a></li>
-                                        <li><a href="orderList.trc">OrderList</a></li>
-                                    </ul>
-                                </li>
-                             </ul> 
-                        </nav>
-                        <div class="header__menu__right">
-                            <a href="#" class="login-btn"><i class="fa fa-user"></i></a>
-                        </div> 
-                    </div>   
-                </div> 
-            </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
+    <jsp:include page="../../../header.jsp"></jsp:include>
     <!-- Header Section End --> 
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-area set-bg" data-setbg="./resources/img/breadcrumb/breadcrumb-orderlist.jpg">
@@ -121,82 +81,7 @@
 </div>
     <!-- Board End -->
         <!-- Footer Section Begin -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <a href="./index.jsp"><img src="./resources/img/footer-logo.png" alt=""></a>
-                        </div>
-                        <p>Challenging the way things have always been done can lead to creative new options that reward
-                            you.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 offset-lg-1 col-md-6">
-                    <div class="footer__address">
-                        <ul>
-                            <li>
-                                <span>Call Us:</span>
-                                <p>(+12) 345-678-910</p>
-                            </li>
-                            <li>
-                                <span>Email:</span>
-                                <p>info.colorlib@gmail .com</p>
-                            </li>
-                            <li>
-                                <span>Fax:</span>
-                                <p>(+12) 345-678-910</p>
-                            </li>
-                            <li>
-                                <span>Connect Us:</span>
-                                <div class="footer__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-skype"></i></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 offset-lg-1 col-md-6">
-                    <div class="footer__widget">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">How it work</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">How it Work</a></li>
-                            <li><a href="#">Advantages</a></li>
-                            <li><a href="#">Direo App</a></li>
-                            <li><a href="#">Packages</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer__copyright">
-                        <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div>
-                        <div class="footer__copyright__links">
-                            <a href="#">Terms</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Cookie Policy</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </footer>
+    <jsp:include page="../../../footer.jsp"></jsp:include>
     <!-- Footer Section End -->
         <!-- Js Plugins -->
     <script src="./resources/js/jquery-3.3.1.min.js"></script>
