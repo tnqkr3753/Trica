@@ -1,5 +1,6 @@
 package com.trica.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -19,7 +20,7 @@ public class ProductDAOImpl implements ProductDAO {
 		return sqlSession.insert("ProductDAO.insertProduct", vo);
 	}
 	
-	
+	 
 	
 	@Override
 	public List<ProductVO> getNewList() {
@@ -32,6 +33,11 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
+	public List<HashMap> getaList() {
+		return sqlSession.selectList("ProductDAO.getaList");
+	}   
+	 
+	@Override 
 	public ProductVO selectProduct(ProductVO vo) {
 		return sqlSession.selectOne("ProductDAO.selectProduct", vo);
 	}
@@ -45,11 +51,11 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<ProductVO> getRecommendList() {
 		return sqlSession.selectList("ProductDAO.getRecommendList");
 	}
-
-
+ 
 
 	@Override
 	public void increaseCount(ProductVO vo) {
 		sqlSession.update("ProductDAO.increaseCount", vo);
 	}
+
 }

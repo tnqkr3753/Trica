@@ -22,7 +22,7 @@
 	type="text/css">
 <link rel="stylesheet" href="./resources/css/elegant-icons.css"
 	type="text/css">
-<link rel="stylesheet" href="./resources/css/flaticon.css"
+<link rel="stylesheet" href="./resources/css/flaticon.css" 
 	type="text/css">
 <link rel="stylesheet" href="./resources/css/nice-select.css"
 	type="text/css">
@@ -76,13 +76,13 @@
 		</div>
 	</div>
 	<!-- Breadcrumb End --> 
-
-	<div class="card align-middle"
+ 
+	<div class="card align-middle" 
 		style="width: 20rem; border-radius: 20px;">
 		<div class="card-title" style="margin-top: 30px;">
 			<h2 class="card-title text-center" style="color: #113366;">Login</h2>
 		</div>
-		<div class="card-body"> 
+		<div class="card-body">  
 			<form class="form-signin" method="POST" 
 				onSubmit="logincall();return false" action="Login.trc">
 				<h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>  
@@ -97,7 +97,7 @@
 				<div class="checkbox"> 
 					<label> <input type="checkbox" value="remember-me">
 						기억하기
-					</label>    
+					</label>     
 				</div>
 				<button id="btn-Yes" class="btn btn-lg btn-primary btn-block"
 					type="submit">로 그 인</button>

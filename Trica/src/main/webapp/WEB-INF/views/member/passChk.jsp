@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> 
 	<!-- Breadcrumb End --> 
 
 	<div class="card align-middle"

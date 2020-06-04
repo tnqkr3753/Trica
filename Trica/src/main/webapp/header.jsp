@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css"> 
     <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css"> 
     <link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
@@ -42,51 +42,51 @@
                     </div> --> 
                 </div>
                 <div class="col-lg-9 col-md-9">
-                    <div class="header__nav">
+                    <div class="header__nav"> 
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="./index.jsp">Home</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Pages</a> 
-                                    <ul class="dropdown">
+                                <li><a href="getaList.trc">Shop</a></li>
+                                <li><a href="#">Pages</a>     
+                                    <ul class="dropdown">   
                                         <li><a href="boardList.trc">Board</a></li>
                                         <li><a href="./listing-details.html">Listing Details</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                         <li><a href="./contact.html">Contact</a></li>
                                     </ul>
-                                </li>  
+                                </li>     
                                 <li><a href="boardList.trc">Board</a></li>
                                 <li><a href="#">Cart</a>
                                 	 <ul class="dropdown">
                                         <li><a href="cart.trc">Shopping Cart</a></li>
                                         <li><a href="favorite.trc">Favorite</a></li>
                                         <li><a href="orderList.trc">OrderList</a></li>
-                                    </ul> 
+                                    </ul>  
                                 </li>   
+                                <c:if test="${!empty sessionScope.memberId}">
                                   <li><a href="#">User</a>
                                 	 <ul class="dropdown">
-                                        <li><a href="Modifier.trc">Information</a></li>
+                                        <li><a href="goChk.trc">Information</a></li>
                                         <li><a href="logout.trc">LogOut</a></li>
-                                    </ul> 
-                                </li>    
-                                       
-                             </ul>    
-                        </nav>    
+                                     </ul> 
+                                  </li>      
+                                </c:if>          
+                             </ul>       
+                        </nav>      
                         <div class="header__menu__right">
-                             
-                            <c:choose>
-	                            <c:when test="${empty sessionScope.memberId}">
-	                            	<a href="LoginPage.trc" class="login-btn"><i class="fa fa-user"></i></a>
-	                            </c:when> 
-	                            <c:otherwise>
-	                            	<a href="#" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
-	                            </c:otherwise>
-                            </c:choose> 
-                        </div>    
-                    </div>         
-                </div>  
+	                        <c:choose>	 
+	                        	<c:when test="${empty sessionScope.memberId}">
+	                        		<a href="LoginPage.trc" class="login-btn"><i class="fa fa-user"></i></a>
+	                        	</c:when> 
+								<c:when test="${1 eq sessionScope.memberType}">	
+	                       			<a href="productInsert.trc" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
+                            	</c:when>
+                            </c:choose>	   
+                        </div>         
+                    </div>               
+                </div>     
             </div> 
-            <div id="mobile-menu-wrap"></div> 
+            <div id="mobile-menu-wrap"></div>  
         </div>
     </header>
     <!-- Header Section End --> 

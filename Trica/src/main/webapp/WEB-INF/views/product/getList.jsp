@@ -6,7 +6,7 @@
 	<c:when test="${empty list }">	<!-- list가 비어있을 때  -->
 		상품이 존재하지 않습니다.
 	</c:when>
-	<c:otherwise>
+	<c:otherwise> 
 		<c:set var="count" value="1"></c:set>
 		
 		<c:forEach items="${list}" var="pct">
@@ -24,7 +24,7 @@
 							<c:when test="${tabName eq 'new'}"><div  class="listing__item__pic__tag new"></c:when>
 						</c:choose>
 						${tabName }</div>
-
+ 
 						
 					</div>
 					<div class="listing__item__text">

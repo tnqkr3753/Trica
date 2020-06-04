@@ -4,7 +4,7 @@ import com.trica.vo.MemberVO;
  
 public interface MemberDAO {
 	
-	//회원가입 DAO
+	//회원가입 
 	public int insertMember(MemberVO vo);
 	
 	//로그인
@@ -12,7 +12,6 @@ public interface MemberDAO {
 	
 	//회원정보 수정
 	public int memberUpdate(MemberVO vo); 
-	  
-	 
+ 
 }           
-                            
+                             

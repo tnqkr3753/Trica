@@ -16,7 +16,7 @@
 <!-- Google Font -->
 <link	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Css Styles -->
+<!-- Css Styles --> 
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
@@ -34,39 +34,39 @@
 <body> 
 	<!-- Header End -->
 	<jsp:include page="header.jsp"></jsp:include>
-
-	<!-- Hero Section Begin -->
+ 
+	<!-- Hero Section Begin -->   
 	<section class="hero set-bg"
 		data-setbg="./resources/img/background_black.png">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="hero__text">
-						<div class="section-title">
-							<h1>□ TRICA</h1>
+		<div class="container">   
+			<div class="row">   
+				<div class="col-lg-12">    
+					<div class="hero__text">  
+						<div class="section-title">  
+							<h1>□ TRICA</h1> 
 							<p>전자제품의 모든것 !</p>
-						</div>
-						<div class="hero__search__form">
+						</div>    
+						<div class="hero__search__form"> 
 							<form action="search.trc">
 								<input type="text" name="title" placeholder="검색어를 입력해주세요">
 								<div class="select__option fir">
 									<select name="bc_no">
-										<option value="1">TV/냉장고/세탁기/건조기</option>
+										<option value="1">TV/냉장고/세탁기/건조기</option> 
 										<option value="2">카메라/게임/음향</option>
-										<option value="3">주방가전</option>
+										<option value="3">주방가전</option> 
 										<option value="4">컴퓨터/휴대폰</option>
 										<option value="5">계절가전</option>
 									</select>
-								</div>
+								</div> 
 								<div class="select__option sec">
 									<select name="sc_no">
-										<option value="">세부 카테고리</option>
-									</select>
+										<option value="">세부 카테고리</option> 
+									</select>   
 								</div>
-								<button type="submit">찾기</button>
-							</form>
-						</div>
-						<ul class="hero__categories__tags">
+								<button type="submit">찾기</button>   
+							</form>  
+						</div>  
+						<ul class="hero__categories__tags"> 
 							<li><a href="#"><img
 									src="./resources/img/hero/cat-1.png" alt=""> TV</a></li>
 							<li><a href="#"><img
@@ -80,8 +80,8 @@
 							<li><a href="#"><img
 									src="./resources/img/hero/cat-6.png" alt=""> All
 									Categories</a></li>
-						</ul>
-
+						</ul> 
+  
 					</div>
 				</div>
 			</div>
@@ -94,9 +94,9 @@
 		<div class="container">
 
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-12"> 
 					<div class="section-title">
-						<h2>카테고리</h2>
+						<h2>카테고리</h2>  
 						<p>세상의 모든 전자제품을 모으다</p>
 					</div>
 					<div class="categories__item__list">
@@ -109,13 +109,13 @@
 						<div class="categories__item" id="2">
 							<img src="./resources/img/categories/cat-2.png" alt="">
 							<h5>카메라/게임/음향</h5>
-							<span>0개</span>
-						</div>
+							<span>0개</span>  
+						</div> 
 						<div class="categories__item" id="3">
 							<img src="./resources/img/categories/cat-3.png" alt="">
 							<h5>주방가전</h5>
 							<span>0개</span>
-						</div>
+						</div> 
 						<div class="categories__item" id="4">
 							<img src="./resources/img/categories/cat-4.png" alt="">
 							<h5>컴퓨터/휴대폰</h5>
@@ -127,8 +127,8 @@
 							<span>0개</span>
 						</div>
 					</div>
-				</div> 
-			</div> 
+				</div>   
+			</div>  
 		</div>
 	</section> 
 	<!-- Categories Section End -->
@@ -179,7 +179,7 @@
 	</section>
 	<!-- Testimonial Section End -->
 
-	<!-- 오늘의 상품 Section 시작 -->
+	<!-- 오늘의 상품 Section 시작 --> 
 	<section class="most-search spad">
 		<div class="container">
 			<div class="row">
@@ -195,7 +195,7 @@
 						<ul class="nav nav-tabs" role="tablist">
 							<li class="nav-item"><a class="nav-link active"
 								data-toggle="tab" href="#" role="tab" data-tab="all"> <span
-									class="icon_grid-3x3"></span> 전체상품
+									class="icon_grid-3x3"></span> 전체상품 
 							</a></li>
 							<li class="nav-item"><a class="nav-link" data-toggle="tab"
 								href="#" role="tab" data-tab="popular"> <span
@@ -209,14 +209,14 @@
 								href="#" role="tab" data-tab="new"> <span class="icon_star"></span>
 									새로 만나는 신상품
 							</a></li>
-						</ul>
+						</ul> 
 					</div> 
 					<!-- tab-content에 붙이기 -->
 					<div class="tab-content">
 						<div class="tab-pane active" id="tabContent" role="tabpanel">
 							<div class="row"></div>
 						</div>
-					</div>
+					</div> 
 				</div>
 			</div>
 	</section>

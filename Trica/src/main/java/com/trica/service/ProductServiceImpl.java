@@ -1,5 +1,6 @@
 package com.trica.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,13 +28,16 @@ public class ProductServiceImpl implements ProductService {
 	}
 	
 	@Override
-	public List<ProductVO> getAllList() {
+	public List<ProductVO> getAllList() { 
 		return productDAO.getAllList();	// 상품 리스트 리턴
-	}
+	} 
+ 
+	@Override 
+	public List<HashMap> getaList(){  
+		return productDAO.getaList(); 
+	} 
 
-
-
-	@Override
+	@Override 
 	public ProductVO selectProduct(ProductVO vo) {
 		return productDAO.selectProduct(vo);
 	}

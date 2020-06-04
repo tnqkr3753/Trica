@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css"> 
-<link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/magnific-popup.css" type="text/css"> 
 <link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
@@ -99,7 +99,7 @@ function sample6_execDaumPostcode() {
 			   <jsp:include page="../../../header.jsp"></jsp:include>
 	<!-- Header Section End --> 
   
-	<!-- Breadcrumb Begin -->
+	<!-- Breadcrumb Begin --> 
 	<div class="breadcrumb-area set-bg" 
 		data-setbg="./resources/img/breadcrumb/breadcrumb-blog.jpg">
 		<div class="container">
@@ -247,10 +247,10 @@ function sample6_execDaumPostcode() {
 									<a href="#">이용약관</a>에 동의합니다.    
 								</div>  
 							</div>           
-    
+     
 							<div class="form-group">  
 								<label for="memberType">회원유형</label><br/>
-				 				<div class="form-check">  
+				 				<div class="form-check">   
 								<input type="checkbox" class="form-check-input" name="memberType" id="memberType" v="일반회원" value="0">일반회원 &nbsp;&nbsp;
 								<input type="checkbox" class="form-check-input" name="memberType" id="memberType" v="판매회원" value="1">판매회원
 								</div>   

@@ -37,8 +37,8 @@
        <!-- Page Preloder -->
    <div id="preloder">
       <div class="loader"></div>
-   </div>
-
+   </div> 
+ 
    <!-- Header Section Begin -->
    <jsp:include page="../../../header.jsp"></jsp:include>
    <!-- Header Section End -->
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
          
     <!-- Most Search Section Begin -->

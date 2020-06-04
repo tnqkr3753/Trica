@@ -19,8 +19,8 @@ public class ProductVO {
 	private String bigC;	// 큰 카테고리 넘버
 	private String smallC;	// 작은 카테고리 넘버
 	private String pctRegDate;	// 상품 등록일
-	
-	
+	 
+	 
 	private String dateKor;
 	
 	public String getPctRegDate() {

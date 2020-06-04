@@ -27,18 +27,18 @@ public class SearchController {
 		//vo로 select문을 통해서 해당하는 값들을 가져와서 mv에 addObject로 페이지에 보내주기
 		//페이지에서 받은 vo List를 이용하여 상품창 띄우기
 		System.out.println(vo.getPctName());
-		ModelAndView mv = new ModelAndView(); 
+		ModelAndView mv = new ModelAndView();  
 		mv.addObject("sList", searchService.getSearchList(vo));
 		mv.setViewName("product/searchView");
 		return mv;
-	}
+	} 
 	 
 	@RequestMapping("bigSearch.trc")
 	public ModelAndView bigSearch(@RequestParam String bcNo) {
 		System.out.println("===============큰 카테고리 출력=================");
 		
 		// --------------------------------------------------------------------------------
-		System.out.println(bcNo);
+		System.out.println(bcNo); 
 		ModelAndView mv = new ModelAndView();
 		System.out.println(searchService.getBigSearch(bcNo));
 		mv.addObject("sList", searchService.getBigSearch(bcNo));
@@ -47,4 +47,5 @@ public class SearchController {
 		
 		return mv;
 	}
-}
+	 
+} 

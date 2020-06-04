@@ -1,5 +1,8 @@
 package com.trica.app;
 
+import java.util.HashMap;
+import java.util.List;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,7 +21,7 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping("productDetail.trc")
+	@RequestMapping("productDetail.trc") 
 	public ModelAndView detailProduct(ProductVO vo) {
 		ModelAndView mv = new ModelAndView();
 		ProductVO rvo = productService.selectProduct(vo);
@@ -54,27 +57,30 @@ public class ProductController {
 		mv.setViewName("product/productConfirm");	// 상품등록 확인 페이지 창으로
 		return mv;
 	}
-
+ 
 	@RequestMapping("goIndex.trc")
 	public ModelAndView goIndex() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("goToIndex");	// 인덱스 창으로
 		return mv;
-	}
+	} 
 	
-	
-	
-	
-	
-
-	
-	
-	
+	//Header Shop 클릭 시 전체상품 보이는 페이지로 이동
+	@RequestMapping("getaList.trc")
+	public ModelAndView getaList() { 
+		ModelAndView mv = new ModelAndView(); 
+		mv.setViewName("product/searchView");
+		mv.addObject("sList", productService.getaList());
+		return mv;  
+	}        
+	                 
+	     
+	  
 	
 	@RequestMapping("getNewList.trc")
 	public ModelAndView getNewList(@RequestParam String tabName) {
 		System.out.println("확인 출력");
-		ModelAndView mv = new ModelAndView();
+		ModelAndView mv = new ModelAndView(); 
 		mv.setViewName("product/getList");
 		System.out.println(productService.getNewList().get(0).getPctName());
 		
@@ -83,8 +89,8 @@ public class ProductController {
 			
 		} else if (tabName.contains("popular")) {
 			mv.addObject("list", productService.getAllList());
-		} */
-		
+		} */ 
+		 
 		if(tabName.contains("new")) {
 			System.out.println("----new-----");
 			mv.addObject("list", productService.getNewList());	// 최근 입력된 상품 불러옴
