@@ -94,52 +94,7 @@
         </div>
     </header>
     <!-- Header Section End --> 
- 
-    <!-- Hero Section Begin -->
-    <section class="hero set-bg" data-setbg="./resources/img/background_black.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="hero__text"> 
-                        <div class="section-title">
-                            <h1>□ TRICA</h1>
-                            <p>전자제품의 모든것 !</p>
-                        </div>
-                        <div class="hero__search__form">
-                            <form action="search.trc">
-                                <input type="text" name="title" placeholder="검색어를 입력해주세요">
-                                <div class="select__option fir">
-                                    <select name="bc_no">
-                                        <option value="1">TV/냉장고/세탁기/건조기</option>
-                                        <option value="2">카메라/게임/음향</option>
-                                        <option value="3">주방가전</option>
-                                        <option value="4">컴퓨터/휴대폰</option>
-                                        <option value="5">계절가전</option>
-                                    </select> 
-                                </div> 
-                                <div class="select__option sec">
-                                    <select name="sc_no">
-                                        <option value="">세부 카테고리</option>
-                                    </select>
-                                </div>
-                                <button type="submit">찾기</button>
-                            </form>
-                        </div>  
-                        <ul class="hero__categories__tags">
-                            <li><a href="#"><img src="./resources/img/hero/cat-1.png" alt=""> TV</a></li>
-                            <li><a href="#"><img src="./resources/img/hero/cat-2.png" alt=""> 냉장고</a></li>
-                            <li><a href="#"><img src="./resources/img/hero/cat-3.png" alt=""> 카메라</a></li>
-                            <li><a href="#"><img src="./resources/img/hero/cat-4.png" alt=""> 전자레인지</a></li>
-                            <li><a href="#"><img src="./resources/img/hero/cat-5.png" alt=""> 노트북</a></li>
-                            <li><a href="#"><img src="./resources/img/hero/cat-6.png" alt=""> All Categories</a></li>
-                        </ul>
 
-                    </div>    
-                </div>    
-            </div> 
-        </div>
-    </section>
-    <!-- Hero Section End -->
 
 	<!-- Footer Section End -->
 	<!-- Js Plugins -->

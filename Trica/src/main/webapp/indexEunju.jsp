@@ -48,6 +48,55 @@
 <!-- ********************** 수정 ******************************* -->
 	<jsp:include page="header.jsp"></jsp:include>
 	
+	    <!-- Hero Section Begin -->
+    <section class="hero set-bg" data-setbg="./resources/img/background_black.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero__text"> 
+                        <div class="section-title">
+                            <h1>□ TRICA</h1>
+                            <p>전자제품의 모든것 !</p>
+                        </div>
+                        <div class="hero__search__form">
+                            <form action="search.trc">
+                                <input type="text" name="title" placeholder="검색어를 입력해주세요">
+                                <div class="select__option fir">
+                                    <select name="bc_no">
+                                    	<option value="">기본 카테고리</option>
+                                        <option value="1">TV/냉장고/세탁기/건조기</option>
+                                        <option value="2">카메라/게임/음향</option>
+                                        <option value="3">주방가전</option>
+                                        <option value="4">컴퓨터/휴대폰</option>
+                                        <option value="5">계절가전</option>
+                                    </select> 
+                                </div> 
+                                <div class="select__option sec">
+                                    <select name="sc_no">
+                                        <option value="">세부 카테고리</option>
+                                    </select>
+                                </div>
+                                <button type="submit">찾기</button>
+                            </form>
+                        </div>  
+                        <ul class="hero__categories__tags">
+                            <li><a href="#"><img src="./resources/img/hero/cat-1.png" alt=""> TV</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-2.png" alt=""> 냉장고</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-3.png" alt=""> 카메라</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-4.png" alt=""> 전자레인지</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-5.png" alt=""> 노트북</a></li>
+                            <li><a href="#"><img src="./resources/img/hero/cat-6.png" alt=""> All Categories</a></li>
+                        </ul>
+
+                    </div>    
+                </div>    
+            </div> 
+        </div>
+    </section>
+    <!-- Hero Section End -->
+	
+	
+<!-- ********************** 수정 ******************************* -->
 	<!-- Categories Section Begin -->
 	<section class="categories spad">
 		<div class="container">
@@ -59,28 +108,29 @@
 						<p>세상의 모든 전자제품을 모으다</p>
 					</div>
 					<div class="categories__item__list">
-						<div class="categories__item">
-							<img src="img/categories/cat-1.png" alt="">
+				
+						<div class="categories__item" id="1">
+							<img src="./resources/img/categories/cat-1.png" alt="">
 							<h5>TV/냉장고/세탁기/건조기</h5>
 							<span>0개</span>
 						</div>
-						<div class="categories__item">
-							<img src="img/categories/cat-2.png" alt="">
+						<div class="categories__item" id="2">
+							<img src="./resources/img/categories/cat-2.png" alt="">
 							<h5>카메라/게임/음향</h5>
 							<span>0개</span>
 						</div>
-						<div class="categories__item">
-							<img src="img/categories/cat-3.png" alt="">
+						<div class="categories__item" id="3">
+							<img src="./resources/img/categories/cat-3.png" alt="">
 							<h5>주방가전</h5>
 							<span>0개</span>
 						</div>
-						<div class="categories__item">
-							<img src="img/categories/cat-4.png" alt="">
+						<div class="categories__item" id="4">
+							<img src="./resources/img/categories/cat-4.png" alt="">
 							<h5>컴퓨터/휴대폰</h5>
 							<span>0개</span>
 						</div>
-						<div class="categories__item">
-							<img src="img/categories/cat-5.png" alt="">
+						<div class="categories__item" id="5">
+							<img src="./resources/img/categories/cat-5.png" alt="">
 							<h5>계절가전</h5>
 							<span>0개</span>
 						</div>
@@ -90,6 +140,33 @@
 		</div>
 	</section>
 	<!-- Categories Section End -->
+	
+	<!-- Testimonial Section Begin -->
+	<section class="testimonial spad set-bg"
+		style="background:gray;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title">
+						<h2>진행중인 이벤트</h2>
+					</div>
+					<div class="testimonial__slider owl-carousel">
+						<div class="testimonial__item" data-hash="review-1">
+														<p><img src="./resources/img/event/event1.png" width="500" height="400"></p>
+							
+						</div>
+						<div class="testimonial__item" data-hash="review-2">
+							<p><img src="./resources/img/event/event1.png" width="500" height="400"></p>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Testimonial Section End -->
+	
+	
 
 	<!-- ********************************* 수정 ********************************* -->
 	<!-- 오늘의 상품 Section 시작 -->
@@ -195,89 +272,7 @@
 	</section>
 	<!-- Feature Location Section End -->
 
-	<!-- Testimonial Section Begin -->
-	<section class="testimonial spad set-bg"
-		data-setbg="./resources/img/testimonial/testimonial-bg.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Trusted By Over 5000+ User</h2>
-						<p>What people say about our site</p>
-					</div>
-					<div class="testimonial__slider owl-carousel">
-						<div class="testimonial__item" data-hash="review-1">
-							<p>" Our site seeks convenience by linking it so that you can
-								compare prices with other sites."</p>
-							<div class="testimonial__item__author">
-								<a href="#review-3"><img
-									src="./resources/img/testimonial/author-3.png" alt=""></a> <a
-									href="#review-1" class="active"><img
-									src="img/testimonial/author-1.png" alt=""></a> <a
-									href="#review-2"><img
-									src="./resources/img/testimonial/author-2.png" alt=""></a>
-							</div>
-							<div class="testimonial__item__author__text">
-								<h5>John Smith -</h5>
-								<div class="testimonial__item__author__rating">
-									<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-										class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-										class="fa fa-star"></i>
-								</div>
-							</div>
-							<span>Trica</span>
-						</div>
-						<div class="testimonial__item" data-hash="review-2">
-							<p>" We have partnered with other companies. Our
-								representative is very Knowledgeable and helpful. Multiple
-								products Suggestions for system improvement. Product description
-								and Kindly answer how it works and why it helps."</p>
-							<div class="testimonial__item__author">
-								<a href="#review-1"><img
-									src="./resources/img/testimonial/author-1.png" alt=""></a> <a
-									href="#review-2" class="active"><img
-									src="img/testimonial/author-2.png" alt=""></a> <a
-									href="#review-3"><img
-									src="./resources/img/testimonial/author-3.png" alt=""></a>
-							</div>
-							<div class="testimonial__item__author__text">
-								<h5>John Smith -</h5>
-								<div class="testimonial__item__author__rating">
-									<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-										class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-										class="fa fa-star"></i>
-								</div>
-							</div>
-							<span>Trica</span>
-						</div>
-						<div class="testimonial__item" data-hash="review-3">
-							<p>" This site sells products, but it is convenient because
-								it allows you to view product reorganization and service at a
-								renowned company in Korea through a newspost."</p>
-							<div class="testimonial__item__author">
-								<a href="#review-2"><img
-									src="./resources/img/testimonial/author-2.png" alt=""></a> <a
-									href="#review-3" class="active"><img
-									src="./resources/img/testimonial/author-3.png" alt=""></a> <a
-									href="#review-1"><img src="img/testimonial/author-1.png"
-									alt=""></a>
-							</div>
-							<div class="testimonial__item__author__text">
-								<h5>John Smith -</h5>
-								<div class="testimonial__item__author__rating">
-									<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-										class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-										class="fa fa-star"></i>
-								</div>
-							</div>
-							<span>Trica</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Testimonial Section End -->
+	
 
 	<!-- Blog Section Begin -->
 	<section class="news-post spad">
@@ -375,6 +370,6 @@
 	<script src="./resources/js/owl.carousel.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/getList.js"></script>
-
+	<script src="./resources/js/cateee.js"></script>
 </body>
 </html>
