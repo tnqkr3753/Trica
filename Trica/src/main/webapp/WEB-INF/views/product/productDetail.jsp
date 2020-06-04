@@ -178,19 +178,16 @@
 								<dt>총 금액</dt>
 								<dd>
 									<input type="hidden" id="pctPrice" value="${vo.pctPrice }"> 
-									<strong class="total_price">${vo.pctPrice }</strong>
+									<strong id="totalPrice" class="total_price">${vo.pctPrice }</strong>
 								</dd>
 							</div>
 							<br />
-							<form name="addForm" action="addWish.trc" method="POST">
 							<div class="btn_choice_box">
-								<input type="submit" class="btn_add_cart" value="장바구니" act="addCart.trc">
-								<input type="submit" class="btn_add_wish" value="찜하기" act="addWish.trc">
-								<input type="submit" class="btn_add_order" value="구매하기" act="addBuy.trc">
-								<input type="hidden" name="pctStock" id="pctStock">
-								<input type="hidden" value="${vo.pctNo }" name="pctNo">
+								<input type="button" class="btn_add_cart" value="장바구니" act="addCart.trc">
+								<input type="button" class="btn_add_wish" value="찜하기" act="addWish.trc">
+								<input type="button" class="btn_add_order" value="구매하기" act="addBuy.trc">
+								<input type="hidden" value="${vo.pctNo }" id="pctNo" name="pctNo">
 							</div>
-							</form>	
 							<br /> <br /> <br /> <br /> <br /> <br /> <br />
 					</td>
 				</div>
