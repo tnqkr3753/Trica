@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="./resources/css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/style.css" type="text/css"> 
+    <link rel="stylesheet" href="./resources/css/searchView.css" type="text/css">
+  
 
 </head>
 
@@ -125,8 +127,7 @@
                                 <button type="submit">찾기</button>
                             </form>
                         </div>         
-                        
-                                 
+                                                         
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="row">
                             <!-- for문 시작 -->
@@ -137,8 +138,14 @@
                                         	<div class="listing__item__pic set-bg" data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}" ><!-- 이미지  -->
                                             <img src="./resources/img/추천상품/BSTE_상품.png" alt=""> <!-- 이미지 -->
                                             <div class="listing__item__pic__tag top_rate"> ${list.SC_NAME } </div> <!--단어  -->
-                                            <div class="listing__item__pic__btns">                          
-                                            </div>
+                                            <c:choose>
+                                            <c:when test="${list.PCT_STOCK<= 15 and list.PCT_STOCK ne 0}"> <!-- 마감임박 -->                                                  
+													<span><img src="./resources/img/soldout.gif" height='50'  width='50'></span>
+													</c:when>
+													<c:when test="${list.PCT_STOCK == 0}">
+													<span><img src="./resources/img/soldout2.png" height='50'  width='100'></span>
+													</c:when>
+											</c:choose>
                                         </div>
                                         <div class="listing__item__text">
                                             <div class="listing__item__text__inside">
@@ -152,20 +159,18 @@
                                                         <span class="icon_star"></span>
                                                     </div>
                                                     <h6>${list.PCT_PRICE }</h6> <!-- 가격 -->
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_id"></span> 삼성디지털프라자</li> <!-- 업체 -->
+                                                <div class="listing__item__text__info__right">			
+												</div>
+                                                </div>                                              
+                                                <ul>                                                   	                                                 
                                                     <li><span class="icon_pencil"></span>${list.PCT_INTRO }</li> <!-- 짧은 설명 -->
-                                                </ul>
+                                                </ul>                                              
                                             </div>
                                         </div>
                                     </div>
                                     </form>
                                 </div>
-                                </c:forEach>
-                                
-                                
-                                
+                                </c:forEach>                                
                                 <!-- for문 끝 -->
                             </div>
                         </div>

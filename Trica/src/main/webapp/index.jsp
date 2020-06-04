@@ -619,7 +619,7 @@
 														St. New Philadelphia, Ohio, United States</li>
 													<li><span class="icon_phone"></span> (+12) 345-678-910</li>
 												</ul>
-											</div>
+											</div> 
 											<div class="listing__item__text__info">
 												<div class="listing__item__text__info__left">
 													<img src="img/listing/list_small_icon-1.png" alt="">
