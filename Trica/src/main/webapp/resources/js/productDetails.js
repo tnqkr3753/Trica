@@ -26,6 +26,9 @@ $(function(){
 		$('#cnt').trigger("input");
 	});
 	$('.btn_choice_box input').click(function(){
-		//장바구니 or 찜하기 누를 때
+		//장바구니 or 찜하기 누를 때 맞는 action 걸어주기
+		$('#pctStock').val($('#cnt').val());
+		var type=$(this).attr('act');
+		$('form[name=addForm]').attr('action',type);
 	});
-})
+});
