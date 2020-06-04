@@ -29,6 +29,23 @@ $(function(){
 		//장바구니 or 찜하기 누를 때 맞는 action 걸어주기
 		$('#pctStock').val($('#cnt').val());
 		var type=$(this).attr('act');
-		$('form[name=addForm]').attr('action',type);
+		var obj = {"pctNo" : $.trim($('#pctNo').val()),
+					"pctStock":$('#cnt').val(),
+					"totalPrice":$('#totalPrice').text()
+						}
+		$.ajax({
+			type : 'POST',                 //get방식으로 통신
+			async : true,
+			contentType : 'application/json',
+			url : type,    //탭의 data-tab속성의 값으로 된 html파일로 통신
+			data : JSON.stringify(obj),
+			dataType : "text",            //html형식으로 값 읽기
+			error : function(e) {          //통신 실패시
+				alert("오류입니다.");
+			},
+			success : function(data) {    //통신 성공시 탭 내용담는 div를 읽어들인 값으로 채운다.
+				alert(data);
+			}
+		});
 	});
 });
