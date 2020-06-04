@@ -1,5 +1,8 @@
 package com.trica.app;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +21,9 @@ public class ProductController {
 	@RequestMapping("productDetail.trc")
 	public ModelAndView detailProduct(ProductVO vo) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("vo", productService.selectProduct(vo));
+		ProductVO rvo = productService.selectProduct(vo);
+		mv.addObject("vo", rvo);
+		productService.increaseCount(rvo);
 		mv.setViewName("product/productDetail");	// 상품 상세 정보 페이지 창으로
 		return mv;
 	}

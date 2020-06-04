@@ -182,12 +182,12 @@
 								</dd>
 							</div>
 							<br />
-							<form name="addForm" action="addCart.trc" method="POST">
+							<form name="addForm" action="addWish.trc" method="POST">
 							<div class="btn_choice_box">
-								<input type="button" class="btn_add_cart" value="장바구니">
-								<input type="submit" class="btn_add_wish" value="찜하기">
-								<input type="button" class="btn_add_order" value="구매하기">
-								<input type="hidden" name="pctStock">
+								<input type="submit" class="btn_add_cart" value="장바구니" act="addCart.trc">
+								<input type="submit" class="btn_add_wish" value="찜하기" act="addWish.trc">
+								<input type="submit" class="btn_add_order" value="구매하기" act="addBuy.trc">
+								<input type="hidden" name="pctStock" id="pctStock">
 								<input type="hidden" value="${vo.pctNo }" name="pctNo">
 							</div>
 							</form>	

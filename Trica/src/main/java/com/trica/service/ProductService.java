@@ -12,5 +12,5 @@ public interface ProductService {
 	public List<ProductVO> getAllList();
 	public List<ProductVO> getPopularList();
 	public List<ProductVO> getRecommendList();
-
+	public void increaseCount(ProductVO vo);
 }

@@ -45,4 +45,11 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<ProductVO> getRecommendList() {
 		return sqlSession.selectList("ProductDAO.getRecommendList");
 	}
+
+
+
+	@Override
+	public void increaseCount(ProductVO vo) {
+		sqlSession.update("ProductDAO.increaseCount", vo);
+	}
 }
