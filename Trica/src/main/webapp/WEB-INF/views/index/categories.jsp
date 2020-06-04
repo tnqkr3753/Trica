@@ -4,8 +4,8 @@
 <c:forEach var="cate" items="${list}">
 	<div class="categories__item">
 		<img src="./resources/img/categories/cat-${cate.BC_NO}.png" alt="">
-		<span>${cate.BC_NAME}</span>
+		<span>${cate.BC_NAME}</span> 
 		<span>${cate.CNT}개</span>
 	</div>
-</c:forEach>
-          
+</c:forEach> 
+            

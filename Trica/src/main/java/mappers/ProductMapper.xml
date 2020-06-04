@@ -56,7 +56,7 @@ SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price,
 	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM 
 	 (SELECT * FROM product ORDER BY pct_cnt ASC) WHERE rownum>=1 AND rownum<=6]]>
 </select>
-
+ 
 
 
 

@@ -18,19 +18,21 @@ public class MemberServiceImpl implements MemberService {
 	{
 		return memberDAO.insertMember(vo);
 	}      
-	   
+	    
 	//로그인 
-	@Override 
+	@Override   
 	public MemberVO login(MemberVO vo)  
 	{ 
-		return memberDAO.login(vo);  
+		return memberDAO.login(vo);   
 	}
-
+	
+	//회원정보 수정
 	@Override
 	public int memberUpdate(MemberVO vo)
-	{  
-		return memberDAO.memberUpdate(vo); 
-	} 
-	 
-}           
-          
+	{   
+		return memberDAO.memberUpdate(vo);  
+	}
+
+ 	      
+}              
+           

@@ -214,6 +214,6 @@
 	//favorite버튼 오른쪽정렬 
 	$('#favorite-btn').css({
 		'float':'right'
-	})
+	})  
 	 
 })(jQuery);

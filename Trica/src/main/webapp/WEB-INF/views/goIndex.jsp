@@ -5,8 +5,8 @@
 <head> 
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
-<body>
+</head> 
+<body> 
 <% response.sendRedirect("index.jsp"); %>
 </body>
-</html>
+</html> 
