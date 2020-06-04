@@ -30,6 +30,11 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<ProductVO> getAllList() {
 		return sqlSession.selectList("ProductDAO.getAllList");
 	}
+
+	@Override
+	public ProductVO selectProduct(ProductVO vo) {
+		return sqlSession.selectOne("ProductDAO.selectProduct", vo);
+	}
 	
 	@Override
 	public List<ProductVO> getPopularList() {
@@ -39,5 +44,12 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public List<ProductVO> getRecommendList() {
 		return sqlSession.selectList("ProductDAO.getRecommendList");
+	}
+
+
+
+	@Override
+	public void increaseCount(ProductVO vo) {
+		sqlSession.update("ProductDAO.increaseCount", vo);
 	}
 }

@@ -30,9 +30,6 @@
 <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/productDetails.css" type="text/css">
 
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="./resources/js/productDetails.js"></script>
 
 </head>
 
@@ -73,11 +70,22 @@
 		</div>
 	</header>
 	<!-- Header 끝 -->
-
 	<!-- 상단 이미지 -->
-	<section class="hero set-bg" data-setbg="./resources/img/background_black.png">
-	</section>
-
+       <div class="breadcrumb-area set-bg" data-setbg="./resources/img/background_black.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>□ TRICA</h2>
+                        <div class="breadcrumb__option">
+                            <a href="#"><i class="fa fa-home"></i> 전자제품</a>
+                            <span> 상품 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	<!-- 상세페이지 시작 -->
 	<div class="content">
 		<section class="product_details">
@@ -85,14 +93,15 @@
 
 			<!-- 상품 큰 제목 -->
 			<div class="detailHeader">
-				<h2>드럼세탁기 F21VDT [21KG／5방향터보샷／6모션손빨래]</h2>
+				<h3>${vo.pctName }</h3>
 			</div>
 
 			<div class="container">
 				<br />
 				<!-- 상품 이미지 출력 -->
 				<div class="img" style="float: left;">
-					<img src="img/details/drum1.jpg" width="500" height="500">
+					<img src="./resources/upload/product/img/${vo.pctImgName }" width="500" height="500">
+					<input type="hidden" value="${vo.pctImgName }" id="pctImgName">
 				</div>
 
 				<!-- 오른쪽 상품상세정보 rightSec 출력 -->
@@ -100,20 +109,20 @@
 
 					<dl>
 						<dt>소개</dt>
-						<dd>옷감 손상을 줄여주는 맞춤형 드럼세탁기</dd>
+						<dd>${vo.pctIntro }</dd>
 					</dl>
 					<dl>
 						<dt>정가</dt>
 						<dd>
 							<del>
-								<span>712,000</span>원
+								<span>${vo.pctPrice }</span>원
 							</del>
 						</dd>
 					</dl>
 					<dl class="item_price">
 						<dt>판매가</dt>
 						<dd>
-							<strong>640,000</strong>원
+							<strong>${vo.pctPrice }</strong>원
 						</dd>
 					</dl>
 					<dl class="item_delivery">
@@ -139,12 +148,8 @@
 
 					<dl class="pct_code">
 						<dt>상품코드</dt>
-						<dd>00000001</dd>
+						<dd>${vo.pctNo }</dd>
 					</dl>
-
-					<dt>브랜드</dt>
-					<dd>LG</dd>
-					
 					<td class="cart_prdt_name">
 						<div class="item_choice_list">
 							<table class="option_display_area" border="0" cellpadding="0" cellspacing="0">
@@ -158,33 +163,31 @@
 									<tr>
 										<span class="count"> <span class="goods_qty">
 												<td><strong><span>수량</span></strong></td>
-												<td><input type="text" name="goodsCnt[]"
-													class="goodsCnt_0" title="수량" value="1"></td>
-												<td><input type="button" class="up_goods_cnt"
-													title="증가" value="▲"></td>
-												<td><input type="button" class="down_goods_cnt"
-													title="감소" value="▼"></td>
+												<td><input id="cnt" type="text" class="goodsCnt_0" title="수량" value="1">
+														<input id="stock" type="hidden" value="${vo.pctStock }">
+												</td>
+												<td><input id="increase-cnt" type="button" class="up_goods_cnt" title="증가" value="▲"></td>
+												<td><input id="decrease-cnt" type="button" class="down_goods_cnt" title="감소" value="▼"></td>
+										</span></span>
 									</tr>
 								</tbody>
 							</table>
+							</div>
 							<br />
 							
 							<div class="total">
 								<dt>총 금액</dt>
 								<dd>
-									<strong class="total_price">640,000원</strong>
+									<input type="hidden" id="pctPrice" value="${vo.pctPrice }"> 
+									<strong id="totalPrice" class="total_price">${vo.pctPrice }</strong>
 								</dd>
 							</div>
 							<br />
-							
 							<div class="btn_choice_box">
-								<input type="button" class="btn_add_cart" value="장바구니">
-								</button>
-								<input type="button" class="btn_add_wish" value="찜하기">
-								</button>
-								<input type="button" class="btn_add_order" value="구매하기">
-								</button>
-
+								<input type="button" class="btn_add_cart" value="장바구니" act="addCart.trc">
+								<input type="button" class="btn_add_wish" value="찜하기" act="addWish.trc">
+								<input type="button" class="btn_add_order" value="구매하기" act="addBuy.trc">
+								<input type="hidden" value="${vo.pctNo }" id="pctNo" name="pctNo">
 							</div>
 							<br /> <br /> <br /> <br /> <br /> <br /> <br />
 					</td>
@@ -194,40 +197,38 @@
 
 			<!-- 상세정보 시작 -->
 			<!-- *********** detailTab : 스크롤 내려도 고정되게 수정해야함 *********** -->
-			<div class="detailTab"
-				style="position: absolute; top: 630px; left: 0px; width: 1090px; margin-left: 0px; z-index: 1;">
-				<a href="#detail_cont" class="active"
-					style="margin-left: 33px; margin-right: 33px;">상품상세설명</a> <a
-					href="#nece_cont" style="margin-left: 33px; margin-right: 33px;">필수정보</a>
-				<a href="#refund_cont"
-					style="margin-left: 33px; margin-right: 33px;">교환/환불정보</a>
-			</div>
+				<div class="detailTab"
+					style="position: absolute; top: 630px; left: 0px; width: 1090px; margin-left: 0px; z-index: 1;">
+					<a href="#detail_cont" class="active" style="margin-left: 33px; margin-right: 33px;">상품상세설명</a>
+	<!-- 				<a href="#nece_cont" style="margin-left: 33px; margin-right: 33px;">필수정보</a> -->
+					<a href="#refund_cont" style="margin-left: 33px; margin-right: 33px;">교환/환불정보</a>
+				</div>
 			
 			<div class="detail_cont" id="detail_cont">
-				<h2>상품상세정보</h2>
+				<h3>상품상세정보</h3>
 				<div class="detail_explain_box">
 
 					<p style="text-align: center;" align="center">
-						<img src="img/details/detail1.jpg">
+						${vo.pctDetail }
 					</p>
 				</div>
 			</div>
 			
-			<div class="nece_cont" id="nece_cont">
-				<h2>필수정보</h2>
-				<div class="nece_explain_box">
+<!-- 			<div class="nece_cont" id="nece_cont"> -->
+<!-- 				<h3>필수정보</h3> -->
+<!-- 				<div class="nece_explain_box"> -->
 
-					<p style="text-align: center;" align="center">
-						<img src="img/details/nece1.PNG">
-					</p>
-				</div>
-			</div>
+<!-- 					<p style="text-align: center;" align="center"> -->
+<!-- 						<img src="./resources/img/details/nece1.PNG"> -->
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 			
 			<div class="refund_cont" id="refund_cont">
-				<h2>교환 및 반품 안내</h2>
+				<h3>교환 및 반품 안내</h3>
 				<div class="refund_explain_box">
 					<p style="text-align: center;" align="center">
-						<img src="img/details/refund.PNG">
+						<img src="./resources/img/detail/notice.png">
 					</p>
 				</div>
 			</div>
@@ -326,5 +327,6 @@
 		<script src="./resources/js/jquery.slicknav.js"></script>
 		<script src="./resources/js/owl.carousel.min.js"></script>
 		<script src="./resources/js/main.js"></script>
+		<script type="text/javascript" src="./resources/js/productDetails.js"></script>
 </body>
 </html>

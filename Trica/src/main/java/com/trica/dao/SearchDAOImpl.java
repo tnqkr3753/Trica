@@ -25,4 +25,8 @@ public class SearchDAOImpl implements SearchDAO {
 		return sqlSession.selectList("SearchDAO.getSearchList", vo);
 	}
 	
+	public List<HashMap> getBigSearch(String bcNo) {
+		System.out.println("getBigSearch() 호출");
+		return sqlSession.selectList("SearchDAO.getBigSearch", bcNo);
+	}
 }

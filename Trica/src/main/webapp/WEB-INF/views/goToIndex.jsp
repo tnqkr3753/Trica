@@ -11,4 +11,4 @@
 <% response.sendRedirect("./index.jsp"); %>
 </body>
 
-</html>
+</html>  

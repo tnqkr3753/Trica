@@ -27,12 +27,12 @@ dt {
     letter-spacing: -1px;
 }
 
-h2 {
-	width: 770px;
-    font-weight: bold;
-    font-size: 26px;
-    color: #232a32;
-}
+/* h2 { */
+/* 	width: 770px; */
+/*     font-weight: bold; */
+/*     font-size: 26px; */
+/*     color: #232a32; */
+/* } */
 
 .count {
     display: table-cell;

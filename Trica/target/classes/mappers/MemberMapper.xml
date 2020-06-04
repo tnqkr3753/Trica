@@ -16,23 +16,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			 #{memberId}, #{memberType}, #{password}, #{memberName},
  		 	 #{regNum}, #{address}, #{gender}, #{tel}
  		 )   
- 	</insert>     
- 	   
+ 	</insert>      
+ 	    
  	<!-- 로그인 -->
  	<select id="login" parameterType='member' resultType="member">
  		SELECT MEMBER_ID, MEMBER_TYPE, PASSWORD, MEMBER_NAME,
  		 	REG_NUMBER reg_num, ADDRESS, GENDER, TEL
- 		 FROM member WHERE trim(MEMBER_ID)=trim(#{memberId}) 
+ 		 FROM member WHERE trim(MEMBER_ID)=trim(#{memberId})
     	<if test='password != null'>
-    	AND PASSWORD=#{password} 
- 		</if>    
- 	</select>      
- 	    
- 	<!-- 회원정보 수정 -->  
+    	AND PASSWORD=#{password}   
+ 		</if>       
+ 	</select>            
+ 	              
+ 	<!-- 회원정보 수정 -->   
  	<update id="memberUpdate" parameterType='member'>  
- 		UPDATE member SET	
- 		PASSWORD=#{password},    
- 		TEL=#{tel}    
- 		WHERE MEMBER_ID=#{memberId} 
- 	</update>           
-</mapper>                                                        
+ 		UPDATE member SET PASSWORD=#{password}, TEL=#{tel}, ADDRESS=#{address}
+ 		WHERE member_id=#{memberId}   
+ 	</update>
+ 	 
+</mapper>                                                            

@@ -111,13 +111,22 @@
                             <form action="search.trc">
                                 <input type="text" name="title" placeholder="검색어를 입력해주세요">
                                 <div class="select__option fir">
-                                    <select name="bc_no">
+                                
+                                
+                                
+                                
+                              <select name="bc_no">
                                         <option value="1">TV/냉장고/세탁기/건조기</option>
                                         <option value="2">카메라/게임/음향</option>
                                         <option value="3">주방가전</option>
                                         <option value="4">컴퓨터/휴대폰</option>
                                         <option value="5">계절가전</option>
                                     </select>
+                                    
+                                    
+                                    
+                                    
+                                    
                                 </div>
                                 <div class="select__option sec">
                                     <select name="sc_no">
@@ -131,9 +140,10 @@
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="row">
                             <!-- for문 시작 -->
-								<c:forEach var='list' items="${sList }" begin='1' end='6'> 
+								<c:forEach var='list' items="${sList }" begin='0' end='6'> 
                                 <div class="col-lg-4 col-md-6 product-item">
-                                 	<form name='next_go'  id='next_go'  action="productDetail.trc" method="get">                           		 	
+                                 	<form name='next_go'  id='next_go'  action="productDetail.trc" method="get">    
+                                 	<input type="hidden" name="pctNo" value="${list.PCT_NO }">                       		 	
                                     <div class="listing__item">
                                         	<div class="listing__item__pic set-bg" data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}" ><!-- 이미지  -->
                                             <img src="./resources/img/추천상품/BSTE_상품.png" alt=""> <!-- 이미지 -->

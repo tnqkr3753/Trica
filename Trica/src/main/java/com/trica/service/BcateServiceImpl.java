@@ -16,10 +16,9 @@ public class BcateServiceImpl implements BcateService {
 	
 	//카테고리 count 
 	@Override
-	public List<HashMap> countBcate() {
-		return bcateDAO.countBcate();
-	}
-	
-	
+	public List<HashMap> bcateCount() {
+		return bcateDAO.bcateCount();
+	} 
+ 	  
 }
-       
+        

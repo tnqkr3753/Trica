@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <% String projectName = "Trica"; %>
-<!DOCTYPE html>
-<html lang="zxx">   
+<!DOCTYPE html>  
+<html lang="zxx">    
 
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>전자제품의 모든것 ! TRICA</title> 
-    <!-- Google Font -->    
+    <!-- Google Font -->     
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-          
-    <!-- Css Styles -->      
+            
+    <!-- Css Styles -->       
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
   
 </head>    
-
-<body>
-    <!-- Page Preloder -->
+  
+<body> 
+    <!-- Page Preloder -->  
     <div id="preloder">
-        <div class="loader"></div>
+        <div class="loader"></div> 
     </div> 
 
     <!-- Header Section Begin --> 
@@ -58,43 +58,45 @@
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                         <li><a href="./contact.html">Contact</a></li>
                                     </ul>
-                                </li>  
+                                </li>   
                                 <li><a href="boardList.trc">Board</a></li>
                                 <li><a href="#">Cart</a>
-                                	 <ul class="dropdown">
-                                        <li><a href="cart.trc">Shopping Cart</a></li>
+                                	 <ul class="dropdown"> 
+                                        <li><a href="cart.trc">Shopping Cart</a></li> 
                                         <li><a href="favorite.trc">Favorite</a></li>
                                         <li><a href="orderList.trc">OrderList</a></li>
-                                    </ul> 
-                                </li>   
-                                  <li><a href="#">User</a>
-                                	 <ul class="dropdown">
-                                        <li><a href="Modifier.trc">Information</a></li>
-                                        <li><a href="logout.trc">LogOut</a></li>
-                                    </ul> 
-                                </li>    
-                                       
-                             </ul>    
-                        </nav>    
-                        <div class="header__menu__right">
-                             
-                            <c:choose>
+                                    </ul>  
+                                </li>      
+                                <c:if test="${not empty sessionScope.memberId}">  
+                                  	<li><a href="#">User</a>  
+                                	 	<ul class="dropdown"> 
+                                        	<li><a href="goChk.trc">Information</a></li>
+                                        	<li><a href="logout.trc">LogOut</a></li>
+                                    	</ul>   
+                                	</li>             
+                                 </c:if>                   
+                             </ul>           
+                        </nav>          
+                        <div class="header__menu__right">  
+                                
+                            <c:choose> 
 	                            <c:when test="${empty sessionScope.memberId}">
 	                            	<a href="LoginPage.trc" class="login-btn"><i class="fa fa-user"></i></a>
-	                            </c:when> 
-	                            <c:otherwise>
-	                            	<a href="#" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
-	                            </c:otherwise>
-                            </c:choose> 
-                        </div>    
-                    </div>         
-                </div>  
-            </div> 
+	                            </c:when>  
+	                            <c:otherwise>     
+			                        <a href="#" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
+								</c:otherwise>    
+                            </c:choose>  
+                             
+                        </div>          
+                    </div>                   
+                </div>          
+            </div>     
             <div id="mobile-menu-wrap"></div> 
-        </div>
+        </div>  
     </header>
-    <!-- Header Section End --> 
- 
+    <!-- Header Section End -->    
+  
     <!-- Hero Section Begin -->
     <section class="hero set-bg" data-setbg="./resources/img/background_black.png">
         <div class="container">
@@ -102,9 +104,9 @@
                 <div class="col-lg-12">
                     <div class="hero__text"> 
                         <div class="section-title">
-                            <h1>□ TRICA</h1>
+                            <h1>□ TRICA</h1> 
                             <p>전자제품의 모든것 !</p>
-                        </div>
+                        </div> 
                         <div class="hero__search__form">
                             <form action="search.trc">
                                 <input type="text" name="title" placeholder="검색어를 입력해주세요">
@@ -113,10 +115,10 @@
                                         <option value="1">TV/냉장고/세탁기/건조기</option>
                                         <option value="2">카메라/게임/음향</option>
                                         <option value="3">주방가전</option>
-                                        <option value="4">컴퓨터/휴대폰</option>
+                                        <option value="4">컴퓨터/휴대폰</option> 
                                         <option value="5">계절가전</option>
                                     </select> 
-                                </div> 
+                                </div>   
                                 <div class="select__option sec">
                                     <select name="sc_no">
                                         <option value="">세부 카테고리</option>
@@ -136,26 +138,24 @@
 
                     </div>    
                 </div>    
-            </div> 
+            </div>   
         </div>
-    </section>
+    </section> 
     <!-- Hero Section End -->
 
-	<!-- Categories Section Begin -->
-	<section class="categories spad">
+	<!-- Categories Section Begin --> 
+	<section class="categories spad"> 
 		<div class="container">
 		
 			<div class="row"> 
 				<div class="col-lg-12">
 					<div class="section-title">
-						<h2>카테고리</h2>
-						<p>세상의 모든 전자제품을 모으다</p>
-					</div>
-					<div class="categories__item__list">
-						
-					</div>
-				</div>
-			</div>
+						<h2>CATEGORY</h2> 
+						<p>Collect all the electronics in the world</p>
+					</div> 
+					<div class="categories__item__list"></div>
+				</div> 
+			</div> 
 		</div>
 	</section>
 	<!-- Categories Section End -->
@@ -173,31 +173,41 @@
 				</div>
 			</div>
 
-
-			<div class="row">
+ 
+			<div class="row">  
 				<div class="col-lg-12">
-					<div class="most__search__tab">
+					<div class="most__search__tab">  
 						<ul class="nav nav-tabs" role="tablist">
-							<li class="nav-item"><a class="nav-link active"
-								data-toggle="tab" href="#tabs-1" role="tab"> <span
-									class="flaticon-039-fork"></span> 전체상품
-							</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab"
-								href="#tabs-2" role="tab"> <span class="flaticon-030-kebab"></span>
-									인기상품
-							</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab"
-								href="#tabs-3" role="tab"> <span
-									class="flaticon-032-food-truck"></span> 추천상품
-							</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab"
-								href="#tabs-4" role="tab"> <span
-									class="flaticon-017-croissant"></span> 최근 본 상품
-							</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab"
-								href="#tabs-5" role="tab"> <span
-									class="flaticon-038-take-away"></span> 새로 만나는 신상품
-							</a></li>
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"> 
+									<span class="flaticon-039-fork"></span> 
+									전체상품
+								</a> 
+							</li>
+							<li class="nav-item"> 
+								<a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"> 
+									<span class="flaticon-030-kebab"></span>
+									인기상품 
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"> 
+									<span class="flaticon-032-food-truck"></span> 
+									추천상품
+								</a> 
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab"> 
+									<span class="flaticon-017-croissant"></span> 
+									최근 본 상품
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tabs-5" role="tab"> 
+									<span class="flaticon-038-take-away"></span> 
+									새로 만나는 신상품
+								</a>
+							</li> 
 						</ul> 
 					</div> 
 					<div class="tab-content"> 
@@ -218,7 +228,7 @@
 														<span class="icon_star"></span> <span class="icon_star"></span>
 														<span class="icon_star-half_alt"></span>
 													</div>
-												</div>
+												</div> 
 												<div class="priceInfo">
 													<span class="discountPrice"><strong>1,049,000</strong>
 														<span class="priceUnit">원</span></span>
@@ -236,7 +246,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> 
 								<div class="col-lg-4 col-md-6">
 									<div class="listing__item">
 										<div class="listing__item__pic set-bg"
@@ -776,13 +786,13 @@
 												<div class="listing__item__text__info__left">
 													<img src="img/listing/list_small_icon-4.png" alt="">
 													<span>Shopping</span>
-												</div>
+												</div> 
 												<div class="listing__item__text__info__right">Open Now</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> 
 						</div>
 						<div class="tab-pane" id="tabs-3" role="tabpanel">
 							<div class="row">
@@ -1427,36 +1437,36 @@
 														<span class="icon_star-half_alt"></span>
 													</div>
 													<h6>$40 - $70</h6>
-												</div>
-												<ul>
+												</div>  
+												<ul> 
 													<li><span class="icon_pin_alt"></span> 236 Littleton
 														St. New Philadelphia, Ohio, United States</li>
 													<li><span class="icon_phone"></span> (+12) 345-678-910</li>
-												</ul>
-											</div>
+												</ul>  
+											</div> 
 											<div class="listing__item__text__info">
 												<div class="listing__item__text__info__left">
 													<img src="./resources/img/listing/list_small_icon-4.png" alt="">
-													<span>Shopping</span>
+													<span>Shopping</span> 
 												</div>
 												<div class="listing__item__text__info__right">Open Now</div>
 											</div>
-										</div>
+										</div> 
 									</div>
 								</div>
-							</div>
+							</div> 
 						</div>
-					</div>
+					</div> 
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- Most Search Section End -->
+	</section> 
+	<!-- Most Search Section End --> 
 
-	<!-- Feature Location Section Begin -->
-	<section class="feature-location spad">
+	<!-- Feature Location Section Begin --> 
+	<section class="feature-location spad"> 
 		<div class="container">
-			<div class="row">
+			<div class="row"> 
 				<div class="col-lg-12">
 					<div class="section-title">
 						<h2>Top Featured Locations</h2>
@@ -1738,12 +1748,12 @@
 						<div class="footer__copyright__links">
 							<a href="#">Terms</a> <a href="#">Privacy Policy</a> <a href="#">Cookie
 								Policy</a>
-						</div>
+						</div> 
 					</div>  
-				</div>
-			</div>
-		</div>
-	</footer>
+				</div> 
+			</div> 
+		</div>  
+	</footer> 
 	<!-- Footer Section End -->
 	<!-- Js Plugins -->
 	<script src="./resources/js/jquery-3.3.1.min.js"></script>
@@ -1756,5 +1766,6 @@
 	<script src="./resources/js/jquery.slicknav.js"></script>
 	<script src="./resources/js/owl.carousel.min.js"></script>
 	<script src="./resources/js/main.js"></script> 
+	<script src="./resources/js/categories.js"></script>  
 </body>  
 </html>
