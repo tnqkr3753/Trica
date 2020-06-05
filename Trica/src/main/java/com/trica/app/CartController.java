@@ -23,6 +23,7 @@ import com.trica.vo.ProductVO;
 
 @Controller
 public class CartController {
+	//장바구니추가 누를 때
 	@ResponseBody
 	@RequestMapping(value="/addCart.trc",produces = "application/text; charset=utf8")
 	public String addCart(@RequestBody HashMap<String, Object> hash,
@@ -45,24 +46,28 @@ public class CartController {
 		response.addCookie(kie);
 		return "장바구니에 추가되었습니다.";
 	}
+	//찜목록 추가 누를 때
+	@ResponseBody
 	@RequestMapping("/addWish.trc")
-	public ModelAndView addWish(ProductVO vo) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("user-favorite");
-		return mv;
+	public String addWish(@RequestBody HashMap<String, Object> hash) {
+		
+		return "장바구니에 추가되었습니다.";
 	}
+	//구매하기 누를 때
 	@RequestMapping("/addBuy.trc")
 	public ModelAndView addBuy(ProductVO vo) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("user-cart");
 		return mv;
 	}
+	//주문목록 누를 때
 	@RequestMapping("/orderList.trc")
 	public ModelAndView getOrderList(ProductVO vo) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("order-list");
 		return mv;
 	}
+	//장바구니창 누를 때
 	@RequestMapping("cart.trc")
 	public ModelAndView getCart(@CookieValue(value="cartPctNo",required = true,defaultValue = "") String ckValue) throws UnsupportedEncodingException {
 		//쿠기 값 받아서 list로 만들기
@@ -84,13 +89,14 @@ public class CartController {
 		mv.setViewName("cart/user-cart");
 		return mv;
 	}
-	
+	//찜목록창 누를 때
 	@RequestMapping("favorite.trc")
 	public ModelAndView getFavorite() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("cart/user-favorite");
 		return mv;
 	}
+	//장바구니에서 삭제하기 누를 때
 	@ResponseBody
 	@RequestMapping(value="deleteCookie.trc",produces = "application/text; charset=utf8")
 	public String deleteCookie(@RequestBody HashMap hash,@CookieValue(value="cartPctNo",required = true) String ckValue,
