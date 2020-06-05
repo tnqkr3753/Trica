@@ -192,7 +192,7 @@
 	    	case "5":
 	    		changeOption(4);
 	    		break;
-    	}
+    	} 
     });
 	function changeOption(num){
 	    secondSelect.find('option').remove();
@@ -201,7 +201,7 @@
     	}
 	    secondSelect.niceSelect('update');
 	} 
-	// 5. 로그인
+	// 5. 로그인 
 	//(2)로그인 버튼에 클릭 이벤트
 	$('.login_wrap img').click(function(){
 		$('#login_f').css({'top':'20px'});
@@ -214,6 +214,6 @@
 	//favorite버튼 오른쪽정렬 
 	$('#favorite-btn').css({
 		'float':'right'
-	})  
+	})   
 	 
 })(jQuery);

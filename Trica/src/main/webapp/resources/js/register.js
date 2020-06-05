@@ -14,7 +14,7 @@ $('input[type="checkbox"][name="gender"]').click(function(){
 		$(this).prop('checked', true);
 		alert($(this).val());  
 	} 
-});         
+});          
 
 //이용약관 동의  
 $('#agree').click(function(){ 

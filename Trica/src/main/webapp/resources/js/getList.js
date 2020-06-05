@@ -18,7 +18,7 @@ $(function(){
 		success : function(data) {    // 통신 성공시 탭 내용담는 div를 읽어들인 값으로 채운다.
 			$('#tabContent > div').html(data);
 		}
-	});
+	}); 
 	$('.most__search__tab a').click(function(){
 		tabName=$(this).attr('data-tab');
 		$.ajax({

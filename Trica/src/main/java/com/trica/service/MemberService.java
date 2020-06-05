@@ -12,7 +12,6 @@ public interface MemberService {
 	 
 	//회원정보 수정 service  
 	public int memberUpdate(MemberVO vo);
-
-   
+	 
 }   
-                                    
+                                     

@@ -17,7 +17,7 @@ public class SearchServiceImpl implements SearchService {
 	public List<HashMap> getSearchList(ProductVO vo) {
 		return searchDAO.getSearchList(vo);
 	}
-	
+	 
 	@Override
 	public List<HashMap> getBigSearch(String bcNo) {
 		return searchDAO.getBigSearch(bcNo);
