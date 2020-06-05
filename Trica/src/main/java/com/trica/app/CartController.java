@@ -12,6 +12,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.trica.service.WishService;
 import com.trica.vo.ProductVO;
 
 @Controller
@@ -46,13 +48,7 @@ public class CartController {
 		response.addCookie(kie);
 		return "장바구니에 추가되었습니다.";
 	}
-	//찜목록 추가 누를 때
-	@ResponseBody
-	@RequestMapping("/addWish.trc")
-	public String addWish(@RequestBody HashMap<String, Object> hash) {
-		
-		return "장바구니에 추가되었습니다.";
-	}
+
 	//구매하기 누를 때
 	@RequestMapping("/addBuy.trc")
 	public ModelAndView addBuy(ProductVO vo) {
@@ -89,13 +85,7 @@ public class CartController {
 		mv.setViewName("cart/user-cart");
 		return mv;
 	}
-	//찜목록창 누를 때
-	@RequestMapping("favorite.trc")
-	public ModelAndView getFavorite() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("cart/user-favorite");
-		return mv;
-	}
+
 	//장바구니에서 삭제하기 누를 때
 	@ResponseBody
 	@RequestMapping(value="deleteCookie.trc",produces = "application/text; charset=utf8")

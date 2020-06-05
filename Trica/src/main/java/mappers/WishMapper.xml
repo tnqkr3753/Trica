@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="WishDAO">
+
+<insert id="insertWish" parameterType="wish">
+	INSERT INTO m_like (LIKE_NO,MEMBER_ID,PCT_NO)
+	VALUES(seq_like_no.nextval,#{memberId},#{pctNo})
+</insert>
+<select id="selectWish" parameterType="wish" resultType="wish">
+	SELECT * FROM m_like WHERE trim(member_id)=trim(#{memberId})
+	<if test="pctNo!=null">
+	AND trim(pct_no)=trim(#{pctNo})
+	</if>
+</select>
+<select id="selectWishProduct" parameterType="wish" resultType="hashmap">
+	SELECT  rownum as rnum,p.pct_name pct_name, p.pct_price pct_price,
+	p.pct_img_name pct_img_name,p.pct_stock pct_stock,l.like_no like_no
+	FROM m_like l INNER JOIN product p 
+	ON l.pct_no = p.pct_no
+	WHERE member_id=#{memberId}
+	ORDER BY like_no desc
+</select>
+<delete id="deleteWish">
+	DELETE FROM m_like WHERE trim(like_no) = trim(#{likeNo})
+</delete>
+</mapper>

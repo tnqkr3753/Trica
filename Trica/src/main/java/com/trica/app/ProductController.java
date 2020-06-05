@@ -24,6 +24,7 @@ public class ProductController {
 	@RequestMapping("productDetail.trc") 
 	public ModelAndView detailProduct(ProductVO vo) {
 		ModelAndView mv = new ModelAndView();
+		System.out.println(vo.getPctNo());
 		ProductVO rvo = productService.selectProduct(vo);
 		mv.addObject("vo", rvo);
 		productService.increaseCount(rvo);

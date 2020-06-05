@@ -177,7 +177,6 @@
     firstSelect.change(function(){
     	switch($(this).val()){
 	    	case "1":
-	    		alert(secondSelect);
 	    		changeOption(0);
 	    		break;
 	    	case "2":

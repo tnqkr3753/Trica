@@ -22,8 +22,6 @@ public class SearchController {
 		ProductVO vo = new ProductVO();
 		vo.setPctName((String)map.get("title"));
 		vo.setScNo((String)map.get("big_category")+(String)map.get("small_category"));
-		System.out.println(vo.getPctName());
-		System.out.println(vo.getScNo());
 		//vo로 select문을 통해서 해당하는 값들을 가져와서 mv에 addObject로 페이지에 보내주기
 		//페이지에서 받은 vo List를 이용하여 상품창 띄우기
 		System.out.println(vo.getPctName());
@@ -49,12 +47,8 @@ public class SearchController {
 		
 		return mv;
 	}
-<<<<<<< HEAD
 	
 
 	
 }
-=======
 	 
-} 
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git

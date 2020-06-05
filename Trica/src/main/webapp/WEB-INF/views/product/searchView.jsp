@@ -118,10 +118,10 @@
                             
                             
                             <!-- for문 시작 -->
-								<c:forEach var='list' items="${sList }" begin='0' end='6'> 
+								<c:forEach var='list' items="${sList }"> 
                                 <div class="col-lg-4 col-md-6 product-item">
                                  	<form name='next_go'  id='next_go'  action="productDetail.trc" method="get">    
-                                 	<input type="hidden" name="pctNo" value="${list.PCT_NO }">      
+                                 	<input type="hidden" name="pctNo" value="${list.PCT_NO}"> 
                                  	<input type='hidden' id='pct_bcNo' value="${list.SC_NO}">                 		 	
                                     <div class="listing__item">
                                         	<div class="listing__item__pic set-bg" data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}" ><!-- 이미지  -->

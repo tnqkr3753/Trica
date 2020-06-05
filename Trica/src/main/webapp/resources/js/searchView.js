@@ -5,7 +5,7 @@ $(function(){
 	
 	$('.product-item').click(function(){
 		
-		$('#next_go').submit();
+		$(this).find('form').submit();
 	});
 	
 	var pctBcNo = $('#pct_bcNo').val(); // big 카테고리 선택하면 sc_no 값 저장
