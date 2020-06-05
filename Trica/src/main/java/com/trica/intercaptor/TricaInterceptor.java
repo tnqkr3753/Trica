@@ -31,7 +31,7 @@ public class TricaInterceptor extends HandlerInterceptorAdapter {
 			File file = new File("D:\\trica-log\\log\\"+time+".log");
 			BufferedWriter bw = new BufferedWriter(new FileWriter(file,true));
 			StringBuffer sb = new StringBuffer();
-			sb.append(timeSecond+"&"+request.getLocalAddr()+"&"+request.getServletPath()+"&"+request.getHeader("referer")+"&"+response.getLocale()+"@");
+			sb.append(timeSecond+"&"+request.getRemoteAddr()+"&"+request.getServletPath()+"&"+request.getHeader("referer")+"&"+response.getLocale()+"@");
 			PrintWriter writer = new PrintWriter(bw, true);
 			writer.write(sb.toString());
 			writer.close();
