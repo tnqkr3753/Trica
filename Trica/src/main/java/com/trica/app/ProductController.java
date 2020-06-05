@@ -83,7 +83,6 @@ public class ProductController {
 		System.out.println("확인 출력");
 		ModelAndView mv = new ModelAndView(); 
 		mv.setViewName("product/getList");
-		System.out.println(productService.getNewList().get(0).getPctName());
 		
 		/* if(tabName.contains("all")) {
 			mv.addObject("list", productService.getNewList());	// 데이터 저장
