@@ -45,6 +45,11 @@ public class SearchController {
 		mv.setViewName("product/searchView");
 		// --------------------------------------------------------------------------------
 		
+		System.out.println(bcNo);
+		
 		return mv;
 	}
+	
+
+	
 }

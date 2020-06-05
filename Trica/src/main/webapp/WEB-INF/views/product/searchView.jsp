@@ -61,14 +61,19 @@
         </div>
     </div>
          
-    <!-- Most Search Section Begin -->
+    <!-- 상단 검색 부분 -->
     <section class="most-search spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>□ TRICA</h2>
-                        <p> TRICA 전자제품의 모든것</p>
+                        <p> TRICA 전자제품의 모든것</p> 
+                        
+                        
+                        
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -78,17 +83,16 @@
                                 <div class="select__option fir">
                                 
                                 
-                                
-                                
-                              <select name="bc_no">
+                         
+                              <select name="bc_no" id="bc_no">
                                         <option value="1">TV/냉장고/세탁기/건조기</option>
                                         <option value="2">카메라/게임/음향</option>
                                         <option value="3">주방가전</option>
                                         <option value="4">컴퓨터/휴대폰</option>
                                         <option value="5">계절가전</option>
-                                    </select>
-                                    
-                                    
+                              </select>
+                               
+                             
                                     
                                     
                                     
@@ -104,11 +108,21 @@
                                                          
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="row">
+                            
+                            
+                            
+                            
+                       
+                            
+                            
+                            
+                            
                             <!-- for문 시작 -->
 								<c:forEach var='list' items="${sList }" begin='0' end='6'> 
                                 <div class="col-lg-4 col-md-6 product-item">
                                  	<form name='next_go'  id='next_go'  action="productDetail.trc" method="get">    
-                                 	<input type="hidden" name="pctNo" value="${list.PCT_NO }">                       		 	
+                                 	<input type="hidden" name="pctNo" value="${list.PCT_NO }">      
+                                 	<input type='hidden' id='pct_bcNo' value="${list.SC_NO}">                 		 	
                                     <div class="listing__item">
                                         	<div class="listing__item__pic set-bg" data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}" ><!-- 이미지  -->
                                             <img src="./resources/img/추천상품/BSTE_상품.png" alt=""> <!-- 이미지 -->
@@ -169,6 +183,9 @@
     <script src="./resources/js/owl.carousel.min.js"></script>
     <script src="./resources/js/main.js"></script>
     <script src="./resources/js/searchView.js"></script>
+    
+    
+
 
 </body>
 
