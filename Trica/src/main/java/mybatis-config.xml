@@ -12,6 +12,7 @@
 	<typeAlias alias="board" type="com.trica.vo.BoardVO"/>
 	<typeAlias alias="member" type="com.trica.vo.MemberVO"/>
 	<typeAlias alias="product" type="com.trica.vo.ProductVO"/>
+	<typeAlias alias="wish" type="com.trica.vo.ProductVO"/>
 </typeAliases>
 
 </configuration>   
