@@ -105,7 +105,9 @@
           </div>
           <!-- End -->
           <div id="favorite-btn">
+          	<form action="wishToCart.trc">
           	<button type="button" id='add-cart' class="btn btn-outline-secondary">장바구니에 담기</button>
+          	</form>
           </div>
         </div>
       </div>

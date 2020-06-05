@@ -68,6 +68,29 @@ public class CartController {
 	public ModelAndView getCart(@CookieValue(value="cartPctNo",required = true,defaultValue = "") String ckValue) throws UnsupportedEncodingException {
 		//쿠기 값 받아서 list로 만들기
 		ModelAndView mv = new ModelAndView();
+		ArrayList<ArrayList<String>> list = getCartAsFromCookie(ckValue, "all");
+		mv.addObject("cList", list);
+		mv.setViewName("cart/user-cart");
+		return mv;
+	}
+
+	//장바구니에서 삭제하기 누를 때
+	@ResponseBody
+	@RequestMapping(value="deleteCookie.trc",produces = "application/text; charset=utf8")
+	public String deleteCookie(@RequestBody HashMap hash,@CookieValue(value="cartPctNo",required = true) String ckValue,
+			HttpServletResponse response) {
+		//ckValue가 default값이 아닐 때
+		Cookie ck = new Cookie("cartPctNo", getCookieString(ckValue, "delete", (String)hash.get("delPctIndex")));
+		ck.setMaxAge(-1);
+		response.addCookie(ck);
+		return "장바구니에서 삭제되었습니다.";
+	}
+	@RequestMapping("wishToCart.trc")
+	public ModelAndView wishToCart(@RequestBody HashMap hash,@CookieValue(value="cartPctNo",required = true) String ckValue) {
+		ArrayList<ArrayList<String>> list = getCartAsFromCookie(ckValue, "wish");
+		return null;
+	}
+	private ArrayList<ArrayList<String>> getCartAsFromCookie(String ckValue,String type) {
 		ArrayList<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
 		if(!ckValue.equals("")){
 			StringTokenizer st = new StringTokenizer(ckValue,"#");
@@ -81,20 +104,10 @@ public class CartController {
 				list.add(arr);
 			}
 		}
-		mv.addObject("cList", list);
-		mv.setViewName("cart/user-cart");
-		return mv;
+		return list;
 	}
-
-	//장바구니에서 삭제하기 누를 때
-	@ResponseBody
-	@RequestMapping(value="deleteCookie.trc",produces = "application/text; charset=utf8")
-	public String deleteCookie(@RequestBody HashMap hash,@CookieValue(value="cartPctNo",required = true) String ckValue,
-			HttpServletResponse response) {
-		System.out.println("-----delcookie----");
-		System.out.println("hash값:"+hash.get("delPctIndex"));
+	private String getCookieString(String ckValue,String type,String index) {
 		StringBuffer sb = new StringBuffer();
-		//ckValue가 default값이 아닐 때
 		if(!ckValue.equals("")){
 			//쿠키를 #으로 자른다
 			System.out.println("-----if문진입----");
@@ -102,7 +115,7 @@ public class CartController {
 			for(int i=1; st.hasMoreTokens();i++) {
 				//자른 값마다 다시 &로 잘라 각자의 값을 받아온다.
 				String tok = st.nextToken();
-				if(String.valueOf(i).equals(hash.get("delPctIndex"))) {
+				if(type.equals("delete")&&String.valueOf(i).equals(index)) {
 					continue;
 				}
 				StringTokenizer st2 = new StringTokenizer(tok, "&");
@@ -114,9 +127,6 @@ public class CartController {
 				sb.append("#");
 			}
 		}
-		Cookie ck = new Cookie("cartPctNo", sb.toString());
-		ck.setMaxAge(-1);
-		response.addCookie(ck);
-		return "장바구니에서 삭제되었습니다.";
+		return sb.toString();
 	}
 }
