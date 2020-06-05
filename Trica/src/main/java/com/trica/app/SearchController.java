@@ -45,7 +45,16 @@ public class SearchController {
 		mv.setViewName("product/searchView");
 		// --------------------------------------------------------------------------------
 		
+		System.out.println(bcNo);
+		
 		return mv;
 	}
+<<<<<<< HEAD
+	
+
+	
+}
+=======
 	 
 } 
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
