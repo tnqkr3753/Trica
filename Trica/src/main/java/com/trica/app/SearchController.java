@@ -49,12 +49,5 @@ public class SearchController {
 		
 		return mv;
 	}
-<<<<<<< HEAD
-	
-
-	
-}
-=======
-	 
+ 
 } 
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git

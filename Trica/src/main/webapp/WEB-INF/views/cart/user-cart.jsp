@@ -136,7 +136,7 @@
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">합계</strong>
                 <h5 class="font-weight-bold" id="total-condition-price">0</h5><h5>원</h5>
               </li>
-            </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">결제</a>
+            </ul><a href="orderConfirm.trc" class="btn btn-dark rounded-pill py-2 btn-block">결제</a>
           </div>
         </div>
       </div>
