@@ -21,7 +21,6 @@ public class SearchDAOImpl implements SearchDAO {
 	}
 
 	public List<HashMap> getSearchList(ProductVO vo) {
-		System.out.println("====> Mybatis getSearchList() 호출");
 		return sqlSession.selectList("SearchDAO.getSearchList", vo);
 	}
 	
