@@ -96,7 +96,7 @@
                     </div>
                   </th>
                   <td class="border-0 align-middle"><strong id="like-pct-price">${list.PCT_PRICE }</strong></td>
-                  <td class="border-0 align-middle"><input type="number" id="pctCount" max="${list.PCT_STOCK }" min="1" value="1"></td>
+                  <td class="border-0 align-middle"><input type="number" id="pctCount" max="${list.PCT_STOCK}" min="1" value="1"></td>
                   <td class="border-0 align-middle"><a href="#" class="text-dark delete-wish"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 <!-- for끝 -->

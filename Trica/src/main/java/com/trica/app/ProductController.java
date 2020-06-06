@@ -108,13 +108,5 @@ public class ProductController {
 		return mv;
 	}
 	
-	@RequestMapping("orderConfirm.trc")
-	public ModelAndView orderConfirm() {
-		
-		System.out.println("주문확인창 ****");
-		
-		ModelAndView mv = new ModelAndView(); 
-		mv.setViewName("order/orderConfirm");
-		return mv;
-	}
+
 }

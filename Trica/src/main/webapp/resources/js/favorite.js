@@ -37,6 +37,7 @@ $(function(){
 						"pctImgName":tr.find('th img').attr('src-name'),
 						"pctName":tr.find('th h5 > a').text()
 							};
+				//장바구니(쿠키)에 추가
 				$.ajax({
 					type : 'POST',                 //post방식으로 통신
 					async : true,
@@ -51,8 +52,8 @@ $(function(){
 						alert(data);
 					}
 				});
-				alert(tr.find('#list-like-no').val());
-				var obj2 = {"delLikeNo":tr.find('#list-like-no').val()};
+				//찜목록에서 삭제
+				var obj2 = {"delLikeNo":tr.find('#list-like-no').val()}; 
 				$.ajax({
 					type : 'POST',                 //post방식으로 통신
 					async : true,
@@ -64,10 +65,9 @@ $(function(){
 						alert("삭제오류입니다.");
 					},
 					success : function(data) {    //통신 성공시 탭 내용담는 div를 읽어들인 값으로 채운다.
-						alert(data);
 					}
 				});
-				location.reload()
+				location.reload();
 			}
 		})
 	})

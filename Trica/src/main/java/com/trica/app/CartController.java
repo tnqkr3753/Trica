@@ -1,7 +1,9 @@
 package com.trica.app;
 
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Array;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -12,13 +14,19 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.asm.TypeReference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.trica.vo.ProductVO;
 
 @Controller
@@ -91,6 +99,7 @@ public class CartController {
 	
 	//쿠키에서 장바구니 가져오기 type =all, select
 	private ArrayList<ArrayList<String>> getCartAsFromCookie(String ckValue,String type) {
+		//TODO 인덱스 값에 있는 것들만 가져오는 알고리즘 만들기 -> orderList에 적용
 		ArrayList<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
 		if(!ckValue.equals("")){
 			StringTokenizer st = new StringTokenizer(ckValue,"#");
@@ -129,5 +138,14 @@ public class CartController {
 			}
 		}
 		return sb.toString();
+	}
+	@RequestMapping("orderConfirm.trc")
+	public ModelAndView orderConfirm(@RequestParam(value = "orderPctIndex") String obj) throws JsonParseException, JsonMappingException, IOException {
+		ObjectMapper om = new ObjectMapper();
+		//json형식의 obj를 String[]로 만드는 과정
+		String[] arr = om.readValue(obj, String[].class);
+		ModelAndView mv = new ModelAndView(); 
+		mv.setViewName("order/orderConfirm");
+		return mv;
 	}
 }
