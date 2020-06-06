@@ -15,7 +15,7 @@
 </select>
 <select id="selectWishProduct" parameterType="wish" resultType="hashmap">
 	SELECT  rownum as rnum,p.pct_name pct_name, p.pct_price pct_price,
-	p.pct_img_name pct_img_name,p.pct_stock pct_stock,l.like_no like_no
+	p.pct_img_name pct_img_name,p.pct_stock pct_stock,l.like_no like_no,p.pct_no pct_no
 	FROM m_like l INNER JOIN product p 
 	ON l.pct_no = p.pct_no
 	WHERE member_id=#{memberId}

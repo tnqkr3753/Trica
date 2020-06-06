@@ -32,7 +32,8 @@ $(function(){
 		var obj = {"pctNo" : $.trim($('#pctNo').val()),
 					"pctStock":$('#cnt').val(),
 					"totalPrice":$('#totalPrice').text(),
-					"pctImgName":$('#pctImgName').val()
+					"pctImgName":$('#pctImgName').val(),
+					"pctName":$('.detailHeader h3').text()
 						};
 		$.ajax({
 			type : 'POST',                 //post방식으로 통신

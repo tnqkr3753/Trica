@@ -81,6 +81,7 @@
               <tr>
                     <td class="border-0 align-middle">
                     <input type="hidden" id="list-like-no" value=${list.LIKE_NO }>
+                    <input type="hidden" id="like-pct-no" value=${list.PCT_NO }> 
                     	<div class="custom-control custom-checkbox">
 							<input type="checkbox" id="jb-checkbox-${list.RNUM }" class="custom-control-input">
 							<label class="custom-control-label" for="jb-checkbox-${list.RNUM }"></label>
@@ -88,14 +89,14 @@
 					</td>
                   <th scope="row" class="border-0">
                     <div class="p-2">
-                      <img src="./resources/upload/product/img/${list.PCT_IMG_NAME }" alt="" width="70" class="img-fluid rounded shadow-sm">
+                      <img src="./resources/upload/product/img/${list.PCT_IMG_NAME }" alt="" width="70" class="img-fluid rounded shadow-sm" src-name="${list.PCT_IMG_NAME }">
                       <div class="ml-3 d-inline-block align-middle">
                         <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">${list.PCT_NAME }</a></h5>
                       </div>
                     </div>
                   </th>
-                  <td class="border-0 align-middle"><strong>${list.PCT_PRICE }</strong></td>
-                  <td class="border-0 align-middle"><input type="number" id="pctCount" max="${list.PCT_STOCK }" min="1"></td>
+                  <td class="border-0 align-middle"><strong id="like-pct-price">${list.PCT_PRICE }</strong></td>
+                  <td class="border-0 align-middle"><input type="number" id="pctCount" max="${list.PCT_STOCK }" min="1" value="1"></td>
                   <td class="border-0 align-middle"><a href="#" class="text-dark delete-wish"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 <!-- for끝 -->

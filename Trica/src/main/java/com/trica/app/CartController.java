@@ -12,7 +12,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.trica.service.WishService;
 import com.trica.vo.ProductVO;
 
 @Controller
@@ -35,7 +33,7 @@ public class CartController {
 		Cookie[] cookies = request.getCookies();
 		Cookie kie = null;
 		StringBuffer newValue = new StringBuffer();
-		newValue.append(hash.get("pctNo")+"&"+hash.get("pctStock")+"&"+hash.get("totalPrice")+"&"+hash.get("pctImgName")+"#");
+		newValue.append(hash.get("pctNo")+"&"+hash.get("pctName")+"&"+hash.get("pctStock")+"&"+hash.get("totalPrice")+"&"+hash.get("pctImgName")+"#");
 		if(cookies!=null) {
 			for (Cookie ck : cookies) {
 				if(ck.getName().equals("cartPctNo")) {
@@ -90,6 +88,8 @@ public class CartController {
 		ArrayList<ArrayList<String>> list = getCartAsFromCookie(ckValue, "wish");
 		return null;
 	}
+	
+	//쿠키에서 장바구니 가져오기 type =all, select
 	private ArrayList<ArrayList<String>> getCartAsFromCookie(String ckValue,String type) {
 		ArrayList<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
 		if(!ckValue.equals("")){
@@ -106,6 +106,7 @@ public class CartController {
 		}
 		return list;
 	}
+	//패턴이 들어간 string을 index로 삭제 type=delete,  index = 삭제할 장바구니번호
 	private String getCookieString(String ckValue,String type,String index) {
 		StringBuffer sb = new StringBuffer();
 		if(!ckValue.equals("")){
