@@ -73,26 +73,18 @@
               </thead>
               <tbody>
                 <!-- for문 시작 -->
-                <c:forEach var="list" items="${cList }">
+                <c:forEach var="list" items="${oList }">
                 <tr>
-                    <td class="border-0 align-middle">
-                    	<input id="list-pct-index" type="hidden" value="${list[0] }">
-                    	<div class="custom-control custom-checkbox">
-							<input type="checkbox" id="jb-checkbox-${list[0] }" class="custom-control-input">
-							<label class="custom-control-label" for="jb-checkbox-${list[0] }"></label>
-						</div>
-					</td>
                   <th scope="row" class="border-0">
                     <div class="p-2">
-                      <img src="./resources/upload/product/img/${list[4] }" alt="" width="70" class="img-fluid rounded shadow-sm">
+                      <img src="./resources/upload/product/img/${list[5] }" alt="" width="70" class="img-fluid rounded shadow-sm">
                       <div class="ml-3 d-inline-block align-middle">
-                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">${list[1] }</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">${list[2] }</a></h5><span class="text-muted font-weight-normal font-italic d-block">${list[1] }</span>
                       </div>
                     </div>
                   </th>
                   <td class="border-0 align-middle"><strong class="each-price">${list[3] }</strong><strong>원</strong></td>
-                  <td class="border-0 align-middle"><strong>${list[2] }</strong></td>
-                  <td class="border-0 align-middle"><a href="cart.trc" class="text-dark delete-order"><i class="fa fa-trash"></i></a></td>
+                  <td class="border-0 align-middle"><strong>${list[3] }</strong></td>
                 </tr>
                 </c:forEach>
                 <!-- for문 끝 -->

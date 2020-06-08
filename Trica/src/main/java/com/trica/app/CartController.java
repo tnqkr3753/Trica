@@ -8,6 +8,7 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.StringTokenizer;
 
 import javax.servlet.http.Cookie;
@@ -74,7 +75,7 @@ public class CartController {
 	public ModelAndView getCart(@CookieValue(value="cartPctNo",required = true,defaultValue = "") String ckValue) throws UnsupportedEncodingException {
 		//쿠기 값 받아서 list로 만들기
 		ModelAndView mv = new ModelAndView();
-		ArrayList<ArrayList<String>> list = getCartAsFromCookie(ckValue, "all");
+		ArrayList<ArrayList<String>> list = getCartAsFromCookie(ckValue, "all",new String[0]);
 		mv.addObject("cList", list);
 		mv.setViewName("cart/user-cart");
 		return mv;
@@ -91,26 +92,36 @@ public class CartController {
 		response.addCookie(ck);
 		return "장바구니에서 삭제되었습니다.";
 	}
-	@RequestMapping("wishToCart.trc")
-	public ModelAndView wishToCart(@RequestBody HashMap hash,@CookieValue(value="cartPctNo",required = true) String ckValue) {
-		ArrayList<ArrayList<String>> list = getCartAsFromCookie(ckValue, "wish");
-		return null;
-	}
 	
 	//쿠키에서 장바구니 가져오기 type =all, select
-	private ArrayList<ArrayList<String>> getCartAsFromCookie(String ckValue,String type) {
+	private ArrayList<ArrayList<String>> getCartAsFromCookie(String ckValue,String type,String[] index) {
 		//TODO 인덱스 값에 있는 것들만 가져오는 알고리즘 만들기 -> orderList에 적용
 		ArrayList<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
 		if(!ckValue.equals("")){
 			StringTokenizer st = new StringTokenizer(ckValue,"#");
 			for(int i=1; st.hasMoreTokens();i++) {
-				ArrayList<String> arr = new ArrayList<String>();
-				arr.add(String.valueOf(i));
-				StringTokenizer st2 = new StringTokenizer(st.nextToken(), "&");
-				while(st2.hasMoreTokens()) {
-					arr.add(st2.nextToken());
+				System.out.println("i:"+i);
+				boolean flag = true;
+				//type이 select인데 인덱스와 i가 맞지 않으면 리스트로 안가져옴
+				for (int j = 0;type.equals("select")&& j < index.length; j++) {
+					flag=false;
+					if(index[j].equals(String.valueOf(i))) {
+						flag=true;
+						break;
+					}
 				}
-				list.add(arr);
+				if(flag) {
+					ArrayList<String> arr = new ArrayList<String>();
+					arr.add(String.valueOf(i));
+					StringTokenizer st2 = new StringTokenizer(st.nextToken(), "&");
+					while(st2.hasMoreTokens()) {
+						arr.add(st2.nextToken());
+					}
+					list.add(arr);
+				}else {
+					//false이면 한 데이터 패스
+					st.nextToken();
+				}
 			}
 		}
 		return list;
@@ -139,12 +150,18 @@ public class CartController {
 		}
 		return sb.toString();
 	}
+	//구매하기 누를 때
 	@RequestMapping("orderConfirm.trc")
-	public ModelAndView orderConfirm(@RequestParam(value = "orderPctIndex") String obj) throws JsonParseException, JsonMappingException, IOException {
+	public ModelAndView orderConfirm(@RequestParam(value = "orderPctIndex") String obj,@CookieValue(value="cartPctNo",required = true) String ckValue) throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper om = new ObjectMapper();
 		//json형식의 obj를 String[]로 만드는 과정
 		String[] arr = om.readValue(obj, String[].class);
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		ArrayList<ArrayList<String>> list = getCartAsFromCookie(ckValue, "select",arr);
 		ModelAndView mv = new ModelAndView(); 
+		mv.addObject("oList", list);
 		mv.setViewName("order/orderConfirm");
 		return mv;
 	}

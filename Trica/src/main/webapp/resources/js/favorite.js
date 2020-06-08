@@ -36,12 +36,13 @@ $(function(){
 						"totalPrice":tr.find('#pctCount').val()*tr.find('#like-pct-price').text(),
 						"pctImgName":tr.find('th img').attr('src-name'),
 						"pctName":tr.find('th h5 > a').text()
-							};
+						};
 				//장바구니(쿠키)에 추가
 				$.ajax({
 					type : 'POST',                 //post방식으로 통신
-					async : true,
+					async : false,
 					contentType : 'application/json',
+					cache : false,
 					url : "addCart.trc",    //탭의 data-tab속성의 값으로 된 html파일로 통신
 					data : JSON.stringify(obj),
 					dataType : "text",            //text형식으로 값 읽기
@@ -49,14 +50,14 @@ $(function(){
 						alert("추가오류입니다.");
 					},
 					success : function(data) {    //통신 성공시 탭 내용담는 div를 읽어들인 값으로 채운다.
-						alert(data);
 					}
 				});
 				//찜목록에서 삭제
 				var obj2 = {"delLikeNo":tr.find('#list-like-no').val()}; 
 				$.ajax({
 					type : 'POST',                 //post방식으로 통신
-					async : true,
+					async : false,
+					cache : false,
 					contentType : 'application/json',
 					url : "deleteWish.trc",    //탭의 data-tab속성의 값으로 된 html파일로 통신
 					data : JSON.stringify(obj2),
@@ -67,8 +68,8 @@ $(function(){
 					success : function(data) {    //통신 성공시 탭 내용담는 div를 읽어들인 값으로 채운다.
 					}
 				});
-				location.reload();
 			}
-		})
-	})
+		});
+		location.reload();
+	});
 })
