@@ -193,6 +193,7 @@
 	    		break;
     	} 
     });
+    changeOption(0);
 	function changeOption(num){
 	    secondSelect.find('option').remove();
 	    for(var i = 0 ; i < options[num].length; i++){

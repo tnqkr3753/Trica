@@ -9,48 +9,46 @@ public class OrderVO {
 	private Date orderDate;
 	private int totalPrice;
 	private boolean orderState;
-	private String deliveryNo;
-	private String orderAddress;
-	private String getOrderNo() {
+	private String orderRequest;
+	@Override
+	public String toString() {
+		return "OrderVO [orderNo=" + orderNo + ", memberId=" + memberId + ", orderDate=" + orderDate + ", totalPrice="
+				+ totalPrice + ", orderState=" + orderState + ", orderRequest=" + orderRequest + "]";
+	}
+	public String getOrderNo() {
 		return orderNo;
 	}
-	private void setOrderNo(String orderNo) {
+	public void setOrderNo(String orderNo) {
 		this.orderNo = orderNo;
 	}
-	private String getMemberId() {
+	public String getMemberId() {
 		return memberId;
 	}
-	private void setMemberId(String memberId) {
+	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
-	private Date getOrderDate() {
+	public Date getOrderDate() {
 		return orderDate;
 	}
-	private void setOrderDate(Date orderDate) {
+	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
-	private int getTotalPrice() {
+	public int getTotalPrice() {
 		return totalPrice;
 	}
-	private void setTotalPrice(int totalPrice) {
+	public void setTotalPrice(int totalPrice) {
 		this.totalPrice = totalPrice;
 	}
-	private boolean isOrderState() {
+	public boolean isOrderState() {
 		return orderState;
 	}
-	private void setOrderState(boolean orderState) {
+	public void setOrderState(boolean orderState) {
 		this.orderState = orderState;
 	}
-	private String getDeliveryNo() {
-		return deliveryNo;
+	public String getOrderRequest() {
+		return orderRequest;
 	}
-	private void setDeliveryNo(String deliveryNo) {
-		this.deliveryNo = deliveryNo;
-	}
-	private String getOrderAddress() {
-		return orderAddress;
-	}
-	private void setOrderAddress(String orderAddress) {
-		this.orderAddress = orderAddress;
+	public void setOrderRequest(String orderRequest) {
+		this.orderRequest = orderRequest;
 	}
 }

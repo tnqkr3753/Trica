@@ -5,28 +5,33 @@ public class OrderProductVO {
 	private String orderNo;
 	private int orderCount;
 	private int orderPrice;
-	private String getPctNo() {
+	public String getPctNo() {
 		return pctNo;
 	}
-	private void setPctNo(String pctNo) {
+	public void setPctNo(String pctNo) {
 		this.pctNo = pctNo;
 	}
-	private String getOrderNo() {
+	public String getOrderNo() {
 		return orderNo;
 	}
-	private void setOrderNo(String orderNo) {
+	@Override
+	public String toString() {
+		return "OrderProductVO [pctNo=" + pctNo + ", orderNo=" + orderNo + ", orderCount=" + orderCount
+				+ ", orderPrice=" + orderPrice + "]";
+	}
+	public void setOrderNo(String orderNo) {
 		this.orderNo = orderNo;
 	}
-	private int getOrderCount() {
+	public int getOrderCount() {
 		return orderCount;
 	}
-	private void setOrderCount(int orderCount) {
+	public void setOrderCount(int orderCount) {
 		this.orderCount = orderCount;
 	}
-	private int getOrderPrice() {
+	public int getOrderPrice() {
 		return orderPrice;
 	}
-	private void setOrderPrice(int orderPrice) {
+	public void setOrderPrice(int orderPrice) {
 		this.orderPrice = orderPrice;
 	}
 	

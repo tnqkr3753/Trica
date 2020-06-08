@@ -14,8 +14,10 @@ import java.util.StringTokenizer;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.asm.TypeReference;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,11 +30,16 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.trica.service.MemberService;
+import com.trica.service.MemberServiceImpl;
+import com.trica.vo.MemberVO;
 import com.trica.vo.ProductVO;
 
 @Controller
 public class CartController {
 	//장바구니추가 누를 때
+	@Autowired
+	MemberService memberService;
 	@ResponseBody
 	@RequestMapping(value="/addCart.trc",produces = "application/text; charset=utf8")
 	public String addCart(@RequestBody HashMap<String, Object> hash,
@@ -152,15 +159,20 @@ public class CartController {
 	}
 	//구매하기 누를 때
 	@RequestMapping("orderConfirm.trc")
-	public ModelAndView orderConfirm(@RequestParam(value = "orderPctIndex") String obj,@CookieValue(value="cartPctNo",required = true) String ckValue) throws JsonParseException, JsonMappingException, IOException {
+	public ModelAndView orderConfirm(@RequestParam(value = "orderPctIndex") String obj,@CookieValue(value="cartPctNo",required = true) String ckValue,
+			HttpSession session) throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper om = new ObjectMapper();
 		//json형식의 obj를 String[]로 만드는 과정
 		String[] arr = om.readValue(obj, String[].class);
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println(arr[i]);
-		}
 		ArrayList<ArrayList<String>> list = getCartAsFromCookie(ckValue, "select",arr);
+		String memberId = (String)session.getAttribute("memberId");
 		ModelAndView mv = new ModelAndView(); 
+		if(memberId !=null) {
+			MemberVO vo = new MemberVO();
+			vo.setMemberId(memberId);
+			MemberVO nvo = memberService.login(vo);
+			mv.addObject("vo", nvo);
+		}
 		mv.addObject("oList", list);
 		mv.setViewName("order/orderConfirm");
 		return mv;
