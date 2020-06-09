@@ -61,7 +61,6 @@ public class SearchController {
 	 */
 	
 	 
-<<<<<<< HEAD
 	 @RequestMapping("bigSearch.trc")
 	public ModelAndView bigSearch(@RequestParam String bcNo,String pNum) {
 		//만약 pNum이 null이면 
@@ -71,21 +70,11 @@ public class SearchController {
 		//전체페이지 수 가져오기 
 		int totalPage=searchService.getTotalCount(bcNo);
 		System.out.println("===============큰 카테고리 출력=================");
-
-=======
-	@RequestMapping("bigSearch.trc")
-	public ModelAndView bigSearch(@RequestParam String bcNo) {
-		
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 		// --------------------------------------------------------------------------------
 		ModelAndView mv = new ModelAndView();
-<<<<<<< HEAD
 		System.out.println(searchService.getBigSearch(bcNo, pageNum));
 		//리스트가져오기
 		mv.addObject("sList", searchService.getBigSearch(bcNo, pageNum));
-=======
-		mv.addObject("sList", searchService.getBigSearch(bcNo));
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 		mv.setViewName("product/searchView");
 		mv.addObject("totalPage", totalPage);
 		// --------------------------------------------------------------------------------
@@ -94,15 +83,6 @@ public class SearchController {
 		System.out.println(bcNo);
 		
 		return mv;
-<<<<<<< HEAD
 	} 
 	
 } 
-=======
-	}
-	
-
-	
-}
-	 
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git

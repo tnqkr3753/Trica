@@ -178,21 +178,4 @@ public class CartController {
 		return mv;
 	}
 	
-	
-	
-	
-	
-	
-	// user-cart 창에서 orderConfirm 창으로
-	@RequestMapping("orderConfirm.trc")
-	public ModelAndView orderConfirm() {
-		
-		System.out.println("***** 결제상세내역 *****");
-		
-		ModelAndView mv = new ModelAndView();
-		
-		mv.setViewName("order/orderConfirm");
-		
-		return mv;
-	}
 }
