@@ -24,6 +24,7 @@ public class ProductController {
 	@RequestMapping("productDetail.trc") 
 	public ModelAndView detailProduct(ProductVO vo) {
 		ModelAndView mv = new ModelAndView();
+		System.out.println(vo.getPctNo());
 		ProductVO rvo = productService.selectProduct(vo);
 		mv.addObject("vo", rvo);
 		productService.increaseCount(rvo);
@@ -82,7 +83,6 @@ public class ProductController {
 		System.out.println("확인 출력");
 		ModelAndView mv = new ModelAndView(); 
 		mv.setViewName("product/getList");
-		System.out.println(productService.getNewList().get(0).getPctName());
 		
 		/* if(tabName.contains("all")) {
 			mv.addObject("list", productService.getNewList());	// 데이터 저장
@@ -107,5 +107,11 @@ public class ProductController {
 		mv.addObject("tabName", tabName);
 		return mv;
 	}
+<<<<<<< HEAD
 }
 
+=======
+	
+
+}
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git

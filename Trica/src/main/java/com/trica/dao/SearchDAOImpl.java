@@ -20,6 +20,7 @@ public class SearchDAOImpl implements SearchDAO {
 		return sqlSession.insert("ProductDAO.selectProduct", vo);
 	}
 
+<<<<<<< HEAD
 	public List<HashMap> getSearchList(ProductVO vo,int firstRow,int  endRow) {
 		System.out.println("====> Mybatis getSearchList() 호출");
 		HashMap m=new HashMap();
@@ -28,6 +29,10 @@ public class SearchDAOImpl implements SearchDAO {
 		m.put("firstRow", firstRow);
 		m.put("endRow", endRow);
 		return sqlSession.selectList("SearchDAO.getSearchList", m);
+=======
+	public List<HashMap> getSearchList(ProductVO vo) {
+		return sqlSession.selectList("SearchDAO.getSearchList", vo);
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 	}
 	
 

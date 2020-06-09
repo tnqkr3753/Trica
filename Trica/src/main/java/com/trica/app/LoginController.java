@@ -46,8 +46,6 @@ public class LoginController {
 		}else { 
 			mv.setViewName("member/login");      
 		}    
-		System.out.println(result.getMemberId());
-		System.out.println(result.getMemberType()); 
 		return mv;          
 	}        
     

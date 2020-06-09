@@ -51,11 +51,8 @@ public class SearchController {
 		ProductVO vo = new ProductVO();
 		vo.setPctName((String)map.get("title"));
 		vo.setScNo((String)map.get("big_category")+(String)map.get("small_category"));
-		System.out.println(vo.getPctName());
-		System.out.println(vo.getScNo());
 		//vo로 select문을 통해서 해당하는 값들을 가져와서 mv에 addObject로 페이지에 보내주기
 		//페이지에서 받은 vo List를 이용하여 상품창 띄우기
-		System.out.println(vo.getPctName());
 		ModelAndView mv = new ModelAndView();  
 		mv.addObject("sList", searchService.getSearchList(vo));
 		mv.setViewName("product/searchView");
@@ -64,6 +61,7 @@ public class SearchController {
 	 */
 	
 	 
+<<<<<<< HEAD
 	 @RequestMapping("bigSearch.trc")
 	public ModelAndView bigSearch(@RequestParam String bcNo,String pNum) {
 		//만약 pNum이 null이면 
@@ -74,12 +72,20 @@ public class SearchController {
 		int totalPage=searchService.getTotalCount(bcNo);
 		System.out.println("===============큰 카테고리 출력=================");
 
+=======
+	@RequestMapping("bigSearch.trc")
+	public ModelAndView bigSearch(@RequestParam String bcNo) {
+		
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 		// --------------------------------------------------------------------------------
-		System.out.println(bcNo); 
 		ModelAndView mv = new ModelAndView();
+<<<<<<< HEAD
 		System.out.println(searchService.getBigSearch(bcNo, pageNum));
 		//리스트가져오기
 		mv.addObject("sList", searchService.getBigSearch(bcNo, pageNum));
+=======
+		mv.addObject("sList", searchService.getBigSearch(bcNo));
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 		mv.setViewName("product/searchView");
 		mv.addObject("totalPage", totalPage);
 		// --------------------------------------------------------------------------------
@@ -88,6 +94,15 @@ public class SearchController {
 		System.out.println(bcNo);
 		
 		return mv;
+<<<<<<< HEAD
 	} 
 	
 } 
+=======
+	}
+	
+
+	
+}
+	 
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="OrderDAO">
+
+<insert id="insertOrderProduct" parameterType="orderproduct">
+	INSERT INTO o_detail (pct_no,order_no,order_count,order_price)
+	VALUES (#{pctNo},#{orderNo},#{orderCount},#{orderPrice})
+</insert>
+<insert id="insertOrder" parameterType="order">
+	INSERT INTO m_order (order_no,member_id,order_date,total_price,order_state,order_request)
+	VALUES (seq_order_no.nextval,#{memberId},sysdate,#{totalPrice},'true',#{orderRequest})
+	<selectKey keyProperty="orderNo" resultType="String" order="AFTER">
+		SELECT seq_order_no.currval FROM dual
+	</selectKey>
+</insert>
+<insert id="insertDelivery" parameterType="delivery">
+	INSERT INTO delivery_detail (order_no,deliver_name,deliver_tel,deliver_sub_tel,recipient_name,recipient_address,recipient_tel,recipient_sub_tel)
+	VALUES (#{orderNo},#{deliverName},#{deliverTel},#{deliverSubTel},#{recipientName},#{recipientAddress},#{recipientTel},#{recipientSubTel})
+</insert>
+</mapper>
