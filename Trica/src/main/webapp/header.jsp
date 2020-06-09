@@ -62,7 +62,12 @@
                                         <li><a href="favorite.trc">Favorite</a></li>
                                         <li><a href="orderList.trc">OrderList</a></li>
                                     </ul>  
-                                </li>   
+                                </li>
+                                <li><a href="#">Chart</a>     
+                                    <ul class="dropdown">   
+                                        <li><a href="chart.trc">Chart</a></li>
+                                    </ul>
+                                </li>        
                                 <c:if test="${!empty sessionScope.memberId}">
                                   <li><a href="#">User</a>
                                 	 <ul class="dropdown">

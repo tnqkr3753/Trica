@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ChartDAO">
+ 	<select id="countPerDay" resultType="hashmap">
+		SELECT to_char(order_date,'yyyyMMdd') as day,count(*) count 
+		FROM m_order 
+		GROUP BY to_char(order_date,'yyyyMMdd')
+		ORDER BY to_char(order_date,'yyyyMMdd') desc
+ 	</select>  
+ 	<select id="countPerCate" resultType="hashmap">
+ 		SELECT sum(pct_cnt) viewcount,sc_no category
+		FROM product
+		GROUP BY sc_no
+		ORDER BY sc_no asc
+ 	</select>
+ 	<select id="salesPerDay" resultType="hashmap">
+ 		SELECT sum(total_price) sales,to_char(order_date,'yyyyMMdd') day
+		FROM m_order
+		GROUP BY to_char(order_date,'yyyyMMdd')
+		ORDER BY to_char(order_date,'yyyyMMdd') desc
+ 	</select>
+</mapper>  
