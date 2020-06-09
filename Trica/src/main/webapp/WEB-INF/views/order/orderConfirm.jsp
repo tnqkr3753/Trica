@@ -178,14 +178,8 @@ function sample5_execDaumPostcode() {
         
             
                 <!-- for문 시작 -->
-<<<<<<< HEAD
-                <c:forEach var="list" items="${cList }">
-                
-                  
-=======
                 <c:set value="0" var="count"></c:set>
                 <c:forEach var="list" items="${oList }">
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
                 <tr>
                   <th scope="row" class="border-0">
                   <input type="hidden" name="indexList[${count }]" value="${list[0] }">
@@ -199,20 +193,10 @@ function sample5_execDaumPostcode() {
                       </div>
                     </div>
                   </th>
-<<<<<<< HEAD
-                  <td class="border-0 align-middle"><strong class="each-price">${list[3] }</strong><strong>원</strong></td>
-                  <td class="border-0 align-middle"><strong>${list[2] }</strong></td>
-=======
                   <td class="border-0 align-middle"><strong class="each-price">${list[4] }</strong><strong>원</strong></td>
                   <td class="border-0 align-middle"><strong>${list[3] }</strong></td>
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
                 </tr>
-<<<<<<< HEAD
-              
-
-=======
                 <c:set value="${count+1 }" var="count"></c:set>
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
                 </c:forEach>
                 <!-- for문 끝 -->
           
@@ -271,20 +255,7 @@ function sample5_execDaumPostcode() {
                                 <tr>
                                     <th scope="row"><span class="important">휴대폰번호</span></th>
                                     <td>
-<<<<<<< HEAD
-                                        <input type="text" id="mobileNum" name="orderCellPhone" value="***" maxlength="20">
-                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><span class="important">이메일</span></th>
-                                    <td class="member_email">
-                                        <input type="text" name="orderEmail" value="***">
-
-                                        
-=======
                                         <input type="text" id="mobileNum" name="dvo.deliverTel" value="${vo.tel }" maxlength="20">
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
                                     </td>
                                 </tr>
                                 </tbody>
@@ -324,23 +295,15 @@ function sample5_execDaumPostcode() {
                                 <tr>
                                     <th scope="row">전화번호</th>
                                     <td>
-<<<<<<< HEAD
-                                        <input type="text" id="receiverPhone" name="receiverPhone">
-                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
-=======
                                         <input type="text" id="dvo.receiverPhone" name="dvo.recipientSubTel">
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
+                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><span class="important">휴대폰번호</span></th>
                                     <td>
-<<<<<<< HEAD
-                                        <input type="text" id="mobileNum" name="orderCellPhone" value="***" maxlength="20">
-                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
-=======
                                         <input type="text" id="dvo.receiverCellPhone" name="dvo.recipientTel">
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
+                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
                                     </td>
                                 </tr>
                                 <tr>
@@ -431,10 +394,6 @@ function sample5_execDaumPostcode() {
     <script src="./resources/js/jquery.slicknav.js"></script>
     <script src="./resources/js/owl.carousel.min.js"></script>
     <script src="./resources/js/main.js"></script>
-<<<<<<< HEAD
-    <script src="/.resources/js/cart.js"></script>
-=======
     <script src="./resources/js/orderConfirm.js"></script>
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 </body>
 </html>

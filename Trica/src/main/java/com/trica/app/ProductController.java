@@ -107,11 +107,4 @@ public class ProductController {
 		mv.addObject("tabName", tabName);
 		return mv;
 	}
-<<<<<<< HEAD
 }
-
-=======
-	
-
-}
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git

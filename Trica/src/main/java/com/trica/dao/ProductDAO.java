@@ -12,10 +12,6 @@ public interface ProductDAO {
 	public List<ProductVO> getNewList();
 	public List<ProductVO> getAllList();
 	public List<HashMap> getaList();
-<<<<<<< HEAD
-=======
-	
->>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 	public List<ProductVO> getPopularList();
 	public List<ProductVO> getRecommendList();
 	public void increaseCount(ProductVO vo);
