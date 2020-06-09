@@ -11,6 +11,7 @@ import com.trica.vo.ProductVO;
 
 @Service("productService")
 public class ProductServiceImpl implements ProductService {
+	int pagePerPct = 9;
 	
 	@Autowired
 	ProductDAO productDAO;
@@ -30,7 +31,7 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<ProductVO> getAllList() { 
 		return productDAO.getAllList();	// 상품 리스트 리턴
-	} 
+	}
  
 	@Override 
 	public List<HashMap> getaList(){  
@@ -61,4 +62,24 @@ public class ProductServiceImpl implements ProductService {
 		productDAO.increaseCount(vo);
 	}
 	
+	
+	
+	
+	
+	@Override
+	public List<ProductVO> getPctList(int pNum) {
+		System.out.println("--------service.getPctList호출-----------");
+		int startRow = (pNum-1)*pagePerPct+1;
+		int endRow = (pNum)*pagePerPct;
+		
+		HashMap hash = new HashMap();
+		hash.put("startRow", startRow);
+		hash.put("endRow", endRow);
+		
+		return productDAO.getPctList(hash);
+	}
+
+	public List<HashMap> countRegPerDay() {
+		return productDAO.countRegPerDay();
+	}
 }

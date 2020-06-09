@@ -32,6 +32,7 @@ $(function(){
         	calcul('-', price);
         }
 	});
+	
 	function calcul(cal,price){
 		var totalPrice=$('#totalOrderPrice').html()*1;
 		if(cal=='+'){
@@ -46,4 +47,5 @@ $(function(){
 	//결제 누를 시 $('#totalOrderPrice').html(totalPrice);로 0아 아닐 때 결제 confirm 후 true이면
 	//결제 order.trc로 연결 // db저장 후 캐쉬에서 pctNo에 해당하는 값들 삭제하기
 	//
+	
 });

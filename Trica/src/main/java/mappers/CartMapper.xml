@@ -20,5 +20,4 @@ VALUES
 ) 
  
 </insert>
-<insert id="insertWish" parameterType=""></insert>
 </mapper>

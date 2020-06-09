@@ -71,5 +71,11 @@ SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price,
 </update>
 
 
+<select id="getRegPerDay" resultType="hashmap">
+	select to_char(pct_reg_date,'yyyyMMdd') pctRegDate,count(*) cnt 
+	from product 
+	group by to_char(pct_reg_date,'yyyyMMdd') 
+	order by to_char(pct_reg_date,'yyyyMMdd')
+</select>
 
 </mapper>

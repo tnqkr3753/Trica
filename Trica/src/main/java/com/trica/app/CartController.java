@@ -129,4 +129,22 @@ public class CartController {
 		response.addCookie(ck);
 		return "장바구니에서 삭제되었습니다.";
 	}
+	
+	
+	
+	
+	
+	
+	// user-cart 창에서 orderConfirm 창으로
+	@RequestMapping("orderConfirm.trc")
+	public ModelAndView orderConfirm() {
+		
+		System.out.println("***** 결제상세내역 *****");
+		
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("order/orderConfirm");
+		
+		return mv;
+	}
 }

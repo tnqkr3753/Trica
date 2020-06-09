@@ -72,16 +72,16 @@
                 </tr>
               </thead>
               <tbody>
+              
+              
+            
+        
+            
                 <!-- for문 시작 -->
                 <c:forEach var="list" items="${cList }">
+                
+                  
                 <tr>
-                    <td class="border-0 align-middle">
-                    	<input id="list-pct-index" type="hidden" value="${list[0] }">
-                    	<div class="custom-control custom-checkbox">
-							<input type="checkbox" id="jb-checkbox-${list[0] }" class="custom-control-input">
-							<label class="custom-control-label" for="jb-checkbox-${list[0] }"></label>
-						</div>
-					</td>
                   <th scope="row" class="border-0">
                     <div class="p-2">
                       <img src="./resources/upload/product/img/${list[4] }" alt="" width="70" class="img-fluid rounded shadow-sm">
@@ -92,10 +92,13 @@
                   </th>
                   <td class="border-0 align-middle"><strong class="each-price">${list[3] }</strong><strong>원</strong></td>
                   <td class="border-0 align-middle"><strong>${list[2] }</strong></td>
-                  <td class="border-0 align-middle"><a href="cart.trc" class="text-dark delete-order"><i class="fa fa-trash"></i></a></td>
                 </tr>
+              
+
                 </c:forEach>
                 <!-- for문 끝 -->
+          
+                
               </tbody>
             </table>
           </div>
@@ -142,6 +145,7 @@
                                     <th scope="row"><span class="important">휴대폰번호</span></th>
                                     <td>
                                         <input type="text" id="mobileNum" name="orderCellPhone" value="***" maxlength="20">
+                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
                                     </td>
                                 </tr>
                                 <tr>
@@ -186,12 +190,14 @@
                                     <th scope="row">전화번호</th>
                                     <td>
                                         <input type="text" id="receiverPhone" name="receiverPhone">
+                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><span class="important">휴대폰번호</span></th>
                                     <td>
-                                        <input type="text" id="receiverCellPhone" name="receiverCellPhone">
+                                        <input type="text" id="mobileNum" name="orderCellPhone" value="***" maxlength="20">
+                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
                                     </td>
                                 </tr>
                                 <tr>
@@ -276,5 +282,6 @@
     <script src="./resources/js/jquery.slicknav.js"></script>
     <script src="./resources/js/owl.carousel.min.js"></script>
     <script src="./resources/js/main.js"></script>
+    <script src="/.resources/js/cart.js"></script>
 </body>
 </html>

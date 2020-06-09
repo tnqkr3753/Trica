@@ -3,6 +3,7 @@ package com.trica.dao;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -57,5 +58,21 @@ public class ProductDAOImpl implements ProductDAO {
 	public void increaseCount(ProductVO vo) {
 		sqlSession.update("ProductDAO.increaseCount", vo);
 	}
+
+	
+	
+	
+	
+	@Override
+	public List<ProductVO> getPctList(HashMap hash) {
+		System.out.println("---------dao.getPctList호출------------");
+		return sqlSession.selectList("ProductDAO.selectPctList", hash);
+	}
+	
+	@Override
+	public List<HashMap> countRegPerDay() {
+		return sqlSession.selectList("ProductDAO.getRegPerDay");
+	}
+
 
 }

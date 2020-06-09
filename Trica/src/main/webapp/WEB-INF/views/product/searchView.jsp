@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
@@ -112,6 +113,8 @@
                             
                             
                             
+                            
+                            
                        
                             
                             
@@ -126,7 +129,7 @@
                                     <div class="listing__item">
                                         	<div class="listing__item__pic set-bg" data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}" ><!-- 이미지  -->
                                             <img src="./resources/img/추천상품/BSTE_상품.png" alt=""> <!-- 이미지 -->
-                                            <div class="listing__item__pic__tag top_rate"> ${list.SC_NAME } </div> <!--단어  -->
+                                            <div class="listing__item__pic__tag top_rate"> ${list.PCT_NAME } </div> <!--단어  -->
                                             <c:choose>
                                             <c:when test="${list.PCT_STOCK<= 15 and list.PCT_STOCK ne 0}"> <!-- 마감임박 -->                                                  
 													<span><img src="./resources/img/soldout.gif" height='50'  width='50'></span>
@@ -161,7 +164,39 @@
                                 </div>
                                 </c:forEach>                                
                                 <!-- for문 끝 -->
-                            </div>
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+				
+									<div class="atag">
+
+						<!-- ************************************ paging **************************************** -->
+						<c:forEach var="i" begin="1" end="${totalPage }">
+
+							<c:if test="${empty bcNo}">
+								<!-- 검색창에서 searchView 페이지로 넘어갈때 -->
+								<a class="btn blue"
+									href="search.trc?title=${title}&big_category=${big_category}&small_category=${small_category}&pNum=${i}">${i}</a>
+							</c:if>
+
+							<c:if test="${not empty bcNo}">
+								<!-- 빅 카테고리에서 searchView 페이지로 넘어갈때 -->
+								<a class="btn blue" href="bigSearch.trc?bcNo=${bcNo}&pNum=${i}">${i}</a>
+							</c:if>
+
+						</c:forEach>
+						<!-- ************************************ paging **************************************** -->
+
+					</div>
                         </div>
                         </div>                  
     		</section>
