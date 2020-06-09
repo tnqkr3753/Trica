@@ -177,7 +177,6 @@
     firstSelect.change(function(){
     	switch($(this).val()){
 	    	case "1":
-	    		alert(secondSelect); 
 	    		changeOption(0);
 	    		break;
 	    	case "2": 
@@ -192,8 +191,9 @@
 	    	case "5":
 	    		changeOption(4);
 	    		break;
-    	}  
-    }); 
+    	} 
+    });
+    changeOption(0);
 	function changeOption(num){
 	    secondSelect.find('option').remove();
 	    for(var i = 0 ; i < options[num].length; i++){
@@ -201,5 +201,4 @@
     	}
 	    secondSelect.niceSelect('update');
 	} 
-	
 })(jQuery);

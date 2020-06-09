@@ -1,0 +1,236 @@
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+    margin: 0;
+    padding: 0;
+}
+
+.side_todayview .box_today .title_today strong, .box_today .title_today h2 {
+    display: inline;
+    padding-left: 2px;
+    color: #666;
+    font-weight: bold;
+    text-indent: 0;
+    font-size: 11px;
+}
+
+.side_todayview .box_today .title_today em {
+    padding-left: 3px;
+    font-size: 11px;
+    color: #ee5555;
+    letter-spacing: 0;
+    font-family: 'tahoma';
+    font-weight: bold;
+}
+
+em, address {
+    font-style: normal;
+}
+
+em {
+    font-style: italic;
+}
+
+.side_todayview .box_today .title_today {
+    display: block;
+    width: 100%;
+    height: 24px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.side_todayview .no_list {
+    height: 135px;
+    padding-top: 101px;
+    color: #aaa;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 11px;
+}
+
+.side_todayview .box_today .box_today_inner {
+	
+    display: block;
+    width: 120px;
+    padding: 12px 14px 14px 14px;
+    border-style: solid;
+    border-width: 1.5px 1.5px 1.5px 1.5px;
+    border-color: red;
+    background-color: #fff;
+    height:400px;
+}
+
+.side_todayview .today_paging .numbering .on {
+    color: #333;
+    font-weight: normal;
+}
+
+.side_todayview .today_paging .numbering {
+    float: left;
+    width: 26px;
+    font-size: 11px;
+    padding-top: 2px;
+    color: #aaa;
+    text-align: center;
+    font-weight: normal;
+}
+
+.side_todayview .today_paging .btn_prev {
+    width: 14px;
+    height: 15px;
+    background-position: -398px -406px;
+}
+
+.side_todayview .today_paging a, .today_paging button {
+    float: left;
+    cursor: pointer;
+}
+
+.container .side_wrap {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    margin: 0 0 0 562px;
+    white-space: nowrap;
+}
+
+.side_todayview .today_paging .btn_next {
+    width: 15px;
+    height: 15px;
+    background-position: -455px -406px;
+}
+
+.container.main .side_wrap {
+    top: 537px;
+    z-index: 1500;
+}
+
+
+body {
+    word-break: break-all;
+}
+
+body {
+    font-family: "Apple SD Gothic Neo",'돋움',Dotum,sans-serif;
+    font-size: 12px;
+    color: #333;
+}
+
+.wrap {
+    min-width: 1084px;
+    min-height: 100%;
+    position: relative;
+}
+
+.container {
+    min-height: 100%;
+}
+
+.container .container_inner {
+    position: relative;
+    width: 100%;
+    min-width: 1084px;
+}
+
+.lay_ico {
+    display: inline-block;
+    overflow: hidden;
+    background: url(//image.wemakeprice.com/images/resources_v2/front/layout/layout_ico_spr.png) no-repeat 0 0;
+    text-indent: -9999px;
+    *font-size: 0;
+    *line-height: 0;
+    *height: 0;
+    *text-indent: 0;
+}
+
+div {
+    display: block;
+}
+
+element.style {
+    margin-left: 150px;
+    margin-top: 499px;
+    position: fixed;
+    top: 300px;
+}
+
+.side_todayview {
+    position: relative;
+    width: 100px;
+    height: 308px;
+}
+
+
+.side_todayview .today_paging {
+    display: block;
+    overflow: hidden;
+    margin-top: 170px;
+    padding: 0 7px 0 8px;
+}
+
+button {
+    border-radius: 0;
+    background: none;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 0;
+}
+
+img, fieldset, button {
+    border: 0;
+}
+
+input, textarea, select, button, table {
+    font-family: inherit;
+    font-size: 12px;
+    color: #333;
+}
+
+button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(buttontext, rgb(170, 170, 170));
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: -internal-light-dark-color(rgb(239, 239, 239), rgb(74, 74, 74));
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark-color(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}
+
+.side_todayview .btn_updown {
+    margin-top: 5px;
+}
+
+.today_paging {
+    float: center;
+    text-align: center;   
+}

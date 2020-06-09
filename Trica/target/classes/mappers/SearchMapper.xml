@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="SearchDAO">
-<select id="getSearchList" parameterType="product" resultType="hashmap">
+<select id="getSearchList" parameterType="hashmap" resultType="hashmap">
 	
 	SELECT * 
 	FROM product  inner join s_cate
@@ -15,8 +15,26 @@
 																											</if>
 																											ORDER BY pct_reg_date desc)
 														)	
-								WHERE rnum<![CDATA[>=]]>1 AND rnum<![CDATA[<=]]>6 )
+								WHERE rnum<![CDATA[>=]]>#{firstRow} AND rnum<![CDATA[<=]]>#{endRow} )
 	
+</select>
+
+<select id="getSearchCount" parameterType="product" resultType="int">
+
+	SELECT count(*) cnt 
+	FROM product  inner join s_cate
+    on product.sc_no = s_cate.sc_no
+	WHERE pct_no in (SELECT pct_no FROM	(SELECT pct_no FROM (SELECT pct_no FROM product
+	
+																											WHERE pct_name like '%${pctName}%'
+																											<if test="scNo!=null">
+																											AND sc_no = #{scNo}
+																											</if>
+																											ORDER BY pct_reg_date desc)
+														)	
+								 )
+
+
 </select>
 
 <select id="getBigSearch" parameterType="String" resultType="hashmap">
@@ -31,4 +49,22 @@
 
 
 
+
+<!-- 전체페이지 가져오기 -->
+<select id="getTotalCount" parameterType="String"  resultType="int">
+	<![CDATA[select count(*) cnt from product 
+	 WHERE pct_no in (SELECT pct_no FROM (SELECT pct_no FROM (SELECT pct_no FROM product WHERE SUBSTR(sc_no, 1, 1) = #{bcNo} ORDER BY pct_cnt desc))
+	)]]>
+
+</select>
+
+<!-- 페이지 리스트 가져오기 -->
+<select id="selectList" resultType="hashmap">
+<![CDATA[SELECT *
+	FROM product
+	WHERE pct_no in (SELECT pct_no FROM(SELECT pct_no,rownum as rnum FROM(SELECT pct_no FROM product WHERE SUBSTR(sc_no, 1, 1) = #{bcNo} ORDER BY pct_cnt desc))
+	WHERE rnum>=#{firstRow} AND rnum<=#{endRow})]]>
+
+
+</select>
 </mapper>

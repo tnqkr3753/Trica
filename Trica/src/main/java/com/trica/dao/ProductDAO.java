@@ -14,11 +14,10 @@ public interface ProductDAO {
 	public List<ProductVO> getNewList();
 	public List<ProductVO> getAllList(); 
 	public List<HashMap> getaList();
-	  
 	public List<ProductVO> getPopularList(); 
 	public List<ProductVO> getRecommendList(); 
 	public List<ProductVO> productList();
 	public void increaseCount(ProductVO vo);
-	
- 
-}   
+	public List<ProductVO> getPctList(HashMap hash);
+	public List<HashMap> countRegPerDay();
+}

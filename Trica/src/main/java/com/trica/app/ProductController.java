@@ -2,25 +2,17 @@ package com.trica.app;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashMap; 
 import java.util.List;
  
-import javax.imageio.IIOException;
-import javax.servlet.http.Cookie; 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.method.annotation.ModelFactory;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.trica.service.ProductService;
-import com.trica.vo.MemberVO;
 import com.trica.vo.ProductVO;
 
 @Controller
@@ -31,7 +23,7 @@ public class ProductController {
 
 	@RequestMapping("productDetail.trc")  
 	public ModelAndView detailProduct(ProductVO vo) {
-		ModelAndView mv = new ModelAndView(); 
+		ModelAndView mv = new ModelAndView();
 		ProductVO rvo = productService.selectProduct(vo);
 		mv.addObject("vo", rvo);
 		productService.increaseCount(rvo);
@@ -81,31 +73,19 @@ public class ProductController {
 		System.out.println("확인 출력");
 		ModelAndView mv = new ModelAndView(); 
 		mv.setViewName("product/getList");
-		System.out.println(productService.getNewList().get(0).getPctName());
-
-		/* if(tabName.contains("all")) { 
-			mv.addObject("list", productService.getNewList());	// 데이터 저장
-
-		} else if (tabName.contains("popular")) {
-			mv.addObject("list", productService.getAllList());
-		} */ 
 
 		if(tabName.contains("new")) {
-			System.out.println("----new-----");
 			mv.addObject("list", productService.getNewList());	// 최근 입력된 상품 불러옴
 		} else if (tabName.contains("all")) {
-			System.out.println("----all-----");
 			mv.addObject("list", productService.getAllList());	// 전체 상품목록 중 랜덤으로 불러옴
 		} else if (tabName.contains("popular")) {
-			System.out.println("----popular-----");
 			mv.addObject("list", productService.getPopularList());	// 조회수 순으로 인기상품 불러옴
 		} else if (tabName.contains("recommend")) {
-			System.out.println("----recommend-----");
 			mv.addObject("list", productService.getRecommendList());
 		}
 		mv.addObject("tabName", tabName);
 		return mv;
-	}
+	} 
 
 	//Header Shop 클릭 시 전체상품 보이는 페이지로 이동
 	@RequestMapping("getaList.trc") 

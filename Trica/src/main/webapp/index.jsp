@@ -52,7 +52,8 @@
 								<input type="text" name="title" placeholder="검색어를 입력해주세요">
 								<div class="select__option fir">
 									<select name="bc_no">
-										<option value="1">TV/냉장고/세탁기/건조기</option> 
+										<option value="">기본 카테고리</option>
+										<option value="1">TV/냉장고/세탁기/건조기</option>
 										<option value="2">카메라/게임/음향</option>
 										<option value="3">주방가전</option>  
 										<option value="4">컴퓨터/휴대폰</option> 

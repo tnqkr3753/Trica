@@ -32,7 +32,7 @@ public class LoginController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("member/login");  
 		return mv;  
-	}    
+	}     
   
 	@RequestMapping("Login.trc") 
 	public ModelAndView login(MemberVO vo,HttpSession session) {
@@ -47,9 +47,9 @@ public class LoginController {
 			   
 		}else { 
 			mv.setViewName("member/login");      
-		}     
-		return mv;          
-	}         
+		} 
+		return mv;
+	}    
       
 	//회원가입
 	@RequestMapping("Register.trc")  
@@ -68,7 +68,7 @@ public class LoginController {
 		}else {  
 			mv.setViewName("member/login"); 
 		}  
-		return mv;     
+		return mv;      
 	}    
 
 	//로그아웃    

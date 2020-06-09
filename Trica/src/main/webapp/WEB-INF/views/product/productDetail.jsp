@@ -219,6 +219,5 @@
 		<script src="./resources/js/owl.carousel.min.js"></script>
 		<script src="./resources/js/main.js"></script> 
 		<script type="text/javascript" src="./resources/js/productDetails.js"></script>
-		<script src="http://lab.alexcican.com/set_cookies/cookie.js" type="text/javascript" ></script>
 </body>
 </html>

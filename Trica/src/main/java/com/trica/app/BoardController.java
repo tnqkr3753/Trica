@@ -32,8 +32,6 @@ public class BoardController {
 	@RequestMapping("/registBoard.trc") //게시글 db삽입
 	public ModelAndView registBoard(BoardVO vo) {
 		ModelAndView mv = new ModelAndView();
-		System.out.println(vo.getBoardContent());
-		System.out.println(vo.getBoardTitle());
 		mv.setViewName("board/boardList");
 		int result = boardService.boardInsert(vo);
 		mv.addObject("result",result);
@@ -51,7 +49,6 @@ public class BoardController {
 			boardType=bType;
 		}
 		//파라미터에 페이지넘버가 없다면
-		System.out.println(pageNum);
 		if(pageNum != null) {
 			if(pageNum.contains("plus")) { // + 가 있을 때 (Next를 눌렀을 때)
 				pageNum=pageNum.replace("plus", "");
@@ -103,7 +100,6 @@ public class BoardController {
 	}
 	@RequestMapping("/boardView.trc") //게시글 상세 보기 (부분페이지)
 	public ModelAndView boardView(BoardVO vo) {
-		System.out.println(vo.getBoardNo());
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/boardView");
 		BoardVO rvo = boardService.getBoardOne(vo); 

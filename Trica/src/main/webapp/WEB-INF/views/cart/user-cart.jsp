@@ -88,14 +88,14 @@
 					</td>
                   <th scope="row" class="border-0">
                     <div class="p-2">
-                      <img src="./resources/upload/product/img/${list[4] }" alt="" width="70" class="img-fluid rounded shadow-sm">
+                      <img src="./resources/upload/product/img/${list[5] }" alt="" width="70" class="img-fluid rounded shadow-sm">
                       <div class="ml-3 d-inline-block align-middle">
-                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">${list[1] }</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">${list[1] }</a></h5><span class="text-muted font-weight-normal font-italic d-block">${list[2] }</span>
                       </div>
                     </div>
                   </th>
-                  <td class="border-0 align-middle"><strong class="each-price">${list[3] }</strong><strong>원</strong></td>
-                  <td class="border-0 align-middle"><strong>${list[2] }</strong></td>
+                  <td class="border-0 align-middle"><strong class="each-price">${list[4] }</strong><strong>원</strong></td>
+                  <td class="border-0 align-middle"><strong>${list[3] }</strong></td>
                   <td class="border-0 align-middle"><a href="cart.trc" class="text-dark delete-order"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 </c:forEach>
@@ -136,7 +136,11 @@
               <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">합계</strong>
                 <h5 class="font-weight-bold" id="total-condition-price">0</h5><h5>원</h5>
               </li>
-            </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">결제</a>
+            </ul>
+            <form id="order-form" action="orderConfirm.trc" method="post">
+            <a href="#" class="btn btn-dark rounded-pill py-2 btn-block btn-order">결제</a>
+            <input type="hidden" name="orderPctIndex">
+            </form>
           </div>
         </div>
       </div>

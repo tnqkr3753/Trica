@@ -19,4 +19,8 @@ public interface ProductService {
 	public List<ProductVO> productList();//상품리스트
 	public void increaseCount(ProductVO vo);
 	
-}      
+	
+	public List<ProductVO> getPctList(int pNum);
+	public List<HashMap> countRegPerDay();
+
+}  
