@@ -21,6 +21,7 @@ public class OrderController {
 	//결제완료 order와 orderProduct와 delivery 데이터베이스에 접근
 	@RequestMapping("orderSuccess.trc")
 	public ModelAndView orderSuccess(OrderSubmitVO vo,HttpSession session) {
+		boolean state = true;;
 		OrderVO ovo = vo.getOvo();
 		ovo.setMemberId((String)session.getAttribute("memberId"));
 		int orderResult = orderService.insertOrder(ovo);
@@ -29,14 +30,21 @@ public class OrderController {
 			for(OrderProductVO pvo :vo.getPvoList()) {
 				pvo.setOrderNo(vo.getOvo().getOrderNo());
 				if(orderService.insertOrderProduct(pvo)!=1) {
-					//orderproduct실패시
+					state = false;
 				}
+				System.out.println(pvo);
 			}
 			DeliveryVO dvo = vo.getDvo();
 			dvo.setOrderNo(ovo.getOrderNo());
 			if(orderService.insertDelivery(dvo)!=1) {
 				//실패시 delivery
+				state = false;
 			}
+			System.out.println(dvo);
+		}
+		//거래가 성공(db추가 성공)이면
+		if(state) {
+			
 		}
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("goToIndex");

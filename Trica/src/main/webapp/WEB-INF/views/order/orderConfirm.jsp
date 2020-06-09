@@ -333,6 +333,13 @@ function sample5_execDaumPostcode() {
                                         <span class="multi_shipping_text"></span>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <th scope="row">부가세</th>
+                                    <td>
+                                        <span id="totalTaxCharge">***</span>원
+                                        <span class="multi_shipping_text"></span>
+                                    </td>
+                                </tr>
                                 
 
                            

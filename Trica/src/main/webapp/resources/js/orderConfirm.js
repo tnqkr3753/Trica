@@ -8,7 +8,8 @@ $(function(){
 	})
 	$('#totalGoodsPrice').text(totalPrice);
 	$('#totalDeliveryCharge').text('2500');
-	$('#totalSettlePrice').text($('#totalGoodsPrice').text()*1+$('#totalDeliveryCharge').text()*1);
+	$('#totalTaxCharge').text(totalPrice*0.1);
+	$('#totalSettlePrice').text($('#totalGoodsPrice').text()*1+$('#totalDeliveryCharge').text()*1+$('#totalTaxCharge').text()*1);
 	$('#inputTotalPrice').val($('#totalSettlePrice').text());
 	$('.order-btn').click(function(){
 		if($('#confirm-check').is(':checked')){
