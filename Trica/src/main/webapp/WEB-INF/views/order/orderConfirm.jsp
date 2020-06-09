@@ -296,12 +296,14 @@ function sample5_execDaumPostcode() {
                                     <th scope="row">전화번호</th>
                                     <td>
                                         <input type="text" id="dvo.receiverPhone" name="dvo.recipientSubTel">
+                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><span class="important">휴대폰번호</span></th>
                                     <td>
                                         <input type="text" id="dvo.receiverCellPhone" name="dvo.recipientTel">
+                                         &nbsp;&nbsp;&nbsp;'-' 없이 입력해주세요.
                                     </td>
                                 </tr>
                                 <tr>

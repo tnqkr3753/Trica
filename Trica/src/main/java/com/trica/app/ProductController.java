@@ -1,10 +1,5 @@
 package com.trica.app;
 
-import java.util.HashMap;
-import java.util.List;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -107,6 +102,4 @@ public class ProductController {
 		mv.addObject("tabName", tabName);
 		return mv;
 	}
-	
-
 }
