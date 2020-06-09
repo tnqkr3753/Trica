@@ -6,6 +6,13 @@ public class OrderSubmitVO {
 	private List<OrderProductVO> pvoList;
 	private OrderVO ovo;
 	private DeliveryVO dvo;
+	private List<String> indexList;
+	public List<String> getIndexList() {
+		return indexList;
+	}
+	public void setIndexList(List<String> indexList) {
+		this.indexList = indexList;
+	}
 	public List<OrderProductVO> getPvoList() {
 		return pvoList;
 	}

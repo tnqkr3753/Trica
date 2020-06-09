@@ -177,6 +177,7 @@ function sample5_execDaumPostcode() {
                 <c:forEach var="list" items="${oList }">
                 <tr>
                   <th scope="row" class="border-0">
+                  <input type="hidden" name="indexList[${count }]" value="${list[0] }">
                   <input type="hidden" name="pvoList[${count}].pctNo" value="${list[1] }">
                   <input type="hidden" name="pvoList[${count}].orderCount" value="${list[3] }">
                   <input type="hidden" name="pvoList[${count}].orderPrice" value="${list[4] }">

@@ -134,7 +134,7 @@ public class CartController {
 		return list;
 	}
 	//패턴이 들어간 string을 index로 삭제 type=delete,  index = 삭제할 장바구니번호
-	private String getCookieString(String ckValue,String type,String index) {
+	public String getCookieString(String ckValue,String type,String index) {
 		StringBuffer sb = new StringBuffer();
 		if(!ckValue.equals("")){
 			//쿠키를 #으로 자른다
