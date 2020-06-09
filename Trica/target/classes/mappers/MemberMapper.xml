@@ -28,11 +28,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     	AND PASSWORD=#{password}            
  		</if> 
  	</select>
- 	               
+ 	                
  	<!-- 회원정보 수정 -->   
  	<update id="memberUpdate" parameterType='member'>
  		UPDATE member SET PASSWORD=#{password}, TEL=#{tel}, ADDRESS=#{address}
  		WHERE member_id=#{memberId}   
  	</update>
- 	   
+	 	       
 </mapper>                                                            

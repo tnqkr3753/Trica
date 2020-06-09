@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<!-- Google Font -->
+<!-- Google Font --> 
 <link
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
 	rel="stylesheet">
@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="./resources/css/elegant-icons.css"
 	type="text/css">
 <link rel="stylesheet" href="./resources/css/flaticon.css" 
-	type="text/css">
+	type="text/css"> 
 <link rel="stylesheet" href="./resources/css/nice-select.css"
 	type="text/css">
 <link rel="stylesheet" href="./resources/css/barfiller.css"
@@ -40,17 +40,17 @@
 <link rel="stylesheet" href="./resources/css/common.css" type="text/css">
  
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
+<link rel="stylesheet" 
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
-<title>Login</title>
-
-</head>
+	crossorigin="anonymous"> 
+<title>Login</title> 
+ 
+</head> 
 
 <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0"
 	width="100%" height="100%" align="center">
-	<!-- Page Preloder -->
+	<!-- Page Preloder -->  
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
@@ -73,14 +73,14 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div> 
+	</div> 
 	<!-- Breadcrumb End --> 
  
-	<div class="card align-middle" 
+	<div class="card align-middle"  
 		style="width: 20rem; border-radius: 20px;">
 		<div class="card-title" style="margin-top: 30px;">
-			<h2 class="card-title text-center" style="color: #113366;">Login</h2>
+			<h2 class="card-title text-center" style="color: #113366;">Login</h2> 
 		</div>
 		<div class="card-body">  
 			<form class="form-signin" method="POST" 
@@ -95,42 +95,45 @@
 					name="password" type="password" id="upw" class="form-control"
 					placeholder="Password" required><br> 
 				<div class="checkbox"> 
-					<label> <input type="checkbox" value="remember-me">
-						기억하기
-					</label>     
-				</div>
+					<label> <input type="checkbox" id="remember" name="remember" value="remember-me">
+						아이디  기억하기
+					</label>         
+				</div>   
 				<button id="btn-Yes" class="btn btn-lg btn-primary btn-block"
 					type="submit">로 그 인</button>
 				<button id="btn-Rg" class="btn btn-lg btn-primary btn-block"
 					onclick="location.href='Register.trc'">회원가입</button>
-			</form>             
+			</form>              
 		</div>             
-	</div>         
- 
-	<div class="modal"></div>
- 
+	</div>             
+   
+	<div class="modal"></div> 
+  
 	<!-- Footer Section Begin -->
 	<jsp:include page="../../../footer.jsp"></jsp:include>
-	<!-- Footer Section End -->
-	<!-- Js Plugins -->
-	<script src="./resources/js/jquery-3.3.1.min.js"></script>
-	<script src="./resources/js/bootstrap.min.js"></script>
-	<script src="./resources/js/jquery.nice-select.min.js"></script>
-	<script src="./resources/js/jquery-ui.min.js"></script>
+	<!-- Footer Section End -->  
+	   
+	<!-- Js Plugins -->    
+	<script src="./resources/js/jquery-3.3.1.min.js"></script> 
+	<script src="./resources/js/bootstrap.min.js"></script>   
+	<script src="./resources/js/jquery.nice-select.min.js"></script> 
+	<script src="./resources/js/jquery-ui.min.js"></script> 
 	<script src="./resources/js/jquery.nicescroll.min.js"></script>
 	<script src="./resources/js/jquery.barfiller.js"></script>
 	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
-	<script src="./resources/js/jquery.slicknav.js"></script>
-	<script src="./resources/js/owl.carousel.min.js"></script> 
-	<script src="./resources/js/main.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script
+	<script src="./resources/js/jquery.slicknav.js"></script> 
+	<script src="./resources/js/owl.carousel.min.js"></script>     
+	<script src="./resources/js/main.js"></script>     
+	<script   
+		src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+		crossorigin="anonymous"></script> 
+	<script       
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script> 
- 
-</body>
-</html>
+		crossorigin="anonymous"></script>
+	<script src="./resources/js/loginRemember.js"></script>  
+	<script src="http://lab.alexcican.com/set_cookies/cookie.js"></script> 
+</body>        
+</html>    
 </html>

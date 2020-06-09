@@ -7,8 +7,8 @@ $(function(){
 		var cook = ["전기밥솥", "전자레인지/오븐", "믹서/쥬서/원액기", "식기세척기/살균건조기"];
 		var computer = ["노트북", "데스크탑", "프린터", "휴대폰"];
 		var season = ["에어컨", "가습기", "공기청정기", "난로/히터"];
-		
-		var changeItem;
+		 
+		var changeItem; 
 		
 		if($('#category1 option:selected').val()=="0") {
 			changeItem = ["2차 분류 선택"];
@@ -31,5 +31,5 @@ $(function(){
 			$('#category2').append(option);
 			$('#category2').niceSelect('update');
 		}
-	});
+	}); 
 })

@@ -15,7 +15,7 @@ $('input[type="checkbox"][name="gender"]').click(function(){
 		alert($(this).val());  
 	} 
 });          
-
+ 
 //이용약관 동의  
 $('#agree').click(function(){ 
 	if(agree.checked == true) { alert("이용약관에 동의하였습니다."); }
@@ -30,12 +30,12 @@ $('input[type="checkbox"][name="memberType"]').click(function(){
 		alert($(this).attr('v')); 
 	}
 });
-//서브밋 이벤트 막기  
+//서브밋 이벤트 막기   
 //$('#join-submit').attr('disabled', true);	  
 //$('#join-submit').attr('disabled', false);	  
 
 //서브밋 버튼 눌렸을 때  
-$('#join-submit').click(function(){
+$('#join-submit').click(function(){ 
 	var addr = $('#sample6_postcode').val()+"_"+$('#sample6_address').val()+"_"+$('#sample6_detailAddress').val()+"_"+$('#sample6_extraAddress').val()
 	$('#address-join').val(addr);
 });	   
@@ -43,8 +43,8 @@ $('#btnUpedate').click(function(){
 	var addr = $('#sample6_postcode').val()+"_"+$('#sample6_address').val()+"_"+$('#sample6_detailAddress').val()+"_"+$('#sample6_extraAddress').val()
 	$('#address-modify').val(addr);
 });	  
-
+ 
 //회원정보 수정버튼을 눌렀을 때
 $('#btnUpedate').click(function(){
 	 alert('정보가 수정되었습니다.') 
-}); 
+});    

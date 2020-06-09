@@ -16,7 +16,7 @@
 					<div class="listing__item__pic set-bg"
 						data-setbg="./resources/upload/product/img/${pct.pctImgName}"
 						style="background-image: url(&quot;./resources/upload/product/img/${pct.pctImgName}&quot;);">	<!-- 이미지 출력 -->
-						
+						 
 						<c:choose>
 							<c:when test="${tabName eq 'all'}"><div  class="listing__item__pic__tag top_rate"></c:when>
 							<c:when test="${tabName eq 'popular'}"><div  class="listing__item__pic__tag popular"></c:when>
@@ -38,7 +38,7 @@
 						</div>
 						<div class="listing__item__text__info">
 							<div class="listing__item__text__info__left">
-							<span>현재 재고 : ${pct.pctStock }개</span>
+							<span>현재 재고 : ${pct.pctStock }개</span> 
 							</div>
 						</div>
 					</div>

@@ -103,7 +103,7 @@
 	<!-- Footer Section End -->
 	<!-- Js Plugins -->
 	<script src="./resources/js/jquery-3.3.1.min.js"></script>
-	<script src="./resources/js/bootstrap.min.js"></script>
+	<script src="./resources/js/bootstrap.min.js"></script> 
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/jquery-ui.min.js"></script>
 	<script src="./resources/js/jquery.nicescroll.min.js"></script>
@@ -118,8 +118,8 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script> 
- 
-</body>
-</html>
+		crossorigin="anonymous"></script>   
+	<script src="http://lab.alexcican.com/set_cookies/cookie.js"></script> 	
+</body> 
+</html>  
 </html>

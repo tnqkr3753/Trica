@@ -6,23 +6,31 @@ import java.io.IOException;
 import org.springframework.web.multipart.MultipartFile;
 
 public class ProductVO {
-	private String pctNo;	// 상품코드
+	private String pctNo;	// 상품코드 
 	private int pctStock;	// 상품재고
 	private String pctName;	// 상품이름
 	private int pctPrice;	// 상품가격
 	private String pctIntro;	// 상품소개
-	private String pctDetail;	// 상품설명
+	private String pctDetail;	// 상품설명  
 	private String pctImgName;	// 상품이미지 이름
 	private Long pctImgSize;	// 상품이미지 크기
-	private String scNo;	// 카테고리 넘버
+	private String scNo;	// 카테고리 넘버 
 	private MultipartFile file;	// 파일
 	private String bigC;	// 큰 카테고리 넘버
-	private String smallC;	// 작은 카테고리 넘버
-	private String pctRegDate;	// 상품 등록일
-	 
+	private String smallC;	// 작은 카테고리 넘버 
+	private String pctRegDate;	// 상품 등록일 
+	  
 	 
 	private String dateKor;
-	
+	 
+	@Override
+	public String toString() {
+		return "ProductVO [pctNo=" + pctNo + ", pctStock=" + pctStock + ", pctName=" + pctName + ", pctPrice="
+				+ pctPrice + ", pctIntro=" + pctIntro + ", pctDetail=" + pctDetail + ", pctImgName=" + pctImgName
+				+ ", pctImgSize=" + pctImgSize + ", scNo=" + scNo + ", file=" + file + ", bigC=" + bigC + ", smallC="
+				+ smallC + ", pctRegDate=" + pctRegDate + ", dateKor=" + dateKor + "]";
+	}
+
 	public String getPctRegDate() {
 		return pctRegDate;
 	}
@@ -117,11 +125,11 @@ public class ProductVO {
 		} else {
 			return bigC+smallC;
 		}
-	} */
+	} */ 
 	
 	public String getScNo() {
 		return scNo;
-	}
+	} 
 	
 	public void setScNo(String scNo) {
 		// this.bigC=String.valueOf(scNo.charAt(0));

@@ -7,9 +7,17 @@ public class MemberVO {
 	private String memberName;
 	private String regNum;
 	private String address; 
-	private String gender;
-	private String tel;   
+	private String gender; 
+	private String tel;  
+	     
 	
+	
+	@Override
+	public String toString() {
+		return "MemberVO [memberId=" + memberId + ", memberType=" + memberType + ", password=" + password
+				+ ", memberName=" + memberName + ", regNum=" + regNum + ", address=" + address + ", gender=" + gender
+				+ ", tel=" + tel + "]";
+	} 
 	public String getMemberId() { 
 		return memberId;  
 	} 

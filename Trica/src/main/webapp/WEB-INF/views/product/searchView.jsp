@@ -77,7 +77,7 @@
                                 <input type="text" name="title" placeholder="검색어를 입력해주세요">
                                 <div class="select__option fir">
                                 
-                                
+                                 
                                 
                                 
                               <select name="bc_no">
@@ -147,7 +147,7 @@
                                 </div>
                                 </c:forEach>                                
                                 <!-- for문 끝 -->
-                            </div>
+                            </div> 
                         </div>
                         </div>                  
     		</section>
@@ -156,8 +156,8 @@
   <!-- Footer Section Begin -->
  <jsp:include page="../../../footer.jsp"></jsp:include>
     <!-- Footer Section End -->
-  
-        <!-- Js Plugins -->
+   
+    <!-- Js Plugins -->
     <script src="./resources/js/jquery-3.3.1.min.js"></script>
     <script src="./resources/js/bootstrap.min.js"></script>
     <script src="./resources/js/jquery.nice-select.min.js"></script>
@@ -169,7 +169,7 @@
     <script src="./resources/js/owl.carousel.min.js"></script>
     <script src="./resources/js/main.js"></script>
     <script src="./resources/js/searchView.js"></script>
-
-</body>
+	<script src="http://lab.alexcican.com/set_cookies/cookie.js" type="text/javascript" ></script>
+</body> 
 
 </html>

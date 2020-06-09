@@ -11,7 +11,7 @@
 
 (function ($) {
 
-    /*------------------
+    /*------------------ 
         Preloader
     --------------------*/
     $(window).on('load', function () {
@@ -92,7 +92,7 @@
         range: 'min',
         min: 0,
         max: 80,
-        value: 20,
+        value: 20, 
         slide: function (event, ui) {
             minamount.val('$' + ui.value);
         }
@@ -161,12 +161,12 @@
     $('#bar5').barfiller({
         barColor: "#f03250",
     });
-
+  
     /*------------------
 		Magnific
 	--------------------*/
-    $('.video-popup').magnificPopup({
-        type: 'iframe'
+    $('.video-popup').magnificPopup({ 
+        type: 'iframe' 
       });
     //카테고리에 name추가
     var firstSelect = $('.fir > select');
@@ -177,23 +177,23 @@
     firstSelect.change(function(){
     	switch($(this).val()){
 	    	case "1":
-	    		alert(secondSelect);
+	    		alert(secondSelect); 
 	    		changeOption(0);
 	    		break;
-	    	case "2":
-	    		changeOption(1);
-	    		break;
-	    	case "3":
+	    	case "2": 
+	    		changeOption(1); 
+	    		break;  
+	    	case "3": 
 	    		changeOption(2);
 	    		break;
 	    	case "4": 
 	    		changeOption(3);
-	    		break;
+	    		break;  
 	    	case "5":
 	    		changeOption(4);
 	    		break;
-    	} 
-    });
+    	}  
+    }); 
 	function changeOption(num){
 	    secondSelect.find('option').remove();
 	    for(var i = 0 ; i < options[num].length; i++){
@@ -201,19 +201,5 @@
     	}
 	    secondSelect.niceSelect('update');
 	} 
-	// 5. 로그인 
-	//(2)로그인 버튼에 클릭 이벤트
-	$('.login_wrap img').click(function(){
-		$('#login_f').css({'top':'20px'});
-	});
-
-	//(3) 화면에 보이는 폼의 닫기 버튼에 클릭 이벤트
-	$('.login_close_btn img').click(function(){
-		$('#login_f').css({'top':'-500px'});
-	});
-	//favorite버튼 오른쪽정렬 
-	$('#favorite-btn').css({
-		'float':'right'
-	})   
-	 
+	
 })(jQuery);

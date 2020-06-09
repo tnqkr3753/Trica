@@ -45,7 +45,7 @@
 		WHERE board_Type = #{bType}
 	</select>
 	<delete id="deleteBoard" parameterType="board">
-		DELETE FROM board 
+		DELETE FROM board  
 		WHERE trim(board_no)=trim(#{boardNo})
 	</delete>
 	<update id="modifyBoard" parameterType="board">
@@ -55,7 +55,7 @@
 		board_fsize=#{boardFsize}
 		</if>
 		WHERE trim(board_no)=trim(#{boardNo})
-	</update>
+	</update> 
 	<update id="increaseCount" parameterType="board">
 		UPDATE board SET view_cnt=view_cnt+1 
 		WHERE trim(board_no)=trim(#{boardNo})

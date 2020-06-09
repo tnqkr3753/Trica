@@ -106,7 +106,7 @@ public class BoardController {
 		System.out.println(vo.getBoardNo());
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/boardView");
-		BoardVO rvo = boardService.getBoardOne(vo);
+		BoardVO rvo = boardService.getBoardOne(vo); 
 		boardService.increaseCount(rvo);
 		mv.addObject("board", rvo);
 		return mv; 
@@ -115,7 +115,7 @@ public class BoardController {
 	public ModelAndView deleteBoard(BoardVO vo,HttpServletResponse response) throws IOException {
 		ModelAndView mv = new ModelAndView();
 		int result = boardService.deleteBoard(vo);
-		// alert창 java에서 이용
+		// alert창 java에서 이용 
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter pw = response.getWriter();
 		pw.println("<script type='text/javascript'>");
@@ -124,7 +124,7 @@ public class BoardController {
 		}else {
 			pw.println("alert('파일 삭제에 실패하였습니다.');");
 		}
-		pw.println("history.back();");
+		pw.println("history.back();");  
 		pw.println("</script>");
 		pw.flush();
 		mv.setViewName("board/boardList"); 

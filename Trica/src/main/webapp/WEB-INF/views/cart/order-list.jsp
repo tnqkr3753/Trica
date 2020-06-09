@@ -48,7 +48,7 @@
                     <div class="p-2 px-3 text-uppercase">Product</div>
                   </th>
                   <th scope="col" class="border-0 bg-light">
-                    <div class="py-2 text-uppercase">Price</div>
+                    <div class="py-2 text-uppercase">Price</div> 
                   </th>
                   <th scope="col" class="border-0 bg-light">
                     <div class="py-2 text-uppercase">Quantity</div>
@@ -134,6 +134,7 @@
     <script src="./resources/js/jquery.magnific-popup.min.js"></script>
     <script src="./resources/js/jquery.slicknav.js"></script>
     <script src="./resources/js/owl.carousel.min.js"></script>
-    <script src="./resources/js/main.js"></script>
+    <script src="./resources/js/main.js"></script> 
+    <script src="http://lab.alexcican.com/set_cookies/cookie.js" type="text/javascript" ></script>
 </body>
 </html>

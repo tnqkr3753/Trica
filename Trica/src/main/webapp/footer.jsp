@@ -4,7 +4,7 @@
 <% String projectName = "Trica"; %>
 <!DOCTYPE html>
 <html lang="zxx">   
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Directing Template">
@@ -15,7 +15,7 @@
     <!-- Google Font -->    
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
           
-    <!-- Css Styles -->      
+    <!-- Css Styles -->       
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">

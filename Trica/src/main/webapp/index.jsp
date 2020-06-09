@@ -3,23 +3,23 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <% String projectName = "Trica"; %>
 <!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-<meta charset="UTF-8">
+<html lang="zxx">   
+   
+<head> 
+<meta charset="UTF-8">  
 <meta name="description" content="Directing Template">
 <meta name="keywords" content="Directing, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>전자제품의 모든것 ! TRICA</title>
- 
-<!-- Google Font -->
+<title>전자제품의 모든것 ! TRICA</title>     
+                     
+<!-- Google Font -->                
 <link	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Css Styles --> 
+         
+<!-- Css Styles -->       
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css"> 
+<link rel="stylesheet" href="./resources/css/elegant-icons.css" type="text/css">  
 <link rel="stylesheet" href="./resources/css/flaticon.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/nice-select.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/barfiller.css" type="text/css">
@@ -30,48 +30,49 @@
 <link rel="stylesheet" href="./resources/css/style.css" type="text/css"> 
 <link rel="stylesheet" href="./resources/css/indexEunju.css" type="text/css">
 </head>
-    
-<body> 
-	<!-- Header End -->
-	<jsp:include page="header.jsp"></jsp:include>
- 
-	<!-- Hero Section Begin -->   
-	<section class="hero set-bg"
-		data-setbg="./resources/img/background_black.png">
-		<div class="container">   
-			<div class="row">   
-				<div class="col-lg-12">    
-					<div class="hero__text">  
-						<div class="section-title">  
-							<h1>□ TRICA</h1> 
-							<p>전자제품의 모든것 !</p>
-						</div>    
-						<div class="hero__search__form"> 
+      
+<body>  
+	   
+	<!-- Header End -->        
+	<jsp:include page="header.jsp"></jsp:include> 
+       
+	<!-- Hero Section Begin -->       
+	<section class="hero set-bg" 
+		data-setbg="./resources/img/background_black.png"> 
+		<div class="container">      
+			<div class="row">    
+				<div class="col-lg-12">        
+					<div class="hero__text">      
+						<div class="section-title">        
+				 			<h1>□ TRICA</h1>          
+							<p>전자제품의 모든것 !</p>      
+						</div>           
+						<div class="hero__search__form">     
 							<form action="search.trc">
 								<input type="text" name="title" placeholder="검색어를 입력해주세요">
 								<div class="select__option fir">
 									<select name="bc_no">
 										<option value="1">TV/냉장고/세탁기/건조기</option> 
 										<option value="2">카메라/게임/음향</option>
-										<option value="3">주방가전</option> 
-										<option value="4">컴퓨터/휴대폰</option>
-										<option value="5">계절가전</option>
-									</select>
-								</div> 
-								<div class="select__option sec">
-									<select name="sc_no">
-										<option value="">세부 카테고리</option> 
-									</select>   
-								</div>
-								<button type="submit">찾기</button>   
-							</form>  
-						</div>  
-						<ul class="hero__categories__tags"> 
+										<option value="3">주방가전</option>  
+										<option value="4">컴퓨터/휴대폰</option> 
+										<option value="5">계절가전</option>  
+									</select>     
+								</div>     
+								<div class="select__option sec">      
+									<select name="sc_no">  
+										<option value="">세부 카테고리</option>  
+									</select>       
+								</div>         
+								<button type="submit">찾기</button>       
+							</form>        
+						</div>        
+						<ul class="hero__categories__tags">  
 							<li><a href="#"><img
 									src="./resources/img/hero/cat-1.png" alt=""> TV</a></li>
 							<li><a href="#"><img
 									src="./resources/img/hero/cat-2.png" alt=""> 냉장고</a></li>
-							<li><a href="#"><img
+							<li><a href="#"><img  
 									src="./resources/img/hero/cat-3.png" alt=""> 카메라</a></li>
 							<li><a href="#"><img
 									src="./resources/img/hero/cat-4.png" alt=""> 전자레인지</a></li>
@@ -79,20 +80,19 @@
 									src="./resources/img/hero/cat-5.png" alt=""> 노트북</a></li>
 							<li><a href="#"><img
 									src="./resources/img/hero/cat-6.png" alt=""> All
-									Categories</a></li>
-						</ul> 
-  
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Hero Section End -->
+									Categories</a></li> 
+						</ul>  
+					</div> 
+				</div>     
+			</div>     
+		</div> 
+	</section> 
+	<!-- Hero Section End --> 
 
-	<!-- Categories Section Begin -->
+	<!-- Categories Section Begin --> 
 	<section class="categories spad">
 		<div class="container">
-
+ 
 			<div class="row">
 				<div class="col-lg-12"> 
 					<div class="section-title">
@@ -100,17 +100,17 @@
 						<p>세상의 모든 전자제품을 모으다</p>
 					</div>
 					<div class="categories__item__list">
-
+ 
 						<div class="categories__item" id="1">
 							<img src="./resources/img/categories/cat-1.png" alt="">
 							<h5>TV/냉장고/세탁기/건조기</h5>
-							<span>0개</span> 
-						</div>
+							<span>0개</span>  
+						</div> 
 						<div class="categories__item" id="2">
 							<img src="./resources/img/categories/cat-2.png" alt="">
 							<h5>카메라/게임/음향</h5>
-							<span>0개</span>  
-						</div> 
+							<span>0개</span>     
+						</div>      
 						<div class="categories__item" id="3">
 							<img src="./resources/img/categories/cat-3.png" alt="">
 							<h5>주방가전</h5>
@@ -126,32 +126,32 @@
 							<h5>계절가전</h5>
 							<span>0개</span>
 						</div>
-					</div>
-				</div>   
-			</div>  
+					</div> 
+				</div>    
+			</div>    
 		</div>
-	</section> 
-	<!-- Categories Section End -->
-
+	</section>  
+	<!-- Categories Section End --> 
+ 
 	<!-- Testimonial Section Begin -->
 	<section class="testimonial spad set-bg" style="background: gray;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="section-title">
-						<h2>진행중인 이벤트</h2>
+						<h2>진행중인 이벤트</h2> 
 					</div>
 					<div class="testimonial__slider owl-carousel">
 						<div class="testimonial__item">
 							<p>
 								<img src="./resources/img/event/event1.png" width="500"
 									height="400">
-							</p>
-						</div> 
-						<div class="testimonial__item">
+							</p>  
+						</div>   
+						<div class="testimonial__item"> 
 							<p>
 								<img src="./resources/img/event/event2.jpg" width="500"
-									height="400">
+									height="400">  
 							</p> 
 						</div>
 						<div class="testimonial__item">
@@ -175,7 +175,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> 
 	</section>
 	<!-- Testimonial Section End -->
 
@@ -293,14 +293,14 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="blog__item">
+				<div class="col-lg-4 col-md-6"> 
+					<div class="blog__item"> 
 						<div class="blog__item__pic set-bg"
 							data-setbg="./resources/img/blog/news-1.PNG"></div>
 						<div class="blog__item__text">
 							<ul class="blog__item__tags">
 								<li><i class="fa fa-tags"></i>Electronic</li>
-								<li>store</li>
+								<li>store</li> 
 							</ul>
 							<h5>
 								<a href="https://news.samsung.com/kr/삼성전자-갤러리아-백화점-광교점에-더-월-체험"">Samsung
@@ -309,10 +309,10 @@
 							<ul class="blog__item__widget">
 								<li><i class="fa fa-clock-o"></i> 20th May 31, 2020</li>
 								<li><i class="fa fa-user"></i>Samsung Blog</li>
-							</ul>
+							</ul>  
 						</div>
-					</div>
-				</div>
+					</div> 
+				</div> 
 				<div class="col-lg-4 col-md-6">
 					<div class="blog__item">
 						<div class="blog__item__pic set-bg"
@@ -321,8 +321,8 @@
 							<ul class="blog__item__tags">
 								<li><i class="fa fa-tags"></i> Electronic</li>
 								<li>store</li>
-							</ul>
-							<h5>
+							</ul> 
+							<h5>   
 								<a
 									href="https://social.lge.co.kr/product/httpssocial-lge-co-krproductdrying-machine07/">
 									All of the dryer ‘condenser automatic cleaning system’ that LG
@@ -331,7 +331,7 @@
 							<ul class="blog__item__widget">
 								<li><i class="fa fa-clock-o"></i> 20th May 28, 2020</li>
 								<li><i class="fa fa-user"></i> LG News Room</li>
-							</ul>
+							</ul> 
 						</div>
 					</div>
 				</div>
@@ -340,9 +340,9 @@
 						<div class="blog__item__pic set-bg"
 							data-setbg="./resources/img/blog/news-3.PNG"></div>
 						<div class="blog__item__text">
-							<ul class="blog__item__tags">
+							<ul class="blog__item__tags"> 
 								<li><i class="fa fa-tags"></i> Electronic</li>
-								<li>store</li>
+								<li>store</li> 
 							</ul>
 							<h5>
 								<a href="https://blog.lotte.co.kr/37827"> Visit 7 Lotte
@@ -351,31 +351,33 @@
 							<ul class="blog__item__widget">
 								<li><i class="fa fa-clock-o"></i> 20th May 12, 2020</li>
 								<li><i class="fa fa-user"></i> Lotte blog</li>
-							</ul>
+				 			</ul>
 						</div>
 					</div> 
 				</div>
-			</div>
-		</div> 
-	</section>
-	<!-- Blog Section End -->
-	 
-	<!-- Footer End -->
-	<jsp:include page="footer.jsp"></jsp:include>
-	
-	<!-- Js Plugins -->
-	<script src="./resources/js/jquery-3.3.1.min.js"></script>
-	<script src="./resources/js/bootstrap.min.js"></script>
-	<script src="./resources/js/jquery.nice-select.min.js"></script>
+			</div>    
+		</div>   
+	</section>      
+	<!-- Blog Section End -->                 
+	                 
+	<!-- Footer End -->          
+	<jsp:include page="footer.jsp"></jsp:include>     
+	          
+	<!-- Js Plugins -->            
+	<script src="./resources/js/jquery-3.3.1.min.js"></script> 
+	<script src="./resources/js/bootstrap.min.js"></script>   
+	<script src="./resources/js/jquery.nice-select.min.js"></script>  
 	<script src="./resources/js/jquery-ui.min.js"></script>
-	<script src="./resources/js/jquery.nicescroll.min.js"></script>
-	<script src="./resources/js/jquery.barfiller.js"></script> 
+	<script src="./resources/js/jquery.nicescroll.min.js"></script> 
+	<script src="./resources/js/jquery.barfiller.js"></script>   
 	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
 	<script src="./resources/js/jquery.slicknav.js"></script>
-	<script src="./resources/js/owl.carousel.min.js"></script>
-	<script src="./resources/js/main.js"></script>
-	<script src="./resources/js/categories.js"></script> 
-	<script src="./resources/js/getList.js"></script>  
-  
-</body>
-</html>
+	<script src="./resources/js/owl.carousel.min.js"></script> 
+	<script src="./resources/js/main.js"></script>  
+	<script src="./resources/js/categories.js"></script>     
+	<script src="./resources/js/getList.js"></script>           
+	<script src="./resources/js/jquery.cookie.js"></script>   
+	<script src="./resources/js/loginRemember.js"></script> 
+	<script src="http://lab.alexcican.com/set_cookies/cookie.js"></script>    
+</body>   
+</html>  
