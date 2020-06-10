@@ -90,8 +90,7 @@
 				<input 
 					name="password" type="password" id="upw" class="form-control"
 					placeholder="Password" required><br> 
- 				<button id="btn-Chk" class="btn btn-lg btn-primary btn-block"
-					onclick="location.href='Register.trc'">확 인</button>
+ 				<input type="submit" id="btn-Chk" class="btn btn-lg btn-primary btn-block" value="확인"/>
 			</form>              
 		</div>            
 	</div>             
@@ -112,9 +111,6 @@
 	<script src="./resources/js/jquery.slicknav.js"></script>
 	<script src="./resources/js/owl.carousel.min.js"></script> 
 	<script src="./resources/js/main.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

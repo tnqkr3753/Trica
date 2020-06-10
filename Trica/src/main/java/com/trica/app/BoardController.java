@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,9 +31,15 @@ public class BoardController {
 		return mv;
 	}
 	@RequestMapping("/registBoard.trc") //게시글 db삽입
-	public ModelAndView registBoard(BoardVO vo) {
+	public ModelAndView registBoard(BoardVO vo,HttpSession session) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/boardList");
+		String id = (String)session.getAttribute("memberId");
+		if(id==null) {
+			mv.setViewName("LoginPage.trc");
+			return mv;
+		}
+		vo.setMemberId(id);
 		int result = boardService.boardInsert(vo);
 		mv.addObject("result",result);
 		return mv;
@@ -88,14 +95,26 @@ public class BoardController {
 		return mv;
 	}
 	@RequestMapping("/insertBoard.trc") // 게시글 입력 페이지
-	public ModelAndView insertBoard(BoardVO vo) {
+	public ModelAndView insertBoard(BoardVO vo,HttpSession session,HttpServletResponse response) throws IOException {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("board/insertBoard");
+		String id = (String)session.getAttribute("memberId");
+		if(id==null) {
+			response.setCharacterEncoding("UTF-8");
+			PrintWriter pw=response.getWriter();
+			pw.println("<script type='text/javascript'>");
+			pw.println("alert('로그인을 해주세요');");
+			pw.println("history.back();");     
+			pw.println("</script>");     
+			pw.flush();
+			mv.setViewName("goToIndex");
+			return mv;
+		}
 		if(vo.getBoardNo()==null) {
 			vo.setBoardNo("");
 		}
 		mv.addObject("boardNo", vo.getBoardNo());
 		mv.addObject("boardType", vo.getBoardType());
+		mv.setViewName("board/insertBoard");
 		return mv;
 	}
 	@RequestMapping("/boardView.trc") //게시글 상세 보기 (부분페이지)
@@ -108,29 +127,51 @@ public class BoardController {
 		return mv; 
 	}
 	@RequestMapping("/deleteBoard.trc")
-	public ModelAndView deleteBoard(BoardVO vo,HttpServletResponse response) throws IOException {
+	public ModelAndView deleteBoard(BoardVO vo,HttpServletResponse response,
+			HttpSession session) throws IOException {
 		ModelAndView mv = new ModelAndView();
-		int result = boardService.deleteBoard(vo);
 		// alert창 java에서 이용 
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter pw = response.getWriter();
 		pw.println("<script type='text/javascript'>");
-		if(result==1) {
-			pw.println("alert('파일이 삭제되었습니다.');");
+		if(!vo.getMemberId().equals(session.getAttribute("memberId"))) {
+			pw.println("alert('글쓴이만 수정,삭제가 가능합니다.');");
+			mv.setViewName("board/boardList");
 		}else {
-			pw.println("alert('파일 삭제에 실패하였습니다.');");
+			int result = boardService.deleteBoard(vo);
+			if(result==1) {
+				pw.println("alert('파일이 삭제되었습니다.');");
+				mv.setViewName("board/boardList"); 
+			}else {
+				pw.println("alert('파일 삭제에 실패하였습니다.');");
+				mv.setViewName("board/boardList"); 
+			}
 		}
 		pw.println("history.back();");  
 		pw.println("</script>");
 		pw.flush();
-		mv.setViewName("board/boardList"); 
 		return mv;
 	}
 	@RequestMapping("modifierBoard.trc") //수정창
-	public ModelAndView modifierBoard(BoardVO vo) {
+	public ModelAndView modifierBoard(BoardVO vo,HttpSession session,
+			HttpServletResponse response) throws IOException {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("board/boardModify");
-		mv.addObject("board", boardService.getBoardOne(vo));
+		if(vo.getMemberId().equals(session.getAttribute("memberId"))) {
+			mv.setViewName("board/boardModify");
+			System.out.println(vo);
+			BoardVO rvo = boardService.getBoardOne(vo);
+			System.out.println(rvo);
+			mv.addObject("board", rvo);
+		}else {
+			mv.setViewName("board/boardList");
+			response.setCharacterEncoding("UTF-8"); 
+			PrintWriter pw = response.getWriter();
+			pw.println("<script type='text/javascript'>"); 
+			pw.println("alert('작성자만 수정,삭제가 가능합니다');");  	 
+			pw.println("history.back();");    
+			pw.println("</script>");   
+			pw.flush();
+		}
 		return mv;
 	}
 	@RequestMapping("modifyBoard.trc") //회원정보수정

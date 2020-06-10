@@ -12,8 +12,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.trica.service.MemberService;
@@ -49,7 +52,7 @@ public class LoginController {
 			mv.setViewName("member/login");      
 		} 
 		return mv;
-	}    
+	}
       
 	//회원가입
 	@RequestMapping("Register.trc")  
@@ -129,7 +132,7 @@ public class LoginController {
 	public ModelAndView passChk(MemberVO vo,HttpSession session,HttpServletResponse response) throws IOException {
 		ModelAndView mv = new ModelAndView();
 		vo.setMemberId((String)session.getAttribute("memberId"));
-		
+		System.out.println(vo);
 		MemberVO rvo = memberService.login(vo);  
 		if(rvo!=null) {  
 			mv.setViewName("redirect:/Modifier.trc");
@@ -152,6 +155,30 @@ public class LoginController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("member/passChk");
 		return mv;
+	}
+	
+	//비밀번호체크 responsebody 본인확인
+	@ResponseBody
+	@RequestMapping("checkPass.trc")
+	public int checkPass(@RequestBody HashMap<String, Object> hash,HttpSession session) {
+		MemberVO vo = new MemberVO();
+		vo.setPassword((String)hash.get("password"));
+		String id = (String)session.getAttribute("memberId");
+		vo.setMemberId(id);
+		if(id!=null) {
+			if(!id.equals(hash.get("memberId"))) {
+				return -1;
+			}
+			vo.setMemberId(id);
+			if(memberService.login(vo)==null) {
+				return 0;
+			}else {
+				return 1;
+			}
+		}else {
+			return 0;
+		}
+		
 	}
    
 }              
