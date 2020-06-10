@@ -10,7 +10,6 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content=""> 
- s
 <!-- Google Font -->
 <link 
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
@@ -174,7 +173,7 @@ function sample6_execDaumPostcode() {
 								<label for="regNum">주민번호</label>
 								<c:choose>
 									<c:when test="${empty vo.memberId }">
-										<input type="text" name="regNum" class="form-control" id="regNum" placeholder="주민번호를 입력해 주세요">
+										<input type="text" name="regNumber" class="form-control" id="regNum" placeholder="주민번호를 입력해 주세요">
 									</c:when>
 									<c:otherwise>
 										<input type="text" value="${vo.regNum }" name="regNum" class="form-control" id="regNum" readonly>
@@ -210,11 +209,11 @@ function sample6_execDaumPostcode() {
 									<label for="address">주소</label><br/>
 									<c:choose>   
 										<c:when test="${empty vo.memberId }">
-											<input type="text" class="form-control" id="sample6_postcode" placeholder="우편번호">
+											<input type="text" class="form-control" id="sample6_postcode" placeholder="우편번호" readonly>
 											<input type="button" id="addbtn" class="form-control btn btn-secondary" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
-											<input type="text" class="form-control" id="sample6_address" placeholder="주소">
+											<input type="text" class="form-control" id="sample6_address" placeholder="주소" readonly>
 											<input type="text" class="form-control" id="sample6_detailAddress" placeholder="상세주소">
-											<input type="text" class="form-control" id="sample6_extraAddress" placeholder="참고항목">
+											<input type="text" class="form-control" id="sample6_extraAddress" placeholder="참고항목" readonly>
 											<input type="hidden" name="address" id="address-join" value=""/>
 										</c:when>
 										<c:otherwise>    

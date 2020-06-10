@@ -1,10 +1,17 @@
 //회원가입 패턴
 $('#memberName').attr('pattern','[가-힣\s]{2,5}');
 $('#memberId').attr('pattern','[A-Za-z0-9]{6,12}');
-$('#regNumber').attr('pattern','^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))-[1-4][0-9]{6}$');
+$('#regNum').attr('pattern','^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))-[1-4][0-9]{6}$');
 $('#password').attr('pattern','[A-Za-z0-9]{6,12}');
 $('#tel').attr('pattern','(^02.{0}|^01.{1}|[0-9]{3})-([0-9]{3,4})-([0-9]{4})');
-
+$('#memberId').attr('required',true);
+$('#regNum').attr('required',true);
+$('#password').attr('required',true);
+$('#tel').attr('required',true);
+$('#gender').attr('required',true);
+$('#memberName').attr('required',true);
+$('#sample6_postcode').attr('required',true);
+$('#memberType').attr('required',true);
 //성별 체크     
 $('input[type="checkbox"][name="gender"]').click(function(){ 
 	//클릭 이벤트 발생한 요소가 체크 상태인 경우
