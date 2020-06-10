@@ -12,6 +12,10 @@ import com.trica.vo.ProductVO;
 @Service("productService")
 public class ProductServiceImpl implements ProductService {
 	int pagePerPct = 9;
+
+	private int totalRecCount; // 전체 레코드 수
+	private int pageTotalCount; // 전체 페이지 수
+	private int countPerPage = 6; // 한페이지당 레코드 수
 	
 	@Autowired
 	ProductDAO productDAO;
@@ -36,8 +40,14 @@ public class ProductServiceImpl implements ProductService {
  
 	
 	@Override 
-	public List<HashMap> getaList(){  
-		return productDAO.getaList(); 
+	public List<HashMap> getaList(String pageNum){  
+		int pNum=1;
+		if(pageNum != null) pNum = Integer.parseInt(pageNum);
+		
+		int firstRow = (pNum-1)*countPerPage+1;
+		int endRow=pNum*countPerPage;
+		
+		return productDAO.getaList(firstRow, endRow); 
 	} 
 
 	
@@ -100,5 +110,15 @@ public class ProductServiceImpl implements ProductService {
 	}
 	public List<HashMap> countRegPerDay() {
 		return productDAO.countRegPerDay();
+	}
+
+
+
+	@Override
+	public int getTotalCount() {
+		totalRecCount = productDAO.getTotalCount();
+		pageTotalCount=totalRecCount/countPerPage;
+		if(totalRecCount % countPerPage>0) pageTotalCount++;
+		return pageTotalCount;
 	}
 }

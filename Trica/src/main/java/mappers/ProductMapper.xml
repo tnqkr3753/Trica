@@ -41,13 +41,14 @@ VALUES
 	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM 
 	 (SELECT * FROM product ORDER BY DBMS_RANDOM.VALUE) WHERE rownum>=1 AND rownum<=6]]>
 </select>
+ 
+<!-- <select id="getaList" resultType="hashmap"> -->
+<!-- 	<![CDATA[   -->
+<!-- 	SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price,  -->
+<!-- 	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM  -->
+<!-- 	 product]]> -->
+<!-- </select> -->
   
-<select id="getaList" resultType="hashmap">
-	<![CDATA[  
-	SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
-	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM 
-	 (SELECT * FROM product ORDER BY DBMS_RANDOM.VALUE) WHERE rownum>=1 AND rownum<=6]]>
-</select>
 
 <select id="getPopularList" resultType="product">
 <![CDATA[
@@ -98,6 +99,19 @@ SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price,
 	from product 
 	group by to_char(pct_reg_date,'yyyyMMdd') 
 	order by to_char(pct_reg_date,'yyyyMMdd')
+</select>
+
+<select id="getTotalCount" parameterType="String" resultType="int">
+SELECT count(*) cnt FROM product
+</select>
+
+<select id="getaList" parameterType="hashmap" resultType="hashmap">
+	<![CDATA[  
+	 SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
+	pct_intro, pct_detail, sc_no, nvl(pct_img_name,'') pct_img_name, pct_img_size,pct_cnt FROM product 
+    WHERE pct_no in     (SELECT pct_no
+    FROM (SELECT pct_no,rownum as rnum FROM product)
+    WHERE rnum>=#{firstRow} and rnum<=#{endRow})]]>
 </select>
 
 </mapper>

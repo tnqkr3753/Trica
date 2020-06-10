@@ -85,10 +85,6 @@
 						<h2>□ TRICA</h2>
 						<p>TRICA 전자제품의 모든것</p>
 
-
-
-
-
 					</div>
 				</div>
 			</div>
@@ -193,16 +189,18 @@
 					<!-- ************************************ paging **************************************** -->
 					<c:forEach var="i" begin="1" end="${totalPage }">
 
-						<c:if test="${empty bcNo}">
-							<!-- 검색창에서 searchView 페이지로 넘어갈때 -->
-							<a class="btn blue"
-								href="search.trc?title=${title}&big_category=${big_category}&small_category=${small_category}&pNum=${i}">${i}</a>
-						</c:if>
-
-						<c:if test="${not empty bcNo}">
-							<!-- 빅 카테고리에서 searchView 페이지로 넘어갈때 -->
-							<a class="btn blue" href="bigSearch.trc?bcNo=${bcNo}&pNum=${i}">${i}</a>
-						</c:if>
+						<c:if test="${empty bcNo and not empty big_category }">
+								<!-- 검색창에서 searchView 페이지로 넘어갈때 -->
+								<a class="btn blue"
+									href="search.trc?title=${title}&big_category=${big_category}&small_category=${small_category}&pNum=${i}">${i}</a>
+							</c:if>
+							<c:if test="${not empty bcNo}">
+								<!-- 빅 카테고리에서 searchView 페이지로 넘어갈때 -->
+								<a class="btn blue" href="bigSearch.trc?bcNo=${bcNo}&pNum=${i}">${i}</a>
+							</c:if>
+							<c:if test="${empty bcNo and empty big_category}">
+								<a class="btn blue" href="getaList.trc?pNum=${i}">${i}</a>
+							</c:if>
 
 					</c:forEach>
 					<!-- ************************************ paging **************************************** -->

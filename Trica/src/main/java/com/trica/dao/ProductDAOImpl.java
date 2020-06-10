@@ -32,8 +32,14 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
-	public List<HashMap> getaList() {
-		return sqlSession.selectList("ProductDAO.getaList");
+	public List<HashMap> getaList(int firstRow, int endRow) {
+		System.out.println("getaList 호출 ******************");
+		
+		HashMap m = new HashMap();
+		m.put("firstRow", firstRow);
+		m.put("endRow", endRow);
+		
+		return sqlSession.selectList("ProductDAO.getaList", m);
 	}   
 	 
 	@Override  
@@ -88,6 +94,15 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public List<HashMap> countRegPerDay() {
 		return sqlSession.selectList("ProductDAO.getRegPerDay");
+	}
+
+
+
+	@Override
+	public int getTotalCount() {
+		System.out.println("getTotalCount() 호출 !!!!!!");
+		return sqlSession.selectOne("ProductDAO.getTotalCount");
+		
 	}
 
 

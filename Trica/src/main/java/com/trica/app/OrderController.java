@@ -21,16 +21,16 @@ import com.trica.vo.OrderVO;
 public class OrderController {
 	@Autowired
 	OrderService orderService;
+	
 	//결제완료 order와 orderProduct와 delivery 데이터베이스에 접근
 	@RequestMapping("orderSuccess.trc")
-	public ModelAndView orderSuccess(OrderSubmitVO vo,HttpSession session,
+	public ModelAndView orderSuccess(String pNum, OrderSubmitVO vo,HttpSession session,
 			@CookieValue(value="cartPctNo",required = true,defaultValue = "") String ckValue,
 			HttpServletResponse response) {
-		boolean state = true;;
+		boolean state = true;
 		OrderVO ovo = vo.getOvo();
 		ovo.setMemberId((String)session.getAttribute("memberId"));
 		int orderResult = orderService.insertOrder(ovo);
-		System.out.println(vo.getOvo().getOrderNo());
 		if(orderResult==1) {
 			for(OrderProductVO pvo :vo.getPvoList()) {
 				pvo.setOrderNo(vo.getOvo().getOrderNo());
@@ -54,7 +54,7 @@ public class OrderController {
 			CartController ccr = new CartController();
 			//역순 탐색 (인덱스값을 작은것부터하면 큰 값의 index가 바뀜)
 			for(int i = vo.getIndexList().size()-1;i >= 0;i--) {
-//			for(String index :vo.getIndexList()) {
+			//for(String index :vo.getIndexList()) {
 				String index =vo.getIndexList().get(i);
 				ckValue = ccr.getCookieString(ckValue, "delete", index);
 			}
@@ -65,7 +65,40 @@ public class OrderController {
 		response.addCookie(kie);
 		
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("goToIndex");
+		mv.setViewName("redirect:/orderPaging.trc");
+		
 		return mv;
 	}
+	
+	/*
+	 * 페이징 된 주문목록 보여주기
+	 */
+	@RequestMapping("orderPaging.trc")
+	public ModelAndView orderSuccess(String pNum, HttpSession session, HttpServletResponse response) {
+		
+		String memberId = (String)session.getAttribute("memberId");	// session에서 회원아이디 얻어와서 memberId에 저장
+		
+		System.out.println("회원ID 출력 확인 : " + memberId);
+		
+		String pageNum = "1";
+		
+		if (pNum != null) {
+			pageNum = pNum;
+		}
+		
+		int totalPage = orderService.getTotalCount(memberId);	// 전체 페이지 수
+		
+		System.out.println("전체 페이지 수 출력 확인 : " + totalPage);
+		
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("totalPage", totalPage);
+		mv.addObject("list", orderService.selectOrder(memberId, pageNum));
+		
+		mv.setViewName("cart/order-list");
+		
+		return mv;
+	}
+	
+	
 }
