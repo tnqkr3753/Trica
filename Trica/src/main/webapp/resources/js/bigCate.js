@@ -2,7 +2,9 @@
  * 
  */
 $(function(){
-	
+	$('.categories__item').css({
+		"cursor":"pointer"
+	})
 	$('.categories__item').click(function(){
 		
 		

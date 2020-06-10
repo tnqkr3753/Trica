@@ -35,7 +35,6 @@
 	   
 	<!-- Header End -->        
 	<jsp:include page="header.jsp"></jsp:include> 
-       
 	<!-- Hero Section Begin -->       
 	<section class="hero set-bg" 
 		data-setbg="./resources/img/background_black.png"> 

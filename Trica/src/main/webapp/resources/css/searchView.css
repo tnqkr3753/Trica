@@ -38,6 +38,12 @@
       font-family:Georgia;
     }
     .btn.blue:active{
-      border-bottom:2px solid #990000;
+      border-bottom	:2px solid #990000;
     }
+    .listing__item__pic{
+    	padding-bottom:100%;
+    	
+    	background-size: contain;
+    }
+    
     

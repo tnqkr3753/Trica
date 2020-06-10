@@ -140,9 +140,9 @@
 								<input type='hidden' id='pct_bcNo' value="${list.SC_NO}">
 								<div class="listing__item">
 									<div class="listing__item__pic set-bg"
-										data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}">
+										data-setbg="./resources/upload/product/img/${list.PCT_IMG_NAME}" >
 										<!-- 이미지  -->
-										<img src="./resources/img/추천상품/BSTE_상품.png" alt="">
+										<img src="./resources/img/추천상품/BSTE_상품.png" alt="" >
 										<!-- 이미지 -->
 										<div class="listing__item__pic__tag top_rate">
 											${list.PCT_NAME }</div>

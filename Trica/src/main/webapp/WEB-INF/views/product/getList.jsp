@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
-
+<style type="text/css">
+		 .listing__item__pic{
+    	padding-bottom:100%;
+    	background-size: contain;
+    }
+</style>
 <c:choose>
 	<c:when test="${empty list }">	<!-- list가 비어있을 때  -->
 		상품이 존재하지 않습니다.
@@ -10,7 +15,6 @@
 		<c:set var="count" value="1"></c:set>
 		
 		<c:forEach items="${list}" var="pct">
-		
 			<div class="col-lg-4 col-md-6">
 				<div class="listing__item">
 					<div class="listing__item__pic set-bg"
@@ -33,6 +37,7 @@
 							<div class="listing__item__text__rating">
 								<h6>${pct.pctPrice }원</h6>
 							</div>
+							<input type="hidden" value="${pct.pctNo }" id="list-pctno"/>
 								<span class="arrow_carrot-right"></span> ${pct.pctIntro}
 							
 						</div>
@@ -49,3 +54,4 @@
 
 
 </c:choose>
+	<script src="./resources/js/getListInner.js"></script> 
