@@ -20,7 +20,14 @@ public class BoardVO {
 	private String parentBoardNo;
 	private int lvl;
 	private String dateKor;
-
+	
+	@Override
+	public String toString() {
+		return "BoardVO [boardNo=" + boardNo + ", memberId=" + memberId + ", boardType=" + boardType + ", boardTitle="
+				+ boardTitle + ", boardContent=" + boardContent + ", boardDate=" + boardDate + ", viewCnt=" + viewCnt
+				+ ", boardFname=" + boardFname + ", boardFsize=" + boardFsize + ", parentBoardNo=" + parentBoardNo
+				+ ", lvl=" + lvl + ", dateKor=" + dateKor + ", file=" + file + "]";
+	}
 	//파일
 	MultipartFile file;
 	public String getParentBoardNo() {

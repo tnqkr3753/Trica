@@ -20,9 +20,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public int insertProduct(ProductVO vo) {
 		return sqlSession.insert("ProductDAO.insertProduct", vo);
 	}
-	
-	 
-	
+ 	
 	@Override
 	public List<ProductVO> getNewList() {
 		return sqlSession.selectList("ProductDAO.getNewList");
@@ -44,7 +42,7 @@ public class ProductDAOImpl implements ProductDAO {
 		return sqlSession.selectList("ProductDAO.getaList", m);
 	}   
 	 
-	@Override 
+	@Override  
 	public ProductVO selectProduct(ProductVO vo) {
 		return sqlSession.selectOne("ProductDAO.selectProduct", vo);
 	}
@@ -58,15 +56,33 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<ProductVO> getRecommendList() {
 		return sqlSession.selectList("ProductDAO.getRecommendList");
 	}
- 
+  
 
 	@Override
 	public void increaseCount(ProductVO vo) {
 		sqlSession.update("ProductDAO.increaseCount", vo);
 	}
+ 
 
-	
-	
+	//상품 수정 
+	@Override
+	public int modifyProduct(ProductVO vo) {
+		System.out.println("===>  ProductMapper modifyProduct() 호출");
+		return sqlSession.update("ProductDAO.modifyProduct", vo);
+	} 
+       
+	//상품 삭제
+	@Override  
+	public int deleteProduct(ProductVO vo) { 
+		return sqlSession.delete("ProductDAO.deleteProduct", vo);
+	}
+
+  
+	//등록상품리스트 
+	@Override
+	public List<ProductVO> productList() {
+		return sqlSession.selectList("ProductDAO.productList");
+	}
 	
 	
 	@Override

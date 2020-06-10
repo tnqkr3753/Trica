@@ -11,6 +11,10 @@ public interface OrderService {
 	public int insertOrder(OrderVO vo);
 	public int insertOrderProduct(OrderProductVO vo);
 	public int insertDelivery(DeliveryVO vo);
+<<<<<<< HEAD
 	public int getTotalCount(String memberId);
 	public List<HashMap> selectOrder(String memberId, String pageNum);
+=======
+	public int decreaseStock(OrderProductVO vo);
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 }

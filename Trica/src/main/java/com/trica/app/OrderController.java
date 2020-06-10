@@ -37,7 +37,10 @@ public class OrderController {
 				if(orderService.insertOrderProduct(pvo)!=1) {
 					state = false;
 				}
-				System.out.println(pvo);
+				//product에서 pctStock 빼기
+				if(orderService.decreaseStock(pvo)!=1) {
+					state=false;
+				}
 			}
 			DeliveryVO dvo = vo.getDvo();
 			dvo.setOrderNo(ovo.getOrderNo());
@@ -45,7 +48,6 @@ public class OrderController {
 				//실패시 delivery
 				state = false;
 			}
-			System.out.println(dvo);
 		}
 		//거래가 성공(db추가 성공)이면 쿠키에서 해당 인덱스값들 삭제
 		if(state) {
@@ -54,12 +56,10 @@ public class OrderController {
 			for(int i = vo.getIndexList().size()-1;i >= 0;i--) {
 			//for(String index :vo.getIndexList()) {
 				String index =vo.getIndexList().get(i);
-				System.out.println("index : "+index);
-				System.out.println(ckValue);
 				ckValue = ccr.getCookieString(ckValue, "delete", index);
 			}
 		}
-		System.out.println("마지막ckvalue : "+ ckValue);
+		//변경된 쿠키값 response에 저장
 		Cookie kie = new Cookie("cartPctNo", ckValue);
 		kie.setMaxAge(-1);
 		response.addCookie(kie);

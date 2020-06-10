@@ -12,6 +12,6 @@ public interface MemberDAO {
 	
 	//회원정보 수정
 	public int memberUpdate(MemberVO vo); 
- 
+
 }           
-                             
+                              

@@ -10,7 +10,6 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content=""> 
-
 <!-- Google Font -->
 <link 
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
@@ -126,7 +125,7 @@ function sample6_execDaumPostcode() {
 							<c:when test="${empty vo.memberId }">
 			 					<div class="col-md-12 col-md-offset-3">
 									<h3>회원가입</h3>
-								</div>
+								</div> 
 							</c:when>
 							<c:otherwise>
 								<div class="col-md-12 col-md-offset-3">
@@ -144,7 +143,7 @@ function sample6_execDaumPostcode() {
 								<form action="Updater.trc">
 							</c:otherwise>
 						</c:choose>  
-						       
+						        
 							<div class="form-group"> 
 								<label for="memberName" >성명</label> 
 								<c:choose>
@@ -168,14 +167,13 @@ function sample6_execDaumPostcode() {
 										<input type="text" value="${vo.gender }" name="gender" class="form-control" id="gender" readonly />
 									</c:otherwise>
 								</c:choose>
-								
-							</div>    
+							</div>      
           					
 							<div class="form-group">  
 								<label for="regNum">주민번호</label>
 								<c:choose>
 									<c:when test="${empty vo.memberId }">
-										<input type="text" name="regNum" class="form-control" id="regNum" placeholder="주민번호를 입력해 주세요">
+										<input type="text" name="regNumber" class="form-control" id="regNum" placeholder="주민번호를 입력해 주세요">
 									</c:when>
 									<c:otherwise>
 										<input type="text" value="${vo.regNum }" name="regNum" class="form-control" id="regNum" readonly>
@@ -204,18 +202,18 @@ function sample6_execDaumPostcode() {
 							<div class="form-group"> 
 								<label for="tel">휴대폰 번호</label> 
 								<input type="tel" name="tel" class="form-control" id="tel"	placeholder="휴대폰번호를 입력해 주세요">
-							</div>   
-           
+							</div>    
+            
 							<div>      
 								<div class="form-group addr">
 									<label for="address">주소</label><br/>
 									<c:choose>   
 										<c:when test="${empty vo.memberId }">
-											<input type="text" class="form-control" id="sample6_postcode" placeholder="우편번호">
+											<input type="text" class="form-control" id="sample6_postcode" placeholder="우편번호" readonly>
 											<input type="button" id="addbtn" class="form-control btn btn-secondary" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
-											<input type="text" class="form-control" id="sample6_address" placeholder="주소">
+											<input type="text" class="form-control" id="sample6_address" placeholder="주소" readonly>
 											<input type="text" class="form-control" id="sample6_detailAddress" placeholder="상세주소">
-											<input type="text" class="form-control" id="sample6_extraAddress" placeholder="참고항목">
+											<input type="text" class="form-control" id="sample6_extraAddress" placeholder="참고항목" readonly>
 											<input type="hidden" name="address" id="address-join" value=""/>
 										</c:when>
 										<c:otherwise>    
@@ -238,7 +236,7 @@ function sample6_execDaumPostcode() {
 							</div>     
 							<c:choose>       
                    			<c:when test="${empty sessionScope.memberId}">   
-							<div class="form-group">  
+							<div class="form-group">   
 								<label>약관 동의</label> 
 								<div data-toggle="buttons">
 									<label class="btn btn-secondary active"> 
@@ -247,16 +245,16 @@ function sample6_execDaumPostcode() {
 									<a href="#">이용약관</a>에 동의합니다.    
 								</div>  
 							</div>           
-     
+      
 							<div class="form-group">  
 								<label for="memberType">회원유형</label><br/>
 				 				<div class="form-check">   
 								<input type="checkbox" class="form-check-input" name="memberType" id="memberType" v="일반회원" value="0">일반회원 &nbsp;&nbsp;
 								<input type="checkbox" class="form-check-input" name="memberType" id="memberType" v="판매회원" value="1">판매회원
 								</div>   
-							</div>        
+							</div>         
      						  
-							<div class="form-group text-center">      
+							<div class="form-group text-center">       
 								<button type="submit" id="join-submit" class="btn btn-primary"> 
 									회원가입<i class="fa fa-check spaceLeft"></i> 
 								</button> 
@@ -272,11 +270,11 @@ function sample6_execDaumPostcode() {
 								<button type="button" class="btn btn-warning" onclick="location.href='goToIndex.trc'">  
 									수정취소<i class="fa fa-times spaceLeft"></i> 
 								</button>   
-							</c:otherwise>         
-							</c:choose>        
+							</c:otherwise>            
+							</c:choose>           
 						</form> 
 					</div>         
-				</div>   
+				</div>    
 			</div> 
 		</div> 
 	</div>
@@ -294,7 +292,9 @@ function sample6_execDaumPostcode() {
 	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
 	<script src="./resources/js/jquery.slicknav.js"></script>
 	<script src="./resources/js/owl.carousel.min.js"></script> 
-	<script src="./resources/js/main.js"></script>
-	<script src="./resources/js/register.js"></script>
-</body> 
+	<script src="./resources/js/main.js"></script>  
+	<script src="./resources/js/register.js"></script>  
+	<script src="http://lab.alexcican.com/set_cookies/cookie.js" type="text/javascript" ></script>
+	   
+</body>  
 </html>

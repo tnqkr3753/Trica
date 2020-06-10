@@ -17,7 +17,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
 	rel="stylesheet">
-
+ 
 <!-- Css Styles -->
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css"
 	type="text/css">

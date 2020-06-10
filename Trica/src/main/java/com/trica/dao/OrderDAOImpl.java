@@ -17,23 +17,21 @@ public class OrderDAOImpl implements OrderDAO {
 	SqlSessionTemplate sqlSession;
 	@Override
 	public int insertOrder(OrderVO vo) {
-		// TODO Auto-generated method stub
 		return sqlSession.insert("OrderDAO.insertOrder",vo);
 	}
 
 	@Override
 	public int insertOrderProduct(OrderProductVO vo) {
-		// TODO Auto-generated method stub
 		return sqlSession.insert("OrderDAO.insertOrderProduct",vo);
 	}
 
 	@Override
 	public int insertDelivery(DeliveryVO vo) {
-		// TODO Auto-generated method stub
 		return sqlSession.insert("OrderDAO.insertDelivery",vo);
 	}
 
 	@Override
+<<<<<<< HEAD
 	public int getTotalCount(String memberId) {
 		System.out.println("getTotalCount() 호출");
 		return sqlSession.selectOne("OrderDAO.getTotalCount", memberId);
@@ -48,6 +46,10 @@ public class OrderDAOImpl implements OrderDAO {
 		m.put("memberId", memberId);
 		return sqlSession.selectList("OrderDAO.selectOrder", m);
 		
+=======
+	public int decreaseStock(OrderProductVO vo) {
+		return sqlSession.update("OrderDAO.decreaseStock", vo);
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 	}
 
 

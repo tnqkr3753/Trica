@@ -20,7 +20,6 @@ public class OrderServiceImpl implements OrderService {
 	OrderDAO orderDAO;
 	@Override
 	public int insertOrder(OrderVO vo) {
-		// TODO Auto-generated method stub
 		return orderDAO.insertOrder(vo);
 	}
 
@@ -35,6 +34,7 @@ public class OrderServiceImpl implements OrderService {
 		return orderDAO.insertDelivery(vo);
 	}
 
+<<<<<<< HEAD
 	/*
 	 * 전체 페이지 수 가져오기
 	 */
@@ -64,5 +64,11 @@ public class OrderServiceImpl implements OrderService {
 	}
 	
 
+=======
+	@Override
+	public int decreaseStock(OrderProductVO vo) {
+		return orderDAO.decreaseStock(vo);
+	}
+>>>>>>> branch 'master' of https://github.com/tnqkr3753/Trica.git
 
 }

@@ -1,10 +1,17 @@
 //회원가입 패턴
 $('#memberName').attr('pattern','[가-힣\s]{2,5}');
 $('#memberId').attr('pattern','[A-Za-z0-9]{6,12}');
-$('#regNumber').attr('pattern','^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))-[1-4][0-9]{6}$');
+$('#regNum').attr('pattern','^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))-[1-4][0-9]{6}$');
 $('#password').attr('pattern','[A-Za-z0-9]{6,12}');
 $('#tel').attr('pattern','(^02.{0}|^01.{1}|[0-9]{3})-([0-9]{3,4})-([0-9]{4})');
-
+$('#memberId').attr('required',true);
+$('#regNum').attr('required',true);
+$('#password').attr('required',true);
+$('#tel').attr('required',true);
+$('#gender').attr('required',true);
+$('#memberName').attr('required',true);
+$('#sample6_postcode').attr('required',true);
+$('#memberType').attr('required',true);
 //성별 체크     
 $('input[type="checkbox"][name="gender"]').click(function(){ 
 	//클릭 이벤트 발생한 요소가 체크 상태인 경우
@@ -15,7 +22,7 @@ $('input[type="checkbox"][name="gender"]').click(function(){
 		alert($(this).val());  
 	} 
 });          
-
+ 
 //이용약관 동의  
 $('#agree').click(function(){ 
 	if(agree.checked == true) { alert("이용약관에 동의하였습니다."); }
@@ -30,12 +37,12 @@ $('input[type="checkbox"][name="memberType"]').click(function(){
 		alert($(this).attr('v')); 
 	}
 });
-//서브밋 이벤트 막기  
+//서브밋 이벤트 막기   
 //$('#join-submit').attr('disabled', true);	  
 //$('#join-submit').attr('disabled', false);	  
 
 //서브밋 버튼 눌렸을 때  
-$('#join-submit').click(function(){
+$('#join-submit').click(function(){ 
 	var addr = $('#sample6_postcode').val()+"_"+$('#sample6_address').val()+"_"+$('#sample6_detailAddress').val()+"_"+$('#sample6_extraAddress').val()
 	$('#address-join').val(addr);
 });	   
@@ -43,8 +50,8 @@ $('#btnUpedate').click(function(){
 	var addr = $('#sample6_postcode').val()+"_"+$('#sample6_address').val()+"_"+$('#sample6_detailAddress').val()+"_"+$('#sample6_extraAddress').val()
 	$('#address-modify').val(addr);
 });	  
-
+ 
 //회원정보 수정버튼을 눌렀을 때
 $('#btnUpedate').click(function(){
 	 alert('정보가 수정되었습니다.') 
-}); 
+});    

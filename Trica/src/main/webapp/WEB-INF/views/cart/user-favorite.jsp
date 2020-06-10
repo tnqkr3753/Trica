@@ -131,6 +131,7 @@
     <script src="./resources/js/jquery.magnific-popup.min.js"></script>
     <script src="./resources/js/jquery.slicknav.js"></script>
     <script src="./resources/js/owl.carousel.min.js"></script>
+<!--     <script src="http://lab.alexcican.com/set_cookies/cookie.js" type="text/javascript" ></script> -->
     <script src="./resources/js/main.js"></script>
     <script src="./resources/js/favorite.js"></script>
 </body>

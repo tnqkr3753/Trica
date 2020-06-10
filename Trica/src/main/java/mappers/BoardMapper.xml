@@ -37,7 +37,7 @@
 	<select id="selectBoard" parameterType="board" resultType="board">
 		SELECT board_no,member_id,board_type,board_title,board_content,board_date,view_cnt,board_fname,board_fsize,parent_board_no
 		FROM board
-		WHERE trim(BOARD_NO)=#{boardNo}
+		WHERE trim(BOARD_NO)=trim(#{boardNo})
 	</select>
 	<select id="countBoard" parameterType="String" resultType="hashmap">
 		SELECT count(board_no) countBoard
@@ -45,7 +45,7 @@
 		WHERE board_Type = #{bType}
 	</select>
 	<delete id="deleteBoard" parameterType="board">
-		DELETE FROM board 
+		DELETE FROM board  
 		WHERE trim(board_no)=trim(#{boardNo})
 	</delete>
 	<update id="modifyBoard" parameterType="board">
@@ -55,7 +55,7 @@
 		board_fsize=#{boardFsize}
 		</if>
 		WHERE trim(board_no)=trim(#{boardNo})
-	</update>
+	</update> 
 	<update id="increaseCount" parameterType="board">
 		UPDATE board SET view_cnt=view_cnt+1 
 		WHERE trim(board_no)=trim(#{boardNo})

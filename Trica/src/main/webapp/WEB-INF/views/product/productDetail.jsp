@@ -159,7 +159,7 @@
 							<br /> <br /> <br /> <br /> <br /> <br /> <br />
 					</td>
 				</div>
-				<!-- rightSec 끝 -->
+				<!-- rightSec 끝 --> 
 			</div>
 
 			<!-- 상세정보 시작 -->
@@ -217,7 +217,7 @@
 		<script src="./resources/js/jquery.magnific-popup.min.js"></script>
 		<script src="./resources/js/jquery.slicknav.js"></script>
 		<script src="./resources/js/owl.carousel.min.js"></script>
-		<script src="./resources/js/main.js"></script>
+		<script src="./resources/js/main.js"></script> 
 		<script type="text/javascript" src="./resources/js/productDetails.js"></script>
 </body>
 </html>

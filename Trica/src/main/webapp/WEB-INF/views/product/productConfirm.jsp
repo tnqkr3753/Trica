@@ -16,7 +16,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
 	rel="stylesheet">
-
+ 
 <!-- Css Styles -->
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
@@ -86,14 +86,14 @@
 						</tr>
 						<tr>
 							<th>상품설명</th>
-							<td>${vo.pctDetail}</td>
+							<td>${vo.pctDetail}</td> 
 						</tr>
-						<tr>
+						<tr> 
 							<th>상품이미지</th>
 							<td><img
 								src="./resources/upload/product/img/${vo.pctImgName }"/></td>
 						</tr>
-					</table>
+					</table>  
 				</div>
 				
 				<div class="text-center">
@@ -121,6 +121,6 @@
 	<script src="./resources/js/owl.carousel.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/productInsert.js"></script>
-
-</body>
+	<script src="http://lab.alexcican.com/set_cookies/cookie.js" type="text/javascript" ></script>
+</body> 
 </html>
