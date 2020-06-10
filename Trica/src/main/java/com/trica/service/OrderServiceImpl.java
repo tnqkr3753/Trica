@@ -13,7 +13,6 @@ public class OrderServiceImpl implements OrderService {
 	OrderDAO orderDAO;
 	@Override
 	public int insertOrder(OrderVO vo) {
-		// TODO Auto-generated method stub
 		return orderDAO.insertOrder(vo);
 	}
 
@@ -26,6 +25,11 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public int insertDelivery(DeliveryVO vo) {
 		return orderDAO.insertDelivery(vo);
+	}
+
+	@Override
+	public int decreaseStock(OrderProductVO vo) {
+		return orderDAO.decreaseStock(vo);
 	}
 
 }

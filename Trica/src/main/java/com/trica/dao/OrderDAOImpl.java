@@ -13,20 +13,22 @@ public class OrderDAOImpl implements OrderDAO {
 	SqlSessionTemplate sqlSession;
 	@Override
 	public int insertOrder(OrderVO vo) {
-		// TODO Auto-generated method stub
 		return sqlSession.insert("OrderDAO.insertOrder",vo);
 	}
 
 	@Override
 	public int insertOrderProduct(OrderProductVO vo) {
-		// TODO Auto-generated method stub
 		return sqlSession.insert("OrderDAO.insertOrderProduct",vo);
 	}
 
 	@Override
 	public int insertDelivery(DeliveryVO vo) {
-		// TODO Auto-generated method stub
 		return sqlSession.insert("OrderDAO.insertDelivery",vo);
+	}
+
+	@Override
+	public int decreaseStock(OrderProductVO vo) {
+		return sqlSession.update("OrderDAO.decreaseStock", vo);
 	}
 
 

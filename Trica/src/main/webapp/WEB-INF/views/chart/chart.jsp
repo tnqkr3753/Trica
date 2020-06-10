@@ -59,7 +59,7 @@
 						</div>
 						<div class="col-md-4 p-5 bg-white rounded shadow-sm mb-5 text-center">
 							<input class="btn chart-btn" type="button" value="날짜 별 주문 건수" tab-link="chart/getDatechart.trc">
-							<input class="btn chart-btn" type="button" value="카테고리 별 주문수" tab-link="chart/getCatechart.trc">
+							<input class="btn chart-btn" type="button" value="카테고리 별 조회수" tab-link="chart/getCatechart.trc">
 							<input class="btn chart-btn" type="button" value="날짜 별 매출"  tab-link="chart/getSaleschart.trc">
 						</div>
 						<div class="col-md-4">

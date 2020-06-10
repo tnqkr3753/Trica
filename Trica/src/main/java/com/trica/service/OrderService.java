@@ -8,4 +8,5 @@ public interface OrderService {
 	public int insertOrder(OrderVO vo);
 	public int insertOrderProduct(OrderProductVO vo);
 	public int insertDelivery(DeliveryVO vo);
+	public int decreaseStock(OrderProductVO vo);
 }

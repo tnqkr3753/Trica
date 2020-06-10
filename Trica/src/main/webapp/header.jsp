@@ -112,6 +112,5 @@
 	<script src="./resources/js/owl.carousel.min.js"></script>
 	<script src="./resources/js/main.js"></script>   
 	<script src="./resources/js/jquery.cookie.js"></script>  
-	<script src="./resources/js/promotion.js"></script>   
 </body>    
 </html>

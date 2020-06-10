@@ -380,5 +380,6 @@
 	<script src="./resources/js/jquery.cookie.js"></script>   
 	<script src="./resources/js/loginRemember.js"></script> 
 	<script src="http://lab.alexcican.com/set_cookies/cookie.js"></script>    
+		<script src="./resources/js/promotion.js"></script>   
 </body>   
 </html>  

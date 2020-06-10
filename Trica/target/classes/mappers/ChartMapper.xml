@@ -9,10 +9,11 @@
 		ORDER BY to_char(order_date,'yyyyMMdd') desc
  	</select>  
  	<select id="countPerCate" resultType="hashmap">
- 		SELECT sum(pct_cnt) viewcount,sc_no category
-		FROM product
-		GROUP BY sc_no
-		ORDER BY sc_no asc
+ 		SELECT sum(p.pct_cnt) viewcount, s.sc_name CATEGORY
+		FROM product p inner join s_cate s
+		ON p.sc_no = s.sc_no
+		GROUP BY s.sc_name
+		ORDER BY s.sc_name asc
  	</select>
  	<select id="salesPerDay" resultType="hashmap">
  		SELECT sum(total_price) sales,to_char(order_date,'yyyyMMdd') day

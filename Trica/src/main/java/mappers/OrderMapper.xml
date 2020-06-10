@@ -18,4 +18,8 @@
 	INSERT INTO delivery_detail (order_no,deliver_name,deliver_tel,deliver_sub_tel,recipient_name,recipient_address,recipient_tel,recipient_sub_tel)
 	VALUES (#{orderNo},#{deliverName},#{deliverTel},#{deliverSubTel},#{recipientName},#{recipientAddress},#{recipientTel},#{recipientSubTel})
 </insert>
+<update id="decreaseStock" parameterType="orderproduct">
+	UPDATE product SET pct_stock=pct_stock-#{orderCount} 
+	WHERE trim(pct_no)=trim(#{pctNo})
+</update>
 </mapper>
