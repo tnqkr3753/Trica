@@ -67,14 +67,37 @@ public class ProductController {
 	} 
 	
 	//Header Shop 클릭 시 전체상품 보이는 페이지로 이동
-	@RequestMapping("getaList.trc")
+	/* @RequestMapping("getaList.trc")
 	public ModelAndView getaList() { 
 		ModelAndView mv = new ModelAndView(); 
 		mv.setViewName("product/searchView");
 		mv.addObject("sList", productService.getaList());
 		return mv;  
-	}        
-	                 
+	} */
+	
+	// Header의 SHOP 클릭시 페이징한 리스트 보여줌
+	@RequestMapping("getaList.trc")
+	public ModelAndView getaList(String pNum) { 
+		// pNum이 null이면
+		String pageNum = "1";
+		
+		// pNum이 null이 아니면
+		if (pNum != null) {
+			pageNum = pNum;
+		}
+		
+		int totalPage = productService.getTotalCount();
+		
+		System.out.println("확인 출력 : " + totalPage);
+		
+		ModelAndView mv = new ModelAndView(); 
+		
+		mv.addObject("sList", productService.getaList(pageNum));
+		mv.addObject("totalPage", totalPage);
+		
+		mv.setViewName("product/searchView");
+		return mv;  
+	}              
 	     
 	  
 	

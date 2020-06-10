@@ -182,7 +182,7 @@
 						<!-- ************************************ paging **************************************** -->
 						<c:forEach var="i" begin="1" end="${totalPage }">
 
-							<c:if test="${empty bcNo}">
+					<c:if test="${empty bcNo and not empty big_category }">
 								<!-- 검색창에서 searchView 페이지로 넘어갈때 -->
 								<a class="btn blue"
 									href="search.trc?title=${title}&big_category=${big_category}&small_category=${small_category}&pNum=${i}">${i}</a>
@@ -192,7 +192,9 @@
 								<!-- 빅 카테고리에서 searchView 페이지로 넘어갈때 -->
 								<a class="btn blue" href="bigSearch.trc?bcNo=${bcNo}&pNum=${i}">${i}</a>
 							</c:if>
-
+							<c:if test="${empty bcNo and empty big_category}">
+								<a class="btn blue" href="getaList.trc?pNum=${i}">${i}</a>
+							</c:if>
 						</c:forEach>
 						<!-- ************************************ paging **************************************** -->
 

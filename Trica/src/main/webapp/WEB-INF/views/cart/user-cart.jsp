@@ -31,6 +31,7 @@
     <!-- Header Section Begin --> 
 		<jsp:include page="../../../header.jsp"></jsp:include>
     <!-- Header Section End --> 
+    
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-area set-bg" data-setbg="./resources/img/breadcrumb/breadcrumb-cart.jpg">
         <div class="container">
@@ -90,7 +91,7 @@
                     <div class="p-2">
                       <img src="./resources/upload/product/img/${list[5] }" alt="" width="70" class="img-fluid rounded shadow-sm">
                       <div class="ml-3 d-inline-block align-middle">
-                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">${list[1] }</a></h5><span class="text-muted font-weight-normal font-italic d-block">${list[2] }</span>
+                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">${list[2] }</a></h5><span class="text-muted font-weight-normal font-italic d-block">${list[1] }</span>
                       </div>
                     </div>
                   </th>

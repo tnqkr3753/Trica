@@ -60,7 +60,7 @@
                                 	 <ul class="dropdown">
                                         <li><a href="cart.trc">Shopping Cart</a></li>
                                         <li><a href="favorite.trc">Favorite</a></li>
-                                        <li><a href="orderList.trc">OrderList</a></li>
+                                        <li><a href="orderPaging.trc">OrderList</a></li>
                                     </ul>  
                                 </li>   
                                 <c:if test="${!empty sessionScope.memberId}">
