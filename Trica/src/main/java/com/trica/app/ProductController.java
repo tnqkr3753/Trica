@@ -35,7 +35,7 @@ public class ProductController {
 	@RequestMapping("productInsert.trc") 
 	public ModelAndView insertProduct() {
 		// System.out.println("==========확인1==========");
-
+		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("product/productInsert");	// 상품 등록 창으로
 		return mv;
@@ -52,14 +52,26 @@ public class ProductController {
 		ModelAndView mv = new ModelAndView();
 
 		int result = productService.insertProduct(vo);
-		mv.addObject("result", result);
+		mv.addObject("result", vo.getPctNo());
 
-		if(result == 1) mv.addObject("vo", vo);
+		if(result != 1) {
+			mv.setViewName("redirect:/productInsert.trc");
+		}else {
+			mv.setViewName("redirect:/productConfirm.trc");	// 상품등록 확인 페이지 창으로
+		}
 
-		mv.setViewName("product/productConfirm");	// 상품등록 확인 페이지 창으로
 		return mv;
 	} 
-
+	@RequestMapping("productConfirm.trc")
+	public ModelAndView goProductConfirm(String result) {
+		ProductVO vo = new ProductVO();
+		vo.setPctNo(result);
+		ModelAndView mv = new ModelAndView();
+		ProductVO rvo = productService.selectProduct(vo);
+		mv.setViewName("product/productConfirm");
+		mv.addObject("vo", rvo);
+		return mv;
+	}
 	@RequestMapping("goIndex.trc")
 	public ModelAndView goIndex() {
 		ModelAndView mv = new ModelAndView();

@@ -51,7 +51,6 @@
 								<input type="text" name="title" placeholder="검색어를 입력해주세요">
 								<div class="select__option fir">
 									<select name="bc_no">
-										<option value="">기본 카테고리</option>
 										<option value="1">TV/냉장고/세탁기/건조기</option>
 										<option value="2">카메라/게임/음향</option>
 										<option value="3">주방가전</option>  
@@ -67,21 +66,6 @@
 								<button type="submit">찾기</button>       
 							</form>        
 						</div>        
-						<ul class="hero__categories__tags">  
-							<li><a href="#"><img
-									src="./resources/img/hero/cat-1.png" alt=""> TV</a></li>
-							<li><a href="#"><img
-									src="./resources/img/hero/cat-2.png" alt=""> 냉장고</a></li>
-							<li><a href="#"><img  
-									src="./resources/img/hero/cat-3.png" alt=""> 카메라</a></li>
-							<li><a href="#"><img
-									src="./resources/img/hero/cat-4.png" alt=""> 전자레인지</a></li>
-							<li><a href="#"><img
-									src="./resources/img/hero/cat-5.png" alt=""> 노트북</a></li>
-							<li><a href="#"><img
-									src="./resources/img/hero/cat-6.png" alt=""> All
-									Categories</a></li> 
-						</ul>  
 					</div> 
 				</div>     
 			</div>     
@@ -222,143 +206,143 @@
 	</section>
 	<!--  오늘의 상품 section 끝 -->
  
-	<!-- Feature Location Section Begin -->
-	<section class="feature-location spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Top Featured Locations</h2>
-						<p>Representative electronics store</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<a href="http://www.samsungsales.co.kr"
-						class="feature__location__item large-item set-bg"
-						data-setbg="./resources/img/feature-location/samsung.PNG">
-						<div class="feature__location__item__text">
-							<h5>Samsung Digital Plaza</h5>
-							<ul>
-								<li>2045 Listings</li>
-								<li>3648 Users</li>
-							</ul>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-lg-6 col-md-6">
-							<a href="http://www.lge.co.kr"
-								class="feature__location__item set-bg"
-								data-setbg="./resources/img/feature-location/lg_bestshop.jpg">
-								<div class="feature__location__item__text">
-									<h5>LG Best Shop</h5>
-								</div>
-							</a>
-						</div>
-						<div class="col-lg-6 col-md-6">
-							<a href="http://www.e-himart.co.kr"
-								class="feature__location__item set-bg"
-								data-setbg="./resources/img/feature-location/hi_mart.PNG">
-								<div class="feature__location__item__text">
-									<h5>Lotte Himart</h5>
-								</div>
-							</a>
-						</div>
-					</div>
-					<a href="http://m.etland.co.kr"
-						class="feature__location__item set-bg"
-						data-setbg="./resources/img/feature-location/E_Land.PNG">
-						<div class="feature__location__item__text">
-							<h5>Electronic Land</h5>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+<!-- Feature Location Section Begin -->
+<!-- 	<section class="feature-location spad"> -->
+<!-- 		<div class="container"> -->
+<!-- 			<div class="row"> -->
+<!-- 				<div class="col-lg-12"> -->
+<!-- 					<div class="section-title"> -->
+<!-- 						<h2>Top Featured Locations</h2> -->
+<!-- 						<p>Representative electronics store</p> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			<div class="row"> -->
+<!-- 				<div class="col-lg-6"> -->
+<!-- 					<a href="http://www.samsungsales.co.kr" -->
+<!-- 						class="feature__location__item large-item set-bg" -->
+<!-- 						data-setbg="./resources/img/feature-location/samsung.PNG"> -->
+<!-- 						<div class="feature__location__item__text"> -->
+<!-- 							<h5>Samsung Digital Plaza</h5> -->
+<!-- 							<ul> -->
+<!-- 								<li>2045 Listings</li> -->
+<!-- 								<li>3648 Users</li> -->
+<!-- 							</ul> -->
+<!-- 						</div> -->
+<!-- 					</a> -->
+<!-- 				</div> -->
+<!-- 				<div class="col-lg-6"> -->
+<!-- 					<div class="row"> -->
+<!-- 						<div class="col-lg-6 col-md-6"> -->
+<!-- 							<a href="http://www.lge.co.kr" -->
+<!-- 								class="feature__location__item set-bg" -->
+<!-- 								data-setbg="./resources/img/feature-location/lg_bestshop.jpg"> -->
+<!-- 								<div class="feature__location__item__text"> -->
+<!-- 									<h5>LG Best Shop</h5> -->
+<!-- 								</div> -->
+<!-- 							</a> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-lg-6 col-md-6"> -->
+<!-- 							<a href="http://www.e-himart.co.kr" -->
+<!-- 								class="feature__location__item set-bg" -->
+<!-- 								data-setbg="./resources/img/feature-location/hi_mart.PNG"> -->
+<!-- 								<div class="feature__location__item__text"> -->
+<!-- 									<h5>Lotte Himart</h5> -->
+<!-- 								</div> -->
+<!-- 							</a> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<a href="http://m.etland.co.kr" -->
+<!-- 						class="feature__location__item set-bg" -->
+<!-- 						data-setbg="./resources/img/feature-location/E_Land.PNG"> -->
+<!-- 						<div class="feature__location__item__text"> -->
+<!-- 							<h5>Electronic Land</h5> -->
+<!-- 						</div> -->
+<!-- 					</a> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</section> -->
 	<!-- Feature Location Section End -->
  
 	<!-- Blog Section Begin -->
-	<section class="news-post spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>News Post</h2>
-						<p>Checkout Latest News And Articles From Our Blog</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6"> 
-					<div class="blog__item"> 
-						<div class="blog__item__pic set-bg"
-							data-setbg="./resources/img/blog/news-1.PNG"></div>
-						<div class="blog__item__text">
-							<ul class="blog__item__tags">
-								<li><i class="fa fa-tags"></i>Electronic</li>
-								<li>store</li> 
-							</ul>
-							<h5>
-								<a href="https://news.samsung.com/kr/삼성전자-갤러리아-백화점-광교점에-더-월-체험"">Samsung
-									Newsroom Latest Article</a>
-							</h5>
-							<ul class="blog__item__widget">
-								<li><i class="fa fa-clock-o"></i> 20th May 31, 2020</li>
-								<li><i class="fa fa-user"></i>Samsung Blog</li>
-							</ul>  
-						</div>
-					</div> 
-				</div> 
-				<div class="col-lg-4 col-md-6">
-					<div class="blog__item">
-						<div class="blog__item__pic set-bg"
-							data-setbg="./resources/img/blog/news-2.PNG"></div>
-						<div class="blog__item__text">
-							<ul class="blog__item__tags">
-								<li><i class="fa fa-tags"></i> Electronic</li>
-								<li>store</li>
-							</ul> 
-							<h5>   
-								<a
-									href="https://social.lge.co.kr/product/httpssocial-lge-co-krproductdrying-machine07/">
-									All of the dryer ‘condenser automatic cleaning system’ that LG
-									Electronics researchers say </a>
-							</h5>
-							<ul class="blog__item__widget">
-								<li><i class="fa fa-clock-o"></i> 20th May 28, 2020</li>
-								<li><i class="fa fa-user"></i> LG News Room</li>
-							</ul> 
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog__item">
-						<div class="blog__item__pic set-bg"
-							data-setbg="./resources/img/blog/news-3.PNG"></div>
-						<div class="blog__item__text">
-							<ul class="blog__item__tags"> 
-								<li><i class="fa fa-tags"></i> Electronic</li>
-								<li>store</li> 
-							</ul>
-							<h5>
-								<a href="https://blog.lotte.co.kr/37827"> Visit 7 Lotte
-									Shopping Malls at once! Online shopping platform Lotte ON </a>
-							</h5>
-							<ul class="blog__item__widget">
-								<li><i class="fa fa-clock-o"></i> 20th May 12, 2020</li>
-								<li><i class="fa fa-user"></i> Lotte blog</li>
-				 			</ul>
-						</div>
-					</div> 
-				</div>
-			</div>    
-		</div>   
-	</section>      
-	<!-- Blog Section End -->                 
+<!-- 	<section class="news-post spad"> -->
+<!-- 		<div class="container"> -->
+<!-- 			<div class="row"> -->
+<!-- 				<div class="col-lg-12"> -->
+<!-- 					<div class="section-title"> -->
+<!-- 						<h2>News Post</h2> -->
+<!-- 						<p>Checkout Latest News And Articles From Our Blog</p> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			<div class="row"> -->
+<!-- 				<div class="col-lg-4 col-md-6">  -->
+<!-- 					<div class="blog__item">  -->
+<!-- 						<div class="blog__item__pic set-bg" -->
+<!-- 							data-setbg="./resources/img/blog/news-1.PNG"></div> -->
+<!-- 						<div class="blog__item__text"> -->
+<!-- 							<ul class="blog__item__tags"> -->
+<!-- 								<li><i class="fa fa-tags"></i>Electronic</li> -->
+<!-- 								<li>store</li>  -->
+<!-- 							</ul> -->
+<!-- 							<h5> -->
+<!-- 								<a href="https://news.samsung.com/kr/삼성전자-갤러리아-백화점-광교점에-더-월-체험"">Samsung -->
+<!-- 									Newsroom Latest Article</a> -->
+<!-- 							</h5> -->
+<!-- 							<ul class="blog__item__widget"> -->
+<!-- 								<li><i class="fa fa-clock-o"></i> 20th May 31, 2020</li> -->
+<!-- 								<li><i class="fa fa-user"></i>Samsung Blog</li> -->
+<!-- 							</ul>   -->
+<!-- 						</div> -->
+<!-- 					</div>  -->
+<!-- 				</div>  -->
+<!-- 				<div class="col-lg-4 col-md-6"> -->
+<!-- 					<div class="blog__item"> -->
+<!-- 						<div class="blog__item__pic set-bg" -->
+<!-- 							data-setbg="./resources/img/blog/news-2.PNG"></div> -->
+<!-- 						<div class="blog__item__text"> -->
+<!-- 							<ul class="blog__item__tags"> -->
+<!-- 								<li><i class="fa fa-tags"></i> Electronic</li> -->
+<!-- 								<li>store</li> -->
+<!-- 							</ul>  -->
+<!-- 							<h5>    -->
+<!-- 								<a -->
+<!-- 									href="https://social.lge.co.kr/product/httpssocial-lge-co-krproductdrying-machine07/"> -->
+<!-- 									All of the dryer ‘condenser automatic cleaning system’ that LG -->
+<!-- 									Electronics researchers say </a> -->
+<!-- 							</h5> -->
+<!-- 							<ul class="blog__item__widget"> -->
+<!-- 								<li><i class="fa fa-clock-o"></i> 20th May 28, 2020</li> -->
+<!-- 								<li><i class="fa fa-user"></i> LG News Room</li> -->
+<!-- 							</ul>  -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="col-lg-4 col-md-6"> -->
+<!-- 					<div class="blog__item"> -->
+<!-- 						<div class="blog__item__pic set-bg" -->
+<!-- 							data-setbg="./resources/img/blog/news-3.PNG"></div> -->
+<!-- 						<div class="blog__item__text"> -->
+<!-- 							<ul class="blog__item__tags">  -->
+<!-- 								<li><i class="fa fa-tags"></i> Electronic</li> -->
+<!-- 								<li>store</li>  -->
+<!-- 							</ul> -->
+<!-- 							<h5> -->
+<!-- 								<a href="https://blog.lotte.co.kr/37827"> Visit 7 Lotte -->
+<!-- 									Shopping Malls at once! Online shopping platform Lotte ON </a> -->
+<!-- 							</h5> -->
+<!-- 							<ul class="blog__item__widget"> -->
+<!-- 								<li><i class="fa fa-clock-o"></i> 20th May 12, 2020</li> -->
+<!-- 								<li><i class="fa fa-user"></i> Lotte blog</li> -->
+<!-- 				 			</ul> -->
+<!-- 						</div> -->
+<!-- 					</div>  -->
+<!-- 				</div> -->
+<!-- 			</div>     -->
+<!-- 		</div>    -->
+<!-- 	</section>       -->
+	<!-- Blog Section End -->               
 	                 
 	<!-- Footer End -->          
 	<jsp:include page="footer.jsp"></jsp:include>     

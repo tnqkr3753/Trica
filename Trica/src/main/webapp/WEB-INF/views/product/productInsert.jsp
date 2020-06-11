@@ -94,7 +94,7 @@
 					</c:otherwise>
 				</c:choose>
 				<div>
-					<form action="productModify.trc" method="post" name="form1"
+					<form action="saveProduct.trc" method="post" name="form1"
 						enctype='multipart/form-data'>
 						<input type="hidden" name="pctNo" value="${result.pctNo }">
 						<div class="table-responsive">
@@ -240,6 +240,13 @@
 											<td colspan="5"><input type="file" name="file"
 												id="pct_img"></td>
 										</tr>
+									 	<tr>
+											<th>이미지</th>
+											<td>
+											<img id="image_section" src="./resources/upload/product/img/${result.pctImgName }">
+											</td>
+										</tr>
+										
 									</c:when>
 									<c:otherwise>
 										<tr>  
@@ -250,7 +257,7 @@
 										<tr>
 											<th>이미지</th>
 											<td>
-											<img src="./resources/upload/product/img/${result.pctImgName }">
+											<img id="image_section" src="./resources/upload/product/img/${result.pctImgName }">
 											</td>
 										</tr>
 										

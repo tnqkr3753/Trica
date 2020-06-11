@@ -173,7 +173,7 @@ function sample6_execDaumPostcode() {
 								<label for="regNum">주민번호</label>
 								<c:choose>
 									<c:when test="${empty vo.memberId }">
-										<input type="text" name="regNumber" class="form-control" id="regNum" placeholder="주민번호를 입력해 주세요">
+										<input type="text" name="regNum" class="form-control" id="regNum" placeholder="주민번호를 입력해 주세요">
 									</c:when>
 									<c:otherwise>
 										<input type="text" value="${vo.regNum }" name="regNum" class="form-control" id="regNum" readonly>

@@ -1488,6 +1488,8 @@ ol {
 	color: #323232;
 	font-weight: 600;
 	margin-bottom: 6px;
+		overflow: hidden;
+	white-space: nowrap;
 }
 
 .listing__item__text__inside ul {
@@ -1499,8 +1501,22 @@ ol {
 	color: #323232;
 	list-style: none;
 	line-height: 25px;
+	display:block;
 	position: relative;
 	padding-left: 25px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.listing__item__text__inside {
+	font-size: 15px;
+	color: #323232;
+	list-style: none;
+	line-height: 25px;
+	display:block;
+	position: relative;
+	padding-left: 25px;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .listing__item__text__inside ul li span {

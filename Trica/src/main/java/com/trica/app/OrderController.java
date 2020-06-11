@@ -74,7 +74,7 @@ public class OrderController {
 	 * 페이징 된 주문목록 보여주기
 	 */
 	@RequestMapping("orderPaging.trc")
-	public ModelAndView orderSuccess(String pNum, HttpSession session, HttpServletResponse response) {
+	public ModelAndView orderPaging(String pNum, HttpSession session, HttpServletResponse response) {
 		
 		String memberId = (String)session.getAttribute("memberId");	// session에서 회원아이디 얻어와서 memberId에 저장
 		
@@ -82,15 +82,18 @@ public class OrderController {
 		
 		String pageNum = "1";
 		
+		ModelAndView mv = new ModelAndView();
 		if (pNum != null) {
 			pageNum = pNum;
 		}
-		
+		if(memberId==null) {
+			mv.setViewName("goToIndex");
+			return mv;
+		}
 		int totalPage = orderService.getTotalCount(memberId);	// 전체 페이지 수
 		
 		System.out.println("전체 페이지 수 출력 확인 : " + totalPage);
 		
-		ModelAndView mv = new ModelAndView();
 		
 		mv.addObject("totalPage", totalPage);
 		mv.addObject("list", orderService.selectOrder(memberId, pageNum));

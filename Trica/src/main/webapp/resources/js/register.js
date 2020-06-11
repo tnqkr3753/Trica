@@ -8,7 +8,6 @@ $('#memberId').attr('required',true);
 $('#regNum').attr('required',true);
 $('#password').attr('required',true);
 $('#tel').attr('required',true);
-$('#gender').attr('required',true);
 $('#memberName').attr('required',true);
 $('#sample6_postcode').attr('required',true);
 $('#memberType').attr('required',true);

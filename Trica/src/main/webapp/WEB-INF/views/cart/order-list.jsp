@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="./resources/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
  <link rel="stylesheet" href="./resources/css/searchView.css" type="text/css">
+ <style type="text/css">
+ 	.table-responsive > .table tbody tr th{
+ 	overflow: hidden;
+	white-space: nowrap;
+ 	}
+ </style>
 </head>
 <body>
 
@@ -95,13 +101,13 @@
 											<td class="border-0 align-middle" rowspan='${list.CNT}'>	<!-- CNT 수만큼 rowspan 생성 -->
 												<div class="custom-control custom-checkbox" id="orderNo">
 													<input type="checkbox" id="jb-checkbox-1"
-														class="custom-control-input"> 주문번호 [ ${list.ORDER_NO}]
+														class="custom-control-input">[ ${list.ORDER_NO}]
 												</div>
 											</td>
 										</c:if>
 										<!-- td -->
 
-										<th scope="row" class="border-0">
+										<th scope="row" class="border-0 float-left">
 											<div class="p-2">
 												<img
 													src="./resources/upload/product/img/${list.PCT_IMG_NAME}"

@@ -4,7 +4,6 @@
 <mapper namespace="ProductDAO">
 
 <insert id="insertProduct" parameterType="product">
-
 INSERT INTO product(pct_reg_date, pct_no, pct_stock, pct_name, pct_price, 
 pct_intro, pct_detail, sc_no  
 <if test='pctImgName != null'> 
@@ -18,6 +17,10 @@ VALUES
 , #{pctImgName}, #{pctImgSize} 
 </if>  
 ) 
+	
+	<selectKey keyProperty="pctNo" resultType="String" order="AFTER">
+		SELECT seq_pct_no.currval FROM dual
+	</selectKey>
  
 </insert>
 
@@ -75,6 +78,9 @@ SELECT pct_reg_date, pct_no, pct_stock, pct_name, pct_price,
 	UPDATE product  
 	SET pct_stock=#{pctStock}, pct_name=#{pctName}, pct_price=#{pctPrice}, 
 		pct_intro=#{pctIntro}, pct_detail=#{pctDetail}
+	<if test="pctImgSize!=null">
+	,pct_img_name = #{pctImgName}, pct_img_size=#{pctImgSize}
+	</if>
 	WHERE trim(pct_no)=trim(#{pctNo})  
 </update>                     
        

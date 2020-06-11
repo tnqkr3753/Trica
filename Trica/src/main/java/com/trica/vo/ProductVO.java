@@ -140,8 +140,8 @@ public class ProductVO {
 	} 
 	
 	public void setScNo(String scNo) {
-		// this.bigC=String.valueOf(scNo.charAt(0));
-		// this.smallC=String.valueOf(scNo.charAt(1));
+		this.bigC=String.valueOf(scNo.charAt(0));
+		this.smallC=String.valueOf(scNo.charAt(1));
 		this.scNo = scNo;
 	}
 	
@@ -153,7 +153,7 @@ public class ProductVO {
 			this.pctImgSize  = file.getSize();
 			
 			// 실제 파일로 저장
-			File f = new File("C:\\Users\\KOSMO_22\\git\\Trica\\Trica\\src\\main\\webapp\\resources\\upload\\product\\img\\"+pctImgName);
+			File f = new File("C:\\Users\\KOSMO_25\\git\\Trica\\Trica\\src\\main\\webapp\\resources\\upload\\product\\img\\"+pctImgName);
 			
 			try {
 				file.transferTo(f);

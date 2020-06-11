@@ -34,9 +34,8 @@ FROM product p INNER JOIN o_detail o
 ON o.pct_no = p.pct_no INNER JOIN m_order mo 
 ON o.order_no =  mo.order_no INNER JOIN (SELECT COUNT(*) cnt,order_no FROM o_detail GROUP BY order_no) s 
 ON mo.order_no = s.order_no 
-WHERE o.order_no IN (SELECT order_no FROM m_order WHERE member_id=#{memberId}) 
-ORDER BY mo.order_date desc) 
-WHERE order_no in (SELECT order_no FROM(SELECT order_no, rownum as rnum FROM (SELECT order_no FROM m_order order by order_date desc)) 
+ORDER BY mo.order_date asc) 
+WHERE order_no in (SELECT order_no FROM(SELECT order_no, rownum as rnum FROM (SELECT order_no FROM m_order  WHERE member_id=#{memberId} order by order_date desc)) 
 WHERE rnum >=#{firstRow} and rnum <=#{endRow}) 
 ]]>
 </select>

@@ -28,12 +28,19 @@
 	<aop:aspectj-autoproxy/>
 	<!-- Interceptor 설정 -->
     <interceptors>
+    	<!-- Logging 인터셉터 -->
         <interceptor>
             <mapping path="/**/"/>
             <beans:bean id="TricaInterceptor" class="com.trica.intercaptor.TricaInterceptor"/>
         </interceptor>
+        <!-- Login 세션확인 인터셉터  -->
+        <interceptor>
+        	<mapping path="/orderPaging.trc"/>
+        	<mapping path="/orderSuccess.trc"/>
+        	<beans:bean id="LoginInterceptor" class="com.trica.intercaptor.LoginInterceptor"/>
+        </interceptor>
     </interceptors>
-
+	
 
 	
 	

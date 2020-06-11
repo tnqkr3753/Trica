@@ -66,13 +66,14 @@
 			<div class="container">
 				<br />
 				<!-- 상품 이미지 출력 -->
-				<div class="img" style="float: left;">
+				<div class="row">
+				<div class="img col-md-6" style="float: left;">
 					<img src="./resources/upload/product/img/${vo.pctImgName }" width="500" height="500">
 					<input type="hidden" value="${vo.pctImgName }" id="pctImgName">
 				</div>
 
 				<!-- 오른쪽 상품상세정보 rightSec 출력 -->
-				<div class="rightSec" style="float: left;">
+				<div class="rightSec col-md-6" style="float: left;">
 
 					<dl>
 						<dt>소개</dt>
@@ -150,16 +151,17 @@
 								</dd>
 							</div>
 							<br />
-							<div class="btn_choice_box">
-								<input type="button" class="btn_add_cart" value="장바구니" act="addCart.trc">
-								<input type="button" class="btn_add_wish" value="찜하기" act="addWish.trc">
-								<input type="button" class="btn_add_order" value="구매하기" act="addBuy.trc">
+							<div class="btn_choice_box col-md-12">
+								<input type="button" class="btn_add_cart col-md-3" value="장바구니" act="addCart.trc">
+								<input type="button" class="btn_add_wish col-md-3" value="찜하기" act="addWish.trc">
+								<input type="button" class="btn_add_order col-md-3" value="구매하기" act="addBuy.trc">
 								<input type="hidden" value="${vo.pctNo }" id="pctNo" name="pctNo">
 							</div>
 							<br /> <br /> <br /> <br /> <br /> <br /> <br />
 					</td>
 				</div>
 				<!-- rightSec 끝 --> 
+			</div>
 			</div>
 
 			<!-- 상세정보 시작 -->

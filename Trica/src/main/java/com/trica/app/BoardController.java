@@ -33,7 +33,7 @@ public class BoardController {
 	@RequestMapping("/registBoard.trc") //게시글 db삽입
 	public ModelAndView registBoard(BoardVO vo,HttpSession session) {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("board/boardList");
+		mv.setViewName("redirect:/boardList.trc");
 		String id = (String)session.getAttribute("memberId");
 		if(id==null) {
 			mv.setViewName("LoginPage.trc");

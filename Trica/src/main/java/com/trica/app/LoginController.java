@@ -67,9 +67,9 @@ public class LoginController {
 		ModelAndView mv = new ModelAndView();
 		int result = memberService.insertMember(vo);
 		if(result==1) { 
-			mv.setViewName("member/Register");
-		}else {  
 			mv.setViewName("member/login"); 
+		}else {  
+			mv.setViewName("member/Register");
 		}  
 		return mv;      
 	}    

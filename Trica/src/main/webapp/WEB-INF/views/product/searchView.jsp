@@ -140,8 +140,8 @@
 										<!-- 이미지  -->
 										<img src="./resources/img/추천상품/BSTE_상품.png" alt="" >
 										<!-- 이미지 -->
-										<div class="listing__item__pic__tag top_rate">
-											${list.PCT_NAME }</div>
+<!-- 										<div class="listing__item__pic__tag top_rate"> -->
+<%-- 											${list.PCT_NAME }</div> --%>
 										<!--단어  -->
 										<c:choose>
 											<c:when test="${list.PCT_STOCK<= 15 and list.PCT_STOCK ne 0}">
@@ -162,9 +162,9 @@
 											<div class="listing__item__text__rating">
 												<div class="listing__item__rating__star">
 													<!-- 평점에 따라 별 숫자 다르게 -->
-													<span class="icon_star"></span> <span class="icon_star"></span>
-													<span class="icon_star"></span> <span class="icon_star"></span>
-													<span class="icon_star"></span>
+<!-- 													<span class="icon_star"></span> <span class="icon_star"></span> -->
+<!-- 													<span class="icon_star"></span> <span class="icon_star"></span> -->
+<!-- 													<span class="icon_star"></span> -->
 												</div>
 												<h6>${list.PCT_PRICE }</h6>
 												<!-- 가격 -->
