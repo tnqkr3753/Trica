@@ -39,6 +39,11 @@
         	<mapping path="/orderSuccess.trc"/>
         	<beans:bean id="LoginInterceptor" class="com.trica.intercaptor.LoginInterceptor"/>
         </interceptor>
+        <interceptor>
+        	<mapping path="/chart.trc"/>
+        	<mapping path="/productList.trc"/>
+        	<beans:bean id="TypeInterceptor" class="com.trica.intercaptor.TypeInterceptor"/>
+        </interceptor>
     </interceptors>
 	
 
